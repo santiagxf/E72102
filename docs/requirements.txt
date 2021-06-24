@@ -1,1 +1,8 @@
 myst-parser
+nbsphinx
+ipykernel
+matplotlib
+numpy
+pandas
+scikit-learn
+lightgbm

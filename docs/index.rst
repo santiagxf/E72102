@@ -11,7 +11,8 @@ Implementación de modelos de aprendizaje automático
    :maxdepth: 2
    :caption: Arquitecturas de datos
 
-   architecture/intro.rst
+   architecture/arch/intro
+   architecture/governance/intro
 
 .. toctree::
    :maxdepth: 2

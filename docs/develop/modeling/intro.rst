@@ -4,7 +4,7 @@ Modelado
 
 .. toctree::
    :maxdepth: 2
-   :caption: Modelado
+   :caption: En esta sección
 
    Entrenamiento del modelo <training>
    Selección del modelo <selection>

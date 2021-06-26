@@ -4,9 +4,9 @@ Desviaciones
 
 La mayoria de los modelos de aprendizaje automático asumen que el conjunto de datos de entrenamiento ha sido generado de un origen de datos estático. Sin embargo, sabemos que está suposición es probablemente incorrecta, sobre todo si los datos han sido recolectados durante un periodo largo de tiempo. Los datos evolucionan ya que nuestro mundo también lo hace. En estos casos, es probable que la distribución de los datos que generó nuestro conjunto de datos cambie en algún momento.
 
-Cuando un modelo de aprendizaje automático es desplegado de forma productiva, detectar estos cambios en la distribución de los datos es clave para asegurarse que las predicciones que generamos son válidas y que pueden ser consumidas de forma seguro por otros procesos dentro de la organización.
+Cuando un modelo de aprendizaje automático es desplegado de forma productiva, detectar estos cambios en la distribución de los datos es clave para asegurarse que las predicciones que generamos son válidas y que pueden ser consumidas de forma segura por otros procesos dentro de la organización.
 
-Una desviación, o *data drift*, es una cambio en la distribución de los datos que se utilizan en un modelo de aprendizaje automático. Este cambio se da entre la distribución de los datos que se utilizaron para entrenar el modelo, llamada *distribución de origen*, y la nueva distribución de los datos que se observan una vez que está desplegado, llamada *distribución objetivos*.
+Una desviación, o *data drift*, es una cambio en la distribución de los datos que se utilizan en un modelo de aprendizaje automático. Este cambio se da entre la distribución de los datos que se utilizó para entrenar el modelo, llamada *distribución de origen*, y la nueva distribución de los datos que se observa una vez que está desplegado, llamada *distribución objetivos*.
 
 Tipos de desviaciones
 ---------------------
@@ -14,6 +14,8 @@ Existen 3 tipos de desviaciones dependiendo de que parte de nuestro conjunto de 
 
 .. image:: _images/drifts.png
   :alt: Tipos de desviaciones
+
+.. _rst_covariate_shift:
 
 Cambio covariable (covariate shift o feature drift)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -32,7 +34,7 @@ Se trata de un problema multifacético que se puede dividir en 2 categorías: re
 
 [Referencia]_
 
-Dependiendo de cómo son estos cambios introducidos a lo largo del tiempo, las desviaciones de concepto pueden ser categorizadas en abruptas, graduales y recurrentes. Una desviación abrupta es aquella que sudede de repente en un momento dado, pero cuyo efecto se mantiene en el tiempo. Una desviación gradual, es un cambio que se introduce paulativamente con pequeñas modificaciones constantes en el tiempo. Finalemnte, una desviación recurrente es un cambio que se introduce de forma repentina, pero que también desaparece de forma repetina, aunque solo temporalmente.
+Dependiendo de cómo se introducen estos cambios a lo largo del tiempo, las desviaciones de concepto pueden ser categorizadas en abruptas, graduales y recurrentes. Una desviación abrupta es aquella que sucede de repente en un momento dado, pero cuyo efecto se mantiene en el tiempo. Una desviación gradual, es un cambio que se introduce paulativamente con pequeñas modificaciones constantes en el tiempo. Finalmente, una desviación recurrente es un cambio que se introduce de forma repentina, pero que también desaparece de forma repetina, aunque solo temporalmente.
 
 .. image:: _images/concept_drifts_freq.png
   :alt: Tipos de desviaciones de concepto
@@ -49,6 +51,13 @@ En general, la mayoría de las desviaciones se pueden explicar por 3 causas:
 
 3) **El proceso que genera los conjuntos de datos ha cambiado:** Este caso es el más sencillo de aceptar. Nuestro mundo es dinámico y de igual forma son los comportamientos de las personas y los dispositivos. Podria ser que la presición de un sensor de temporatura ha cambiado devido a un nuevo modelo del fabricante, la temporatura global está cambiando y como efecto el comportamiento del clima también lo hace, etc.
 
+Algoritmos de adaptación
+------------------------
+Una forma de mitigar este problema sería que los modelos de aprendizaje automático se diseñaran con la idea de que existen desviaciones de concepto que están continuamente cambiando la distribución de los datos. Entonces, en lugar de mantiener el modelo estático e intentar detectar la desviación para luego poder reentrenar el modelo, estos modelos de aprendizaje automático actualizan constantemente sus parámetros cada vez que se observan nuevos datos. Esta técnica, si bien pareciera conveniente en principio, requiere de la utilización de modelos de aprendizaje automático que admitan este tipo de comportamiento. Algunos ejemplos pueden ser: Very fast decision tree (VFDT), Online information network (OLIN), Streaming ensemble algorithm (SEA), Online Non-stationary Boosting (ONSBOOST) y Online Sequential Extreme Learning Machine (OS-ELM).
+
+.. note:: Estos algoritmos suponen que las desviaciones en la distribución de los datos es intrinseca del proceso que los genera y no de un error de modelado o de ingesta de información. Esto es importante de tener en cuenta porque podria incorrectamente opacar errores de integración de datos.
+
+
 Algoritmos de detección
 -----------------------
 Existen numerosas técnicas para detectar desviaciones de datos. En general todos entran en alguna de las siguientes 3 categorias: 1) Basados en análisis secuencial, 2) Basados en la distribución de los datos, 3) Basados en las predicciones del modelo.
@@ -58,10 +67,6 @@ Existen numerosas técnicas para detectar desviaciones de datos. En general todo
 3) **Basados en las predicciones del modelo:** Si tenemos acceso a los valores verdaderos de la variable objetivo, una forma sencilla de detectar las desviaciones es corriendo el modelo sobre el conjunto de datos objetivo y comparar la performance de las métricas con el conjunto de datos de entrenamiento. Sin embargo, en la vida real, la adquisición de los valores verdaderos de la variable objetivo puede ser costoso y adicionalmente, tener demora en el tiempo. Ejemplos de estos métodos incluyen Adaptive Windowing (ADWIN), SeqDrift, Hoeffding’s Bound (HDDMA-test and HDDMW-test) y Fast Hoeffding Drift Detection Method (FHDDM).
 
 .. note:: No todos los métodos son apropiados para detectar todos los tipos de desviaciones. Recomendamos revisar la documentación de cada una de las técnicas para determinar que método es apropiado en cada ocasión.
-
-Algoritmos de adaptación
-------------------------
-Una alternativa a la idea de detectar las desviaciones sería que los modelos de aprendizaje automático se diseñaran con la idea de que existen desviaciones de concepto que están continuamente cambiando la distribución de los datos. Entonces, en lugar de mantiener el modelo estático e intentar detectar la desviación para luego poder reentrenar el modelo, estos modelos de aprendizaje automático actualizan constantemente sus parámetros cada vez que se observan nuevos datos. Esta técnica, si bien conveniente, requiere de la utilización de modelos de aprendizaje automático que admitan este tipo de comportamiento. Algunos ejemplos pueden ser: Very fast decision tree (VFDT), Online information network (OLIN), Streaming ensemble algorithm (SEA), Online Non-stationary Boosting (ONSBOOST) y Online Sequential Extreme Learning Machine (OS-ELM).
 
 
 .. toctree::

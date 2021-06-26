@@ -1,3 +1,3 @@
 =============================
-Bitacora (logging) y alertas
+Gobierno de procesos de datos
 =============================

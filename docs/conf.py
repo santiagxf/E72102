@@ -18,6 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'E72.1.02'
+project_repo = 'e72102'
 copyright = '2021, Universidad de Buenos Aires (FCE-UBA)'
 author = 'Facundo Santiago'
 
@@ -49,7 +50,6 @@ language = 'es'
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
@@ -67,3 +67,11 @@ html_context = {
         '_static/theme_overrides.css',  # overrides for wide tables in RTD theme
         ],
     }
+
+nbsphinx_prolog = """
+.. image:: /_images/colab.png
+  :alt: Abrir en Google Colab
+  :align: right
+  :target: http://colab.research.google.com/github/santiagxf/{{ env.config['project'].replace('.','') }}/blob/master/docs/{{ env.doc2path(env.docname, base=None) }}
+
+"""

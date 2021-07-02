@@ -73,7 +73,7 @@ Existen numerosas técnicas para detectar desviaciones de datos. En general todo
     :maxdepth: 1
     :caption: Ejemplos
 
-    domain_classifier.ipynb
-    wasserstein.ipynb
+    code/domain_classifier.ipynb
+    code/wasserstein.ipynb
 
 .. [Referencia] Gama, J., Zliobaite, I., Bifet, A., Pechenizkiy, M., and Bouchachia, A. 2013. A Survey on Concept Drift Adaptation. ACM Comput. Surv. 1, 1, Article 1 (January 2013).

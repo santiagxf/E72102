@@ -26,10 +26,12 @@ La siguiente trabla muestra los formatos más comunes que se utilizan dependiend
    ".pmml", "Múltiples frameworks", "Es un formato interoperable basado en XML que permite representar multiples tipos de modelos. Si bien su ultima versión (4.3) data de 2016, `multiples organizaciones lo soportan <http://dmg.org/pmml/products.html>`_ "
 
 
-Conversión de formato interoperables
+Conversión a formatos interoperables
 ------------------------------------
-La conversión a formatos interoperables, como ONNX o PMML, pemiter persistir los modelos en formatos que pueden ser ejecutados en diversos ambientes independientes de las tecnologías donde se entrenó el modelo. En algunos casos, puede ser que el framework de aprendizaje automático que estamos usando soporte persistir el modelo en estos formatos, en otros casos, deberemos hacerlo manualmente a traves de las librerias de soporte del formato.
+La conversión a formatos interoperables, como ONNX o PMML, pemite persistir los modelos en formatos que pueden ser ejecutados en diversos ambientes y plataformas independientemente de la tecnología con la que se entrenó el modelo. En algunos casos, puede ser que el framework de aprendizaje automático que estamos usando soporte persistir el modelo en estos formatos, en otros casos, deberemos hacer dicha partabilidad manualmente a través de las librerias de soporte que provea el formato.
 
+Ejemplo de conversión al formato ONNX
+*************************************
 Por ejemplo, si quisieramos convertir un modelo entrenado con Keras a ONNX, podriamos utilizar la librería `onnxtools` de la siguiente forma. Primero definiremos un simple modelo::
 
    from keras.layers import Input, Dense, Add

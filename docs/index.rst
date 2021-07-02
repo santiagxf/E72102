@@ -3,12 +3,6 @@ Implementación de modelos de aprendizaje automático
 
 .. toctree::
    :maxdepth: 2
-   :caption: Sobre el curso
-
-   Cuerpo docente <course/instructors.rst>
-
-.. toctree::
-   :maxdepth: 2
    :caption: Arquitecturas de datos
 
    architecture/arch/intro

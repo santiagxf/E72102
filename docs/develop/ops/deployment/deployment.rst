@@ -10,6 +10,8 @@ Este tipo de despliegue permite comparar estadisticamente los resultados de los 
 
 .. note:: Shadow scoring supone que el valor verdadero de la predicción no depende de una acción que es consecuencia de la predicción. Por ejemplo, en el caso de un modelo que recomienda un elemento para comprar en un sitio de compras por internet, solo las predicciones de un modelo podrán ser evaluadas ya que es imposible determinar la performance del `modelo B` sin mostrar la recomendación propiamente dicha para que el usuario haga clic. En estos casos, está técnica es de poca utilidad.
 
+.. _rst_blue_green_deployment:
+
 Blue/Green
 ----------
 Uno de los desafios más grandes a la hora de realizar un despliegue es el "corte" entre la versión antigua y la nueva versión del modelo. En general, uno necesita que este pasaje se realice rápido para evitar tener interrupciones en los servicios que el modelo provee. Sin embargo, no queremos cambiar de modelo hasta estar seguros de que funciona correctamente en el ambiente productivo. El despliegue de tipo Blue/Green trata de atacar esta problemática al proveer 2 ambientes productivos identicos (o tan identicos como sea posible). El nuevo modelo entonces es desplegado en un ambiente identico a producción al que llamamos **green**, mientras que el modelo original continua funcionando en el ambiente **blue**. Las fases finales de validación y control se realizan en este ambiente *green*. Una vez que nos aseguramos que el modelo funciona como esperamos, se realiza un intercambio de ambientes, es decir **green** toma el lugar de **blue** y viceversa. Esto se realiza con una simple configuración de ruteo de red para que todas las solicitudes ahora sean contestadas por el otro ambiente.
@@ -17,6 +19,14 @@ Uno de los desafios más grandes a la hora de realizar un despliegue es el "cort
 Este tipo de despliegue también tiene la ventaja de que permite una rápida *vuelta atrás* o **roll-back** ya que si algo no funciona como esperamos, podemos a volver a hacer el cambio. Por supuerto que, de ser este el caso y necesitar deshacer la operación, se habrán perdido todas las solicitudes que llegaron durante el periodo en donde el ambiente *green* estuvo respondiendo solicitudes. Estos casos pueden ser resueltos implementando algo similar a Shadow Testing que vimos anteriormente.
 
 Una vez que el despliegue finaliza y es aceptado, el ambiente *green* pasa a llamarse *blue*, y el antiguo ambiente *green* queda disponible para desplegar las proximas versiones del modelo en cuestión.
+
+.. _rst_progressive_rollouts:
+
+Progressive Rollouts
+--------------------
+TODO
+
+.. _rst_canary_releases:
 
 Canary releases
 ---------------

@@ -1,5 +1,6 @@
 myst-parser
 nbsphinx
+furo
 ipykernel
 matplotlib
 numpy

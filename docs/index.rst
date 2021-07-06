@@ -20,9 +20,12 @@ Implementación de modelos de aprendizaje automático
 
 .. toctree::
    :maxdepth: 2
-   :caption: Proyectos y personas
+   :caption: Proyectos basados en datos
 
-   projects/intro.rst
+   Introducción <projects/intro>
+   projects/agile/intro
+   projects/mlops/intro
+   projects/teams/intro
 
 
 Indices and tables

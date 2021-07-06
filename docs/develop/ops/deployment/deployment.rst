@@ -2,6 +2,12 @@
 Técnicas de despliegue
 ======================
 
+Hay dos conceptos importantes a tener en cuenta a la hora de poner un modelo de aprendizaje automático a disposición de nuestros usuarios, y son: los **despliegues** y las **versiones** (aunque más conocidas como **releases**). Un despliegue (*o deployment*) es el proceso por el cúal él código/modelo es ubicado o instalado en su ubicación final. Esta ubicación podría ser un servidor web, un dispositivo movil de un usuario, etc. Un release, por el contrario, es el proceso por el cúal el o los usuarios obtienen acceso al nuevo código/modelo/funcionalidad como parte de un objetivo de negocio. 
+
+En algunos casos estos dos procesos se dan al unísono, pero no necesariamente. Un release, por ejemplo, puede involucrar varias instancias de despliegue y, también, un despliegue puede tener multiples releases o releases progresivos. En general, el proceso de despliegue es controlado por un área técnica de operaciones o incluso un proceso automático. El proceso de release, en general es controlado por el equipo responsable del producto.
+
+A contuación veremos varias técnicas para controlar tanto el proceso de despliegue y el proceso de versiones.
+
 Shadow testing
 --------------
 En algunas organizaciones, los ambientes de entrenamiento de modelos y los ambientes de despliegue del modelo son distintos y estan aislados. Como consecuencia, el reentrenamiento del modelo con nuevos datos podría verse comprometido y no reflejar exactamente el ambiente productico cuando se depliega. Una técnica para mitigar este riesgo consiste en desplegar el nuevo modelo, `modelo B`, junto con el modelo actual `modelo A`. En esta configuración, cada vez que ingresa una nueva solicitud para ejecutar el modelo, tanto el `modelo A` como el `modelo B` se ejecutan, aunque solo las predicciones de `modelo A` son retornadas al sistema. Las prediciones de `modelo B` son registradas vía logging. 

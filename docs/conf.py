@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'E72.1.02'
-project_repo = 'e72102'
 copyright = '2021, Universidad de Buenos Aires (FCE-UBA)'
+html_title = 'E72.1.02'
 author = 'Facundo Santiago'
 
 
@@ -55,23 +55,23 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
+html_theme = 'furo'
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_context = {
-    'css_files': [
-        '_static/theme_overrides.css',  # overrides for wide tables in RTD theme
-        ],
-    }
+#html_context = {
+#    'css_files': [
+#        '_static/theme_overrides.css',  # overrides for wide tables in RTD theme
+#        ],
+#    }
 
 nbsphinx_prolog = """
 .. image:: /_images/colab.png
   :alt: Abrir en Google Colab
-  :align: right
   :target: http://colab.research.google.com/github/santiagxf/{{ env.config['project'].replace('.','') }}/blob/master/docs/{{ env.doc2path(env.docname, base=None) }}
 
 """

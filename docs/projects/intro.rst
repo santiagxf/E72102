@@ -1,9 +1,4 @@
-=========
-Proyectos
-=========
+===========================================
+Proyectos basados en aprendizaje automático
+===========================================
 
-.. toctree::
-    :maxdepth: 2
-    :caption: En esta sección
- 
-    MLOps <mlops>

@@ -8,13 +8,21 @@ Obtener un modelo funcionando en un ambiente de desarrollo no es garantia alguna
 
 Los ambientes productivos dentro de una organización puede tomar diferentes formas: desde servidores en centro de computos, plataformas de ciencias de datos específicas, como parte de un software que se distribuye a los clientes de la organización, como parte de una aplicación e incluso como parte de un dispositivo que vendemos (como es el caso de los automobiles Tesla).
 
+.. figure:: _images/ops_environments.png
+   :alt: Segregación de ambientes
+   :align: center
+
+   *Separación de ambientes dentro del proceso de desarrollo de modelos de aprendizaje automático.*
+
 Idealmente, esperariamos poder empaquetar nuetro modelo desarrollado con minimos cambios a un ambiente productivo ya que, de esa forma, minimizariamos el riesgo de que nuestro modelo se comporte distinto que como lo hacia en desarrollo. Sin embargo, en la práctica, es mucho mas común de lo que uno espera de que este no sea el caso. Adaptaciones deben de realizarse al modelo para que pueda ser puesto en producción de forma correcta.
 
 .. toctree::
    :maxdepth: 2
    :caption: En esta sección
+   :hidden:
 
    Adaptación del modelo <adaptation/intro>
    Validación del modelo <validation/intro>
+   Interpretación <validation/interpretation/intro>
    Despliegue del modelo <deployment/intro>
    Monitoreo <monitoring/intro>

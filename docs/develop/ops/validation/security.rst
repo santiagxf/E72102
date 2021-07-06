@@ -31,3 +31,9 @@ Adversarial Attacks
 Ataques adversarios, aunque más conocido como *adversarial attacks*, es un tipo de problema de seguridad basado en redes adversarias generativas, o *generative adversarial networks (GANs)*. Esta técnica busca presentarle al modelo en cuestión un dato de entrada que ha sido perturbado (modificado) ligeramente de tal forma que si bien a simple vista pareciera una perturbación insignificante - o incluso inperceptible, produce grandes cambios en las predicciones del modelo. La idea central está basada en como funcionan las redes neuronales internamente, ya que buscan generar las perturbaciones mas pequeñas en los datos de entrada de tal forma que al multiplicar estos valores por todos los coeficientes de la red, genere las variaciones más grandes en la salida.
 
 
+.. toctree::
+    :maxdepth: 1
+    :caption: Ejemplos
+
+    code/cleverhans.ipynb
+    code/foolbox.ipynb

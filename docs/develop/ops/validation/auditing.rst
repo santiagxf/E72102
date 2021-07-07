@@ -2,6 +2,11 @@
 Reproducibilidad y auditabilidad
 ================================
 
+La reproducibilidad y auditabilidad de un modelo de aprendizaje automático están relacionadas entre si, pero suponen alcances distintos a la hora de implementarlas.
+
+Reproducibilidad
+----------------
+
 Reproducibilidad se refiere a la habilidad de poder recrear exactamente el mismo modelo que se está considerando. La misma requiere que el modelo esté correctamente documentado, que los datos utilizados para su entrenamiento estén disponibles en su misma forma que se encontraron cuando se entrenó (vea :ref:`rst_dataset_versioning` ), y toda la especificación de los requerimientos de software para recrear el ambiente en el que fue entrenado. Reproducibilidad es una propiedad escencial no solo para poder replicar los resultados que se encontraron durante desarrollo, pero también considerando implicaciones de alta disponibilidad y recuperación ante desastres del servicio del del modelo. 
 
 .. _rst_auditability:

@@ -16,7 +16,7 @@ Este tipo de despliegue permite comparar estadisticamente los resultados de los 
 
 .. note:: Shadow scoring supone que el valor verdadero de la predicción no depende de una acción que es consecuencia de la predicción. Por ejemplo, en el caso de un modelo que recomienda un elemento para comprar en un sitio de compras por internet, solo las predicciones de un modelo podrán ser evaluadas ya que es imposible determinar la performance del `modelo B` sin mostrar la recomendación propiamente dicha para que el usuario haga clic. En estos casos, está técnica es de poca utilidad.
 
-.. _rst_blue_green_deployment:
+.. _rst_deployment_bg:
 
 Blue/Green
 ----------

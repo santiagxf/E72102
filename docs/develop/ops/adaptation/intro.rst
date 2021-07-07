@@ -16,6 +16,7 @@ En el medio de estas dos historias tenemos todas las combinaciones posibles y de
 .. toctree::
    :maxdepth: 2
    :caption: En esta sección
+   :hidden:
    
    Portabilidad <portability>
    Performance <performance>

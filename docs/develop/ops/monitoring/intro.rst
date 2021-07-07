@@ -17,6 +17,7 @@ Sin embargo, otro tipo de monitoreos puede ser más dificil de implementar. Por 
 .. toctree::
     :maxdepth: 2
     :caption: En esta sección
+    :hidden:
  
     Diagnóstico y alertas <logging>
     Evaluación online <onlineEval>

@@ -68,6 +68,7 @@ Existen numerosas técnicas para detectar desviaciones de datos. En general todo
 
 .. note:: No todos los métodos son apropiados para detectar todos los tipos de desviaciones. Recomendamos revisar la documentación de cada una de las técnicas para determinar que método es apropiado en cada ocasión.
 
+Una vez que detectamos la desviación, el siguiente paso es el :ref:`rst_model_retrain` con un conjunto de datos actualizado.
 
 .. toctree::
     :maxdepth: 1

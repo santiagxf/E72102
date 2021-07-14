@@ -20,5 +20,5 @@ Sin embargo, otro tipo de monitoreos puede ser más dificil de implementar. Por 
     :hidden:
  
     Diagnóstico y alertas <logging>
-    Evaluación online <onlineEval>
+    Evaluación en linea <onlineEval>
     Desviaciones <drift>

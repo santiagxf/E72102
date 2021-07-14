@@ -38,3 +38,10 @@ Data-centric vs Model-centric
 Podríamos decir que un modelo de aprendizaje automático es una fotografía de cómo el mundo solía lucir cuando se recolectó el conjunto de datos de entrenamiento. Dependiendo del dominio en el que estemos trabajando, este hecho podría no representar un problema, por incluso, bastante tiempo. Sin embargo, en otros casos y como consecuencia de vivir en un mundo que no es estático, es necesario que el modelo y el conocimiento que el modelo extrajo desde el conjunto de datos evolucione junto con los datos.
 
 En los sitemas basados en aprendizaje automático, aquellos que utilizan la mayor cantidad y calidad de datos son los ganadores. Esta realidad hace que muchos equipos de desarrollo se focalizen en la mejora continua de sus datos <data centric> en lugar de la arquitectura del modelo <model centric>. Los datos pueden cambiar con una gran velocidad, lo que impone restricciones fuertes en la velocidad en la que los modelos deben moverse a lo largo de todo el proceso de desarrollo. ¿Cómo poveer entonces está velocidad a los equipos de desarrollo?
+
+.. toctree::
+   :maxdepth: 2
+   :caption: En esta sección
+   :hidden:
+   
+   CI/CD <cicd>

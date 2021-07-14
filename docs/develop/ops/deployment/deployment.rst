@@ -1,8 +1,8 @@
-======================
-Técnicas de despliegue
-======================
+=========================
+Estratégias de despliegue
+=========================
 
-Hay dos conceptos importantes a tener en cuenta a la hora de poner un modelo de aprendizaje automático a disposición de nuestros usuarios, y son: los **despliegues** y las **versiones** (aunque más conocidas como **releases**). Un despliegue (*o deployment*) es el proceso por el cúal él código/modelo es ubicado o instalado en su ubicación final. Esta ubicación podría ser un servidor web, un dispositivo movil de un usuario, etc. Un release, por el contrario, es el proceso por el cúal el o los usuarios obtienen acceso al nuevo código/modelo/funcionalidad como parte de un objetivo de negocio. 
+Hay dos conceptos importantes a tener en cuenta a la hora de poner un modelo de aprendizaje automático a disposición de nuestros usuarios, y son: los **despliegues** y las **liberaciones** (aunque más conocidas como **releases**). Un despliegue (*o deployment*) es el proceso por el cúal él código/modelo es ubicado o instalado en su ubicación final. Esta ubicación podría ser un servidor web, un dispositivo movil de un usuario, etc. Un release, por el contrario, es el proceso por el cúal el o los usuarios obtienen acceso al nuevo código/modelo/funcionalidad como parte de un objetivo de negocio. 
 
 En algunos casos estos dos procesos se dan al unísono, pero no necesariamente. Un release, por ejemplo, puede involucrar varias instancias de despliegue y, también, un despliegue puede tener multiples releases o releases progresivos. En general, el proceso de despliegue es controlado por un área técnica de operaciones o incluso un proceso automático. El proceso de release, en general es controlado por el equipo responsable del producto.
 
@@ -20,7 +20,7 @@ Este tipo de despliegue permite comparar estadisticamente los resultados de los 
 
 Blue/Green
 ----------
-Uno de los desafios más grandes a la hora de realizar un despliegue es el "corte" entre la versión antigua y la nueva versión del modelo. En general, uno necesita que este pasaje se realice rápido para evitar tener interrupciones en los servicios que el modelo provee. Sin embargo, no queremos cambiar de modelo hasta estar seguros de que funciona correctamente en el ambiente productivo. El despliegue de tipo Blue/Green trata de atacar esta problemática al proveer 2 ambientes productivos identicos (o tan identicos como sea posible). El nuevo modelo entonces es desplegado en un ambiente identico a producción al que llamamos **green**, mientras que el modelo original continua funcionando en el ambiente **blue**. Las fases finales de validación y control se realizan en este ambiente *green*. Una vez que nos aseguramos que el modelo funciona como esperamos, se realiza un intercambio de ambientes, es decir **green** toma el lugar de **blue** y viceversa. Esto se realiza con una simple configuración de ruteo de red para que todas las solicitudes ahora sean contestadas por el otro ambiente.
+Uno de los desafios más grandes a la hora de realizar un despliegue es el "corte" entre la versión antigua y la nueva versión del modelo. En general, uno necesita que este pasaje se realice rápido para evitar tener interrupciones en los servicios que el modelo provee. Sin embargo, no queremos cambiar de modelo hasta estar seguros de que funciona correctamente en el ambiente productivo. El despliegue de tipo Blue/Green (o a veces conocido como black/red) trata de atacar esta problemática al proveer 2 ambientes productivos identicos (o tan identicos como sea posible). El nuevo modelo entonces es desplegado en un ambiente identico a producción al que llamamos **green**, mientras que el modelo original continua funcionando en el ambiente **blue**. Las fases finales de validación y control se realizan en este ambiente *green*. Una vez que nos aseguramos que el modelo funciona como esperamos, se realiza un intercambio de ambientes, es decir **green** toma el lugar de **blue** y viceversa. Esto se realiza con una simple configuración de ruteo de red para que todas las solicitudes ahora sean contestadas por el otro ambiente.
 
 Este tipo de despliegue también tiene la ventaja de que permite una rápida *vuelta atrás* o **roll-back** ya que si algo no funciona como esperamos, podemos a volver a hacer el cambio. Por supuerto que, de ser este el caso y necesitar deshacer la operación, se habrán perdido todas las solicitudes que llegaron durante el periodo en donde el ambiente *green* estuvo respondiendo solicitudes. Estos casos pueden ser resueltos implementando algo similar a Shadow Testing que vimos anteriormente.
 
@@ -40,11 +40,19 @@ Versiones canarias, o *canary releases*, es una técnica para reducir el riesgo 
 
 Similar a `Blue/Green`_ , la nueva versión del modelo se despliega en un ambiente lo más similar al productivo posible y las pruebas de validación se realizan sobre el mismo. Una vez que estás pruebas se completaron, un pequeño grupo de usuarios es redireccionado para que utilice el nuevo ambientes - *green*. Esta selección puede realizar de forma simple elijiendolos al azar, o de forma más compleja, basada en propiedades del perfil del usuario, usuarios externos vs interos, etc. A medida que se gana más confianza con el nuevo despliegue, más usuarios son dirijidos a la nueva versión del modelo hasta que finalmente el 100% de los usuarios es direccionado al nuevo modelo y su versión anterior permanece inactiva. En este punto, podemos decomisar la infraestructura asociado con el modelo anterior.
 
-Una de las ventajas más visibles de esta técnica es que podemos ir realizando pruebas de estrés y capacidad a medida que nuevos usuarios ingresan a la nueva versión del modelo. Esto lo logramos monitoreando las métricas de utilización de recursos. Adicionalmente, si encontramos un problema, siempre podemos volver hacia atrás con el despliegue.
+La elección de qué usuarios asignar a nuestro `canary release` podría no ser trivial. Probablemente quisieramos asignar grupos de usuarios basandose en alguna propiedad demográfica. Pero podría ser el caso que nuestro modelo opere correctamente para esta porción de la población, mientras que para el resto de la población resulte errático. Por el contrario, una estratégia más robusta sería elegir a los usuarios de forma aleatoria y, de ese modo, obtener una muestra más representativa. Sin embargo, probablmente querrámos que nuestros usuarios tengan una experiencia consistente cuando utilizan nuestros servicios, por lo que deberemos aplicar algún tipo de afinidad: una vez que un usuarios es asignado a una versión canaria, entonces permanecerá en esa versión canaria hasta que el despliegue se haya completado.
 
+Una de las ventajas más visibles de esta técnica es que podemos ir realizando pruebas de estrés y capacidad a medida que nuevos usuarios ingresan a la nueva versión del modelo. Esto lo logramos monitoreando las métricas de utilización de recursos. Adicionalmente, si encontramos un problema, siempre podemos volver hacia atrás con el despliegue. Este proceso de análisis puede ser incluso automátizado a traves de :doc:`automate_canary`.
 
 A/B testing
 -----------
 Similar a `Blue/Green`_ , la nueva versión del modelo se despliega en un ambiente lo más similar al productivo posible y las pruebas de validación se realizan sobre el mismo. Sin embargo, en A/B testing, las solicitudes de ejecución del modelo se distribuyen entre los dos ambientes y modelos. Es decir, algunas solicitudes son enviadas al `modelo A` y otras solicitudes al `modelo B`. Cada solicitud es procesada o por uno o por el otro, pero nunca por ambos. Los resultados de ambos modelos son registrados via logging para el análisis.
 
 .. warning:: A primera vista, esta técnica puede parecer similar a `Canary releases`_ debido a similaridades técnicas de implementación. Sin embargo, no deben confundirse. Mientras que *Canary releases* es una técnica para detectar problemas al implementar modelos de forma gradual utilizando un *canario*, A/B testing es una técnica para probar una hipótesis utilizando variaciones de un modelo (o multiples modelos). Incluso, dependiendo del tráfico, esperariamos poder concluir con un despluegue de tipo canario en horas, mientras que para una prueba A/B deberiamos de esperar hasta que nuestra prueba alcance significancia estadística.
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Ejemplos
+    :hidden:
+    
+    Análisis automático de Canary Releases <automate_canary>

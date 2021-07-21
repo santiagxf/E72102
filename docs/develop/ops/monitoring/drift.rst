@@ -21,13 +21,22 @@ Cambio covariable (covariate shift o feature drift)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Este tipo de desviación se da cuando la distribución de las variables predictoras (features) cambia, mientras que la distribución de la variable objetivo permanece igual. Un ejemplo tipico de este caso es cuando alguno de los valores de los predictores, previamente poco frecuente o incluso nunca visto (no está presente en el conjunto de entrenamiento) se vuelve más frecuente. 
 
+.. math::
+  P(x_s) \ne P(x_t) \textrm{ and } P(y_s|x_s)=P(y_t|x_t)
+
 Cambio en la distribución previa (prior shift)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Este tipo de desviación se da cuando la distribución de la variable objetivo cambia, mientras que la distribución de los restantes predictores permanece igual. Este tipo de cambios tipicamente se da cuando cambia la proporción de las muetras de alguna de las clases por ejemplo. Algo típico cuando trabajamos con conjuntos de datos que no están balanceados.
 
+
 Cambio de concepto (concept shift)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Se trata de un problema multifacético que se puede dividir en 2 categorías: real y virtual. Una desviación de concepto real es un cambio en la **distribución condicional** de la variable objetivo, independientemente de si la distribución de las variables predictores haya cambiado o no. Una desviación de concepto virtual, también conocidas como temporales, puede ocurrir como resultado de una representación incompleta de la distribución real de los datos mas que como una cambio en el concepto que se intenta capturar. Esta separación es importante ya que para resolver una desviación de concepto real, se requiere de técnicas basadas en feedback para evaluar la performance del modelo de aprendizaje automático, mientras que una virutal puede realizarse sin tales técnicas.
+Se trata de un problema multifacético que se puede dividir en 2 categorías: real y virtual. Una desviación de concepto real es un cambio en la **distribución condicional** de la variable objetivo, independientemente de si la distribución de las variables predictores haya cambiado o no. 
+
+.. math::
+  P(y_s|x_s) \ne P(y_t|x_t) \textrm{ and } P(x_s) = P(x_t)
+
+Una desviación de concepto virtual, también conocidas como temporales, puede ocurrir como resultado de una representación incompleta de la distribución real de los datos mas que como una cambio en el concepto que se intenta capturar. Esta separación es importante ya que para resolver una desviación de concepto real, se requiere de técnicas basadas en feedback para evaluar la performance del modelo de aprendizaje automático, mientras que una virutal puede realizarse sin tales técnicas.
 
 .. image:: _images/concept_drifts.png
   :alt: Tipos de desviaciones de concepto

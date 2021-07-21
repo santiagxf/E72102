@@ -2,11 +2,13 @@
 Estratégias de despliegue
 =========================
 
-Hay dos conceptos importantes a tener en cuenta a la hora de poner un modelo de aprendizaje automático a disposición de nuestros usuarios, y son: los **despliegues** y las **liberaciones** (aunque más conocidas como **releases**). Un despliegue (*o deployment*) es el proceso por el cúal él código/modelo es ubicado o instalado en su ubicación final. Esta ubicación podría ser un servidor web, un dispositivo movil de un usuario, etc. Un release, por el contrario, es el proceso por el cúal el o los usuarios obtienen acceso al nuevo código/modelo/funcionalidad como parte de un objetivo de negocio. 
+Hay dos conceptos importantes a tener en cuenta a la hora de poner un modelo de aprendizaje automático a disposición de nuestros usuarios, y son: los **despliegues** (*o deployment*) y los **lanzamientos** (aunque más conocidos como *releases*). Un despliegue es el proceso por el cual el código/modelo se ubicado o se instala en su ubicación final. Esta ubicación podría ser un servidor web, un dispositivo movil de un usuario, etc. Un release, por el contrario, es el proceso por el cúal el o los usuarios obtienen acceso al nuevo código/modelo/funcionalidad como parte de un objetivo de negocio. 
+
+La diferencia más importante entre un despliege y un lanzamiento tiene que ver con el **nivel de riesgo**. Mientras un despliegue es una operación de bajo riesgo, la liberación es una operación de alto riesgo. Vea :doc:`../validation/riskmodel`.
 
 En algunos casos estos dos procesos se dan al unísono, pero no necesariamente. Un release, por ejemplo, puede involucrar varias instancias de despliegue y, también, un despliegue puede tener multiples releases o releases progresivos. En general, el proceso de despliegue es controlado por un área técnica de operaciones o incluso un proceso automático. El proceso de release, en general es controlado por el equipo responsable del producto.
 
-A contuación veremos varias técnicas para controlar tanto el proceso de despliegue y el proceso de versiones.
+A contuación veremos varias técnicas para controlar tanto el proceso de despliegue y el proceso de versiones o lanzamientos.
 
 Shadow testing
 --------------
@@ -15,6 +17,10 @@ En algunas organizaciones, los ambientes de entrenamiento de modelos y los ambie
 Este tipo de despliegue permite comparar estadisticamente los resultados de los modelos `modelo A` y `modelo B` sin comprometer el ambiente de producción. Si el resultado de este test es satisfactorio, entonces, el `modelo B` toma el lugar del `modelo A`. Esta técnica se conoce como *shadow scoring* y permite implementar transiciones controladas entre diferentes versiones del modelo.
 
 .. note:: Shadow scoring supone que el valor verdadero de la predicción no depende de una acción que es consecuencia de la predicción. Por ejemplo, en el caso de un modelo que recomienda un elemento para comprar en un sitio de compras por internet, solo las predicciones de un modelo podrán ser evaluadas ya que es imposible determinar la performance del `modelo B` sin mostrar la recomendación propiamente dicha para que el usuario haga clic. En estos casos, está técnica es de poca utilidad.
+
+Feature flags
+-------------
+.. todo:: Upcoming
 
 .. _rst_deployment_bg:
 
@@ -30,13 +36,18 @@ Una vez que el despliegue finaliza y es aceptado, el ambiente *green* pasa a lla
 
 Progressive Rollouts
 --------------------
-TODO
+
+.. figure:: _images/rings.png
+   :alt: Despliegues progresivos utilizando rings o anillos
+   :align: center
+
+   *Despliegues progresivos utilizando rings o anillos*
 
 .. _rst_canary_releases:
 
 Canary releases
 ---------------
-Versiones canarias, o *canary releases*, es una técnica para reducir el riesgo asociado al introducir una nueva versión del modelo en producción. Se basa en la idea de introducir los cambios a un pequeño subset de usuarios antes de desplegar la nueva versión por completo y habilitarla para todos los usuarios.
+Versiones canarias, o *canary releases*, es una técnica para reducir el riesgo asociado al introducir una nueva versión del modelo en producción. Se basa en la idea de introducir los cambios a un pequeño subset de usuarios antes de desplegar la nueva versión por completo y habilitarla para todos los usuarios. Su nombre está relacionado con los canarios que se utilizaban en las minas en donde, si el canario *dejaba de cantar* significaba que había problemas.
 
 Similar a `Blue/Green`_ , la nueva versión del modelo se despliega en un ambiente lo más similar al productivo posible y las pruebas de validación se realizan sobre el mismo. Una vez que estás pruebas se completaron, un pequeño grupo de usuarios es redireccionado para que utilice el nuevo ambientes - *green*. Esta selección puede realizar de forma simple elijiendolos al azar, o de forma más compleja, basada en propiedades del perfil del usuario, usuarios externos vs interos, etc. A medida que se gana más confianza con el nuevo despliegue, más usuarios son dirijidos a la nueva versión del modelo hasta que finalmente el 100% de los usuarios es direccionado al nuevo modelo y su versión anterior permanece inactiva. En este punto, podemos decomisar la infraestructura asociado con el modelo anterior.
 
@@ -49,6 +60,14 @@ A/B testing
 Similar a `Blue/Green`_ , la nueva versión del modelo se despliega en un ambiente lo más similar al productivo posible y las pruebas de validación se realizan sobre el mismo. Sin embargo, en A/B testing, las solicitudes de ejecución del modelo se distribuyen entre los dos ambientes y modelos. Es decir, algunas solicitudes son enviadas al `modelo A` y otras solicitudes al `modelo B`. Cada solicitud es procesada o por uno o por el otro, pero nunca por ambos. Los resultados de ambos modelos son registrados via logging para el análisis.
 
 .. warning:: A primera vista, esta técnica puede parecer similar a `Canary releases`_ debido a similaridades técnicas de implementación. Sin embargo, no deben confundirse. Mientras que *Canary releases* es una técnica para detectar problemas al implementar modelos de forma gradual utilizando un *canario*, A/B testing es una técnica para probar una hipótesis utilizando variaciones de un modelo (o multiples modelos). Incluso, dependiendo del tráfico, esperariamos poder concluir con un despluegue de tipo canario en horas, mientras que para una prueba A/B deberiamos de esperar hasta que nuestra prueba alcance significancia estadística.
+
+Interleaving
+------------
+Interleaving es una técnica que puede aplicarse tanto para despliegues de tipo `Blue/Green`_, `Canary releases`_ o `A/B testing`_ y aplica en aquellos casos donde los modelos no predicen un único valor sino que una secuencia de valores con un `rank` asociado, como puede ser los sistemas de recomendación. Interleaving es una técnica que mezcla las recomendaciones de varios sistemas de recomendación (modelos) con el objetivo de limitar el risgo de obtener recomendaciones irrelevantes. Basicamente, consiste de 2 pasos:
+ #. Combinar las recomendaciones de 2 o más sistemas de recomendación.
+ #. Interpretar las interacciones de las recomendaciones propuestas.
+
+.. note:: Para mayor información sobre esta técnica puede revisar: K. Hofmann, L. Li, and F. Radlinski. Online Evaluation for Information Retrieval. Foundations and Trends® in Information Retrieval, 10(1):1–117, 2016
 
 .. toctree::
     :maxdepth: 2

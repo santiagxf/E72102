@@ -31,7 +31,8 @@ author = 'Facundo Santiago'
 extensions = [
     'myst_parser',
     'sphinx_rtd_theme',
-    'sphinx.ext.imgmath',
+    'sphinx.ext.todo',
+    'sphinx.ext.mathjax',
     'nbsphinx'
 ]
 

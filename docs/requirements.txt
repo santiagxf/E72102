@@ -7,3 +7,5 @@ numpy
 pandas
 scikit-learn
 lightgbm
+bootstrapped
+statsmodels

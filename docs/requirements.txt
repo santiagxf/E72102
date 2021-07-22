@@ -1,5 +1,5 @@
 myst-parser
-nbsphinx
+nbsphinx==4.0.2
 furo
 ipykernel
 matplotlib

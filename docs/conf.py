@@ -70,6 +70,8 @@ html_static_path = ['_static']
 #        ],
 #    }
 
+myst_update_mathjax = False
+
 nbsphinx_prolog = """
 .. image:: /_images/colab.png
   :alt: Abrir en Google Colab

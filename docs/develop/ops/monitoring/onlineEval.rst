@@ -3,7 +3,7 @@
 ===================
 Evaluación en linea
 ===================
-Al igual que evaluamos la performance de nuestro modelo durante su desarrollo y validación para estimar su performance, una vez que un modelo de aprendizaje automático alcanza producción, deberemos de instrumentar mecanismos que nos aseguren de que dicha performance que estimamos anteriormente continua siendo la performance real que la organización obtiene como parte del proceso de negocio en el que el modelo está involucrado. Este procedimiento se lo conoce como **evaluación en linea**. La evaluación en linea no solo es útil para estimar la performance del modelo pero además para compararla con cualquier procedimiento anterior que el modelo está remplazando.
+De la misma forma que evaluamos la performance de nuestro modelo durante su desarrollo y validación para estimar su performance, una vez que un modelo de aprendizaje automático alcanza producción, deberemos de instrumentar mecanismos que nos aseguren de que dicha performance que estimamos anteriormente continua siendo la performance real que la organización obtiene como parte del proceso de negocio en el que el modelo está involucrado. Este procedimiento se lo conoce como **evaluación en linea**. La evaluación en linea no solo es útil para estimar la performance del modelo pero además para compararla con cualquier procedimiento anterior que el modelo está remplazando.
 
 Valores verdadedores o etiquetas
 --------------------------------

@@ -63,7 +63,7 @@ Aunque calcular este costo resulte muy importante, es crítico entender que su q
 
 Failure Modes and Effects Analysis (FMEA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-También conocido como *potential failure modes and effect analysis*, se trata de un procedimiento para identificar todas las posibles fallas que se pueden dar durante un proceso de diseño, desarrollo o implementación de un producto o servicio [3]_. Aqui:
+También conocido como *potential failure modes and effect analysis*, se trata de un procedimiento para identificar todas las posibles fallas que se pueden dar durante un proceso de diseño, desarrollo o implementación de un producto o servicio [3]_ [4]_. Aqui:
 
 :Failure modes,: significa las formas o modos en las que algo puede salir mal - es decir, que se puede dar una falla. Failures o *fallas* son cualquier tipo de error o defecto que afectan a un cliente, y que pueden ser potenciales o reales. Note que una falla puede tener multiples modos.
 :Effect analysis,: hace referencia al estudio de las consecuencias de tales fallas.
@@ -123,3 +123,4 @@ Referencias:
 .. [1] `Stress Test Model Management — Bank of England <https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/letter/2017/stress-test-model-management.pdf?la=en&hash=0B16C05C121B299D8FC3ACB600D52FF9D8A3154A>`_
 .. [2] `PRA’s 4 Key Principles of Model Risk Management <https://www.sas.com/content/dam/SAS/en_gb/doc/whitepaper1/4-key-principles-model-risk-management.pdf>`_
 .. [3] `Failure mode and effects analysis (FMEA) - ASQ <https://asq.org/quality-resources/fmea>`_
+.. [4] `Manufacturing Technology Committee – Risk Management Working Group. Failure Modes and Effects Analysis Guide <https://pqri.org/wp-content/uploads/2015/08/pdf/FMEA_Training_Guide.pdf>`_

@@ -44,8 +44,8 @@ Conformal predictions
 ^^^^^^^^^^^^^^^^^^^^^
 TODO
 
-Aserción de métricas
---------------------
+Aseguramiento de métricas
+-------------------------
 Sobre los sets de datos de validación se colectan métricas, tanto estadísticas como de ejecución:
  - Estadisticas:
    - Accuracy

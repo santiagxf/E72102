@@ -22,6 +22,8 @@ Cuando tenemos acceso a los valores verdaderos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 En los casos donde tenemos acceso a los valores verdaderos, podemos calcular cualquiera de las métricas que se definieron para nuestro modelo y tomar una decisión bansandonos en una comparativa de los resultados. Con el fin de asegurarnos tener la suficiente evidencia (datos) para sostener cualquier de los resultados que estamos observando, en general se utilizan intervalos de confianza para estimar las métricas de interes. La utilización de Intervalos de confianza para reportar este tipo de valores es alentado. [5]_
 
+.. _rst_confidence_intervals:
+
 Intervalos de confianza (CI) [6]_
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Los intervalos de confianza proveen un rango de valores en donde es probable encontrar el valor verdadero de la métrica. En general podemos calcular el intervalo de confianza de una métrica utilizando:

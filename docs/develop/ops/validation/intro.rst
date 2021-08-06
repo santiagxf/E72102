@@ -29,4 +29,3 @@ Industrias reguladas puede requerir que el equipo que realiza la validación del
     Control de calidad <testing>
     Reproducibilidad y auditabilidad <auditing>
     Seguridad <security>
-    Vinculación de datos en inferencia <augmentation>

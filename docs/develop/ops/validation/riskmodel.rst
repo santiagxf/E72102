@@ -10,15 +10,15 @@ Un riesgo es una perdida potencial en la que una organización podría incurrir 
 
 Responsabilidades de la alta gerencia [2]_
 ------------------------------------------
-Es responsabilidad de la gerencia de datos el establecer un framework para la administración del riesgo de los modelos de aprendizaje automático. Tal framework debe estar documentado de forma apropiada. Sin embargo, son los propietarios del producto responsable finalmente por la ejecución y mantenimiento de este framwork asi como también de la designación de roles y responsabilidades. Los propietarios deben poder entender las capacidades del modelo, sus limitaciones y el potencial impacto relacionado con la incertidumbre del modelo que es quantificada mediante pruebas de calidad. Esto hace extremadamente importante que los resultados de la fase de validación estén en un formato que la gerencia pueda interpretar. Vea las secciones :ref:`rst_auditability` e :doc:`../interpret/intro` para mas detalle como asegurar que la alta gerencia pueda interpretar los resultados de los modelos.
+Es responsabilidad de la gerencia de datos el establecer un marco de trabajo para la administración del riesgo de los modelos de aprendizaje automático. Tal marco debe estar documentado de forma apropiada. Sin embargo, finalmente son los propietarios del producto responsables por la ejecución y mantenimiento de este marco de trabajo asi como también de la designación de roles y responsabilidades. Los propietarios deben poder entender las capacidades del modelo, sus limitaciones y el potencial impacto relacionado con la incertidumbre del modelo, la cual debería ser quantificada mediante pruebas de calidad. Esto hace extremadamente importante que los resultados de la fase de validación estén en un formato que la gerencia pueda interpretar. Vea las secciones :ref:`rst_auditability` e :doc:`../interpret/intro` para más detalle cómo asegurar que la alta gerencia pueda interpretar los resultados de los modelos.
 
 Técnicas para la estimación del riesgo
 --------------------------------------
-No existe una forma estandar para estimar el riesgo de un modelo de aprendizaje automático. Cada organización puede tener un modelo de riesgo distinto que incluso esté afectado por el dominio en el que opera o la industria en los casos en los que esté regulada. 
+No existe una forma estandar para estimar el riesgo de un modelo de aprendizaje automático. Cada organización puede tener un modelo de riesgo distinto que incluso esté afectado por el dominio o, en los casos en los que esté regulada, la industria en el que la misma opera. 
 
-Las siguientes consideraciones deben ser tenidas en cuenta en el modelo de riesgos:
- - Errores de programación, errores en el diseño, entrenamiento o evaluación del modelo.
- - Errores de programación en el post-procesamiento de la salida del modelo.
+Un modelo de riesgos debería de considerar:
+ - Errores de programación, en el diseño, de entrenamiento o en la evaluación del modelo.
+ - Errores de programación en las rutinas de post-procesamiento de la salida del modelo.
  - Incompatibilidad entre el modelo y su entorno de ejecución.
  - Mala calidad en los datos de entrenamiento.
  - Mala representación de los datos de producción en los datos de entrenamiento.
@@ -35,11 +35,11 @@ Los riesgos deben ser amplificados cuando existe:
  - Complejas interacciones entre diferentes modelos: Probablemente son una de las condiciones más complejas a la hora de evaluar el riesgo. En algunos casos las interacciones pueden ser directas y evidentes, como ser que la salida de un modelo es consumida como un predictor de otro modelo. Incluso podria ser que la salida de un modelo representa los datos de entrenamiento de otro modelo. Sin embargo, este podría no ser siempre el caso y tener modelos que interactuan entre si en procesos de negocio donde incluso la ineración sucede a traves de personas.
 
 
-Dos ejemplos de modelos de riesgos son Matriz de costos y Failure Modes and Effects Analysis (FMEA).
+Analizaremos aquí dos ejemplos de modelos de riesgos, que son Matriz de costos y Failure Modes and Effects Analysis (FMEA).
 
 Matríz de costos
 ^^^^^^^^^^^^^^^^
-La matríz de costos permite a los equipos de proyecto evaluar el costo promedio de operar un modelo de aprendizaje automático comparado contra su contrapartida ideal (un modelo perfecto - aunque imposible). Esta matriz ofrece adicionalmente una forma de diferenciar los diferentes tipos de errores que un modelo puede cometer. 
+La matríz de costos permite a los equipos de proyecto evaluar el costo promedio de operar un modelo de aprendizaje automático comparado contra su contraparte ideal (un modelo perfecto - aunque imposible). Esta matriz ofrece adicionalmente una forma de diferenciar los distintos tipos de errores que un modelo puede cometer. 
 
 Ejemplo
 *******
@@ -68,14 +68,14 @@ También conocido como *potential failure modes and effect analysis*, se trata d
 :Failure modes,: significa las formas o modos en las que algo puede salir mal - es decir, que se puede dar una falla. Failures o *fallas* son cualquier tipo de error o defecto que afectan a un cliente, y que pueden ser potenciales o reales. Note que una falla puede tener multiples modos.
 :Effect analysis,: hace referencia al estudio de las consecuencias de tales fallas.
 
-Las fallas están priorizadas según que tan severas son sus consecuencias, que tan frecuentemente pueden ocurrir y que tan fáciles son de detectar. El proposito de FMEA es el de tomar acciones que eliminen o reduzcan estas fallas, empezando por aquellas que tienen prioridades más altas.
+Las fallas están priorizadas según qué tan severas son sus consecuencias, qué tan frecuentemente pueden ocurrir y qué tan fáciles son de detectar. El proposito de FMEA es el de tomar acciones que eliminen o reduzcan estas fallas, empezando por aquellas que tienen prioridades más altas.
 
 .. important:: Si bien proponemos este método para la fase de validación, es importante entender que FMEA debe también ser utilizado durante la fase de diseño para prevenir fallas. Idealmente, FMEA comienza en las etapas más tempranas del desarrollo y continua a lo largo de todo el proceso de desarrollo del modelo de aprendizaje automático.
 
-FMEA es un método que puede ser aplicado a cualquier disciplina, pero en el ámbito de aprendizaje automático, en general significa identificar que tipo de errores puede cometer el modelo y cuales son sus consecuencias. Una vez identificados, se deben cuantificar 3 factores:
+FMEA es un método que puede ser aplicado a cualquier disciplina, pero en el ámbito de aprendizaje automático, en general significa identificar qué tipo de errores puede cometer el modelo y cuáles son sus consecuencias. Una vez identificados, se deben cuantificar 3 factores:
 
 - **Severidad (SEV):** La severidad de la falla, medida desde la perspectiva del cliente. Podríamos preguntarnos *¿Qué tan significativo es el impacto para los clientes si la falla ocurre?*
-- **Ocurrencia (OCC):** La frecuencia con la cual la falla (real o potencial) puede o podría ocurrir. Podríamos preguntarnos *¿Qué tan frecuente es que ocurra esta falla debido a este modo?*
+- **Ocurrencia (OCC):** La frecuencia con la cual la falla (real o potencial) puede o podría ocurrir. Podríamos preguntarnos *¿Qué tan frecuente ocurre o ocurriría esta falla debido a este modo?*
 - **Detection (DET):** La probabilidad de que detectemos la falla antes de que afecte a algún cliente. Podríamos preguntarnos *¿Qué tan probable es que el sistema detecte a falla antes de que ocurra o cuando se hace presente? ¿Qué tan detectable es este modo?*
 
 .. note:: FMEA es una técnica muy amplia y está fuera del alcance de este curso. Para un detalle más profundo sobre la misma puede revisar `Guide to Failure Mode and Effect Analysis – FMEA en el sitio de Juran <https://www.juran.com/blog/guide-to-failure-mode-and-effect-analysis-fmea/>`_.

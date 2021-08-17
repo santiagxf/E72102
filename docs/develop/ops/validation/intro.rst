@@ -27,5 +27,6 @@ Industrias reguladas puede requerir que el equipo que realiza la validación del
     
     Modelo de riesgo <riskmodel>
     Control de calidad <testing>
+    Robustes <robustness>
     Reproducibilidad y auditabilidad <auditing>
     Seguridad <security>

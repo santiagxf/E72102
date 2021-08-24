@@ -2,9 +2,11 @@
 Entendimiento
 =============
 
-    "If you stop looking up and out, what does it says about you? Whatever it says it's not good."
+    "The naive simplicity of assuming that understanding meaning is easy, that there is one right definition. The relationship between objects and their essential meanings is far more problematic."
 
-    -- Bill Nye, American Engineer, The Planetary Society's CEO.
+    -- Being and Nothingness essay, Jean-Paul Sartre.
+
+Durante el análisis de datos, el analista intenta descubrir el significando de los datos, el cual lo lleva a determinar cual es su *valor de negocio*. Sin embargo, en la mayoria de los casos, los datos tiene **múltiples valoraciones** para el negocio.
 
 .. toctree::
     :maxdepth: 2

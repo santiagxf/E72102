@@ -11,5 +11,5 @@ Modelado
    :caption: En esta sección
    :hidden:
 
-   Entrenamiento del modelo <training>
+   Entrenamiento del modelo <training/intro>
    Selección del modelo <selection/intro>

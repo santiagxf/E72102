@@ -2,14 +2,14 @@ Implementación de modelos de aprendizaje automático
 ===================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Arquitecturas de datos
 
    architecture/arch/intro
    architecture/governance/intro
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Ciclo de desarrollo
 
    Introducción <develop/intro>
@@ -19,7 +19,7 @@ Implementación de modelos de aprendizaje automático
    Operacionalización <develop/ops/intro>
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Proyectos basados en datos
 
    Introducción <projects/intro>

@@ -79,9 +79,12 @@ Existen numerosas técnicas para detectar desviaciones de datos. En general todo
 
 Una vez que detectamos la desviación, el siguiente paso es el :ref:`rst_model_retrain` con un conjunto de datos actualizado.
 
+Ejemplos
+--------
+
 .. toctree::
     :maxdepth: 1
-    :caption: Ejemplos
+    :titlesonly:
 
     code/domain_classifier.ipynb
     code/wasserstein.ipynb

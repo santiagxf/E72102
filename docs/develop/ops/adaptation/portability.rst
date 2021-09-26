@@ -51,3 +51,11 @@ Luego podemos convertir el modelo a ONNX y persistirlo::
 
    onnx_model = onnxmltools.convert_keras(model)
    onnxmltools.utils.save_model(onnx_model, 'ejemplo.onnx')
+
+
+Persistir otros componentes
+---------------------------
+
+El modelo propiamente dicho es un componente central de nuestra implementación de aprendizaje automático, pero no debemos de perder de vista otros componentes que hacen posible que el modelo funcione correctamente. Por ejemplo, si durante la fase de :doc:`../../prep/engineering` se aplicaron transformaciones o normalizaciones de predictores, probablemente debamos de persistirlas para asegurarnos que las mismas se aplican de forma correcta durante inferencia.
+
+.. note:: La forma en la que estas transformaciones se persiste dependerá del lenguaje de programación y de la librería que estemos utilizando.

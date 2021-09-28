@@ -7,7 +7,7 @@ Entendimiento
     -- Being and Nothingness essay, Jean-Paul Sartre.
 
 
-Según una encuesta realizada por Harvard Business Review [1]_, la mayoria de las organizaciones creen ser buenas en la resolución de problemas. Sin embargo, el 85% dice tener dificultad para **identificar qué problema resolver**. Es más, el 87% afirma que esta dificultad y su consecuente "solución al problema incorrecto* les ha signficado grandes costos. Entonces: *¿realmente estamos solucionando el problema correcto? ¿estamos formulando el problema de la forma correcta?*.
+Según una encuesta realizada por Harvard Business Review [1]_, la mayoria de las organizaciones creen ser buenas en la resolución de problemas. Sin embargo, el 85% dice tener dificultad para **identificar qué problema resolver**. Es más, el 87% afirma que esta dificultad y su consecuente "solución al problema incorrecto" les ha signficado grandes costos. Entonces: *¿realmente estamos solucionando el problema correcto? ¿estamos formulando el problema de la forma correcta?*.
 
 Claro está que de nada nos sirve tener un modelo de aprendizaje automático que tiene una precisión del 99% si en realidad sus pedicciones no contribuyen a reducir el problema. Es más, cuando esto sucede nos deberíamos preguntar *¿sigue el problema sin resolver o estamos creando nuevos problemas?*. Cuando trabajamos con modelos que buscan aprender a partir de la experiencia este punto se vuelve más crítico. Durante el análisis de datos, el analista intenta descubrir el significando de los datos, el cual lo lleva a determinar cual es su *valor de negocio*. Sin embargo, en la mayoria de los casos, los datos tiene **múltiples valoraciones** para el negocio.
 

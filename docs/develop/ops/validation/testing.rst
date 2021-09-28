@@ -92,32 +92,9 @@ Sobre los sets de datos de validación se colectan métricas, tanto estadística
 
 Para cada una de estas métricas se deben diseñar pruebas o tests que deberán fallar cuando los valores están fuera de los rangos aceptados. Por ejemplo, un test podría fallar si *Accuracy* está por debajo del 85%, o si hay un 5% de inferencias que tardan más de 300 milisegundos en ejecutarse. Adicionalmente estas métricas son comparadas con la versión anterior del modelo (si hubiera una) para constatar que la performance del mismo no ha sido dañada en alguna dimensión.
 
-.. note:: En muchos casos, todas estas métricas son recolectadas para el conjunto de datos de validación en su totalidad como también para diferentes cortes (cohorte) de datos donde las instancias tienen atributos protegidos. Vea `Análisis de errores`_ para más detalle.
+.. note:: En muchos casos, todas estas métricas son recolectadas para el conjunto de datos de validación en su totalidad como también para diferentes cortes (cohorte) de datos donde las instancias tienen atributos protegidos. Vea :ref:`rst_error_analysis` para más detalle.
 
 En general, estas métricas suelen ser estimadas utilizando mecanismos robustos ya sea mediante validación cruzada o utilizando :ref:`rst_confidence_intervals`.
-
-Análisis de errores
--------------------
-La práctica de analisis de errores trata de identificar cómo nuestro modelo comete los errores y cómo se distribuyen esos errores dentro del conjunto de datos y en particular en algunos subconjuntos con determinados atributos. En muchos casos, es importante diseñar tests que dividan el conjunto de datos en subpoblaciones o *slices* basandose en atributos protegidos (los cuales prodrían o no ser predictores utilizados por el modelo). Esta técnica también suele utilizarse para asegurar que nuestro modelo sea justo (*fairness*), un procedimiento mandatorio para cualquier modelo que intervenga con datos de personas ya que podría haber requerimientos de negocio, regulatorios y legales que penalizen a la organización por no realizarlo. Por ejemplo, podríamos preguntarnos "¿Cúal es la performance de nuestro modelo de reconocimiento de voz cuando el interlocutor tiene un acento determinado?".
-
-Hacer este tipo de preguntas llevan a nuestro análisis de performance mucho mas lejos que cuando miramos simplemente una métrica en particular como la presición o el coeficiente de determinación. 
-
-Tomarse el tiempo para entender cómo y porqué nuestro modelo comete errores tiene numerosos beneficios incluyendo:
- - Puede ayudarnos a identificar zonas donde no tenemos suficiente cantidad de datos. Por ejemplo, si nuestro modelo comete muchos errores clasificando frutas pero no clasificando animales, entonces podríamos querer aumentar el conjunto de datos con más imágenes de frutas.
- - Si sabemos que nuestro modelo tiene especiales complicaciones manejando determinado tipo de casos, podríamos decidir imponer algunas restricciones en su uso para prevenir fallas más gráves en los procesos de negocio que lo utilizan. Vea :doc:`riskmodel`. 
- - Puede ayudarnos a identificar problemas fundamentales en nuestro modelo que nos hagan replantearnos si el modelo debería llegar a producción. Por ejemplo, si nuestro modelo comete determinados errores con determinado género de las personas, quizás deberíamos evaluar no utilizarlo.
-
-
-Ejemplos
-^^^^^^^^
-
-.. toctree::
-  :maxdepth: 1
-  :titlesonly:
-
-  code/error_analysis.ipynb
-  code/what_if.ipynb
-  code/fairlearn.ipynb
 
 Verificación en producción
 --------------------------

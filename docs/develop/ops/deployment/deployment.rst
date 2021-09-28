@@ -10,10 +10,13 @@ En algunos casos estos dos procesos se dan al unísono, pero no necesariamente. 
 
 A contuación veremos varias técnicas para controlar tanto el proceso de despliegue y el proceso de versiones o lanzamientos.
 
+Despliegues controlados
+-----------------------
+
 .. _rst_deployment_bg:
 
 Blue/Green
-----------
+^^^^^^^^^^
 Uno de los desafios más grandes a la hora de realizar un despliegue es el "corte" entre la versión antigua y la nueva versión del modelo. En general, uno necesita que este pasaje se realice rápido para evitar tener interrupciones en los servicios que el modelo provee. Sin embargo, no queremos cambiar de modelo hasta estar seguros de que funciona correctamente en el ambiente productivo. El despliegue de tipo Blue/Green (o a veces conocido como black/red) trata de atacar esta problemática al proveer 2 ambientes productivos identicos (o tan identicos como sea posible). El nuevo modelo entonces es desplegado en un ambiente identico a producción al que llamamos **green**, mientras que el modelo original continua funcionando en el ambiente **blue**. Las fases finales de validación y control se realizan en este ambiente *green*. Una vez que nos aseguramos que el modelo funciona como esperamos, se realiza un intercambio de ambientes, es decir **green** toma el lugar de **blue** y viceversa. Esto se realiza con una simple configuración de ruteo de red para que todas las solicitudes ahora sean contestadas por el otro ambiente.
 
 Este tipo de despliegue también tiene la ventaja de que permite una rápida *vuelta atrás* o **roll-back** ya que si algo no funciona como esperamos, podemos a volver a hacer el cambio. Por supuerto que, de ser este el caso y necesitar deshacer la operación, se habrán perdido todas las solicitudes que llegaron durante el periodo en donde el ambiente *green* estuvo respondiendo solicitudes. Estos casos pueden ser resueltos implementando algo similar a :ref:`rst_shadow_testing` que veremos más adelante.
@@ -23,7 +26,7 @@ Una vez que el despliegue finaliza y es aceptado, el ambiente *green* pasa a lla
 .. _rst_progressive_rollouts:
 
 Progressive Rollouts
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: _images/rings.png
    :alt: Despliegues progresivos utilizando rings o anillos
@@ -34,7 +37,7 @@ Progressive Rollouts
 .. _rst_canary_releases:
 
 Canary releases
----------------
+^^^^^^^^^^^^^^^
 Versiones canarias, o *canary releases*, es una técnica para reducir el riesgo asociado al introducir una nueva versión del modelo en producción. Se basa en la idea de introducir los cambios a un pequeño subset de usuarios antes de desplegar la nueva versión por completo y habilitarla para todos los usuarios. Su nombre está relacionado con los canarios que se utilizaban en las minas en donde, si el canario *dejaba de cantar* significaba que había problemas.
 
 Similar a `Blue/Green`_ , la nueva versión del modelo se despliega en un ambiente lo más similar al productivo posible y las pruebas de validación se realizan sobre el mismo. Una vez que estás pruebas se completaron, un pequeño grupo de usuarios es redireccionado para que utilice el nuevo ambientes - *green*. Esta selección puede realizar de forma simple elijiendolos al azar, o de forma más compleja, basada en propiedades del perfil del usuario, usuarios externos vs interos, etc. A medida que se gana más confianza con el nuevo despliegue, más usuarios son dirijidos a la nueva versión del modelo hasta que finalmente el 100% de los usuarios es direccionado al nuevo modelo y su versión anterior permanece inactiva. En este punto, podemos decomisar la infraestructura asociado con el modelo anterior.

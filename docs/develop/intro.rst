@@ -2,7 +2,7 @@
 Ciclo de desarrollo de modelos de aprendizaje automático
 ========================================================
 
-El modelo de aprendizaje automático propiamente dicho es tan solo una pequeña parte dentro de un proyecto que está basado en aprendizaje automático. Si incluso mantenieramos lo mínimo indispensable, encontrariamos que necesitaríamos datos sobre los cuales entrenar nuestro modelo, infraestructura donde ejecutarlo y alguna forma de consumirlo.
+El modelo propiamente dicho es tan solo una pequeña parte dentro de un proyecto que está basado en aprendizaje automático. Si incluso mantuvieramos los componentes a lo mínimo e indispensable, encontraríamos que necesitamos al menos datos sobre los cuales entrenar nuestro modelo, infraestructura donde ejecutarlo y alguna forma de consumirlo.
 
 .. figure:: _images/infraestructure.png
   :alt: Infraestructura relacionado con Machine Learning
@@ -11,7 +11,7 @@ El modelo de aprendizaje automático propiamente dicho es tan solo una pequeña 
 
 Proceso
 -------
-El proceso de desarrollo es un proceso iterativo, y es importante entender que en general no entraremos en este proceso *una vez*, sino que lo haremos **multiples veces**. Desarrollar y desplegar nuevas versiones de los modelos de aprendizaje automático es central para implementar `mejora continua <https://es.wikipedia.org/wiki/Proceso_de_mejora_continua>`_. Existen varias razones para iterar y desplegar nuevas versiones de los modelos incluyendo su degradación de performance en el tiempo, cambios en los esquemas de los datos, etc. En algunos casos puede ser que las consideraciones de negocio hayan cambiado, que el proceso de recolección de datos haya mejorado o que simplemente nuestros científicos de datos encontraron una mejor forma que resuelve el problema.
+El proceso de desarrollo de un modelo es un proceso iterativo, y es importante entender que en general entraremos en este proceso no solo *una vez*, sino que lo haremos **multiples veces**. Desarrollar y desplegar nuevas versiones de los modelos de aprendizaje automático es central para implementar `mejora continua <https://es.wikipedia.org/wiki/Proceso_de_mejora_continua>`_. Existen varias razones para iterar y desplegar nuevas versiones de los modelos incluyendo su degradación de performance en el tiempo, cambios en los esquemas de los datos, etc. En algunos casos puede ser que las consideraciones de negocio hayan cambiado, que el proceso de recolección de datos haya mejorado o que simplemente nuestros científicos/analístas de datos encontraron una mejor forma de resolver el problema.
 
 .. figure:: _images/ml_process.png
    :alt: Proceso de desarrollo de modelos de aprendizaje automático

@@ -4,10 +4,11 @@ Evaluación offline
 Origenes de variabilidad
 ------------------------
 Una buena metodología que determine si dos algorimtos de aprendizaje automático son diferentes o no debe poder estimar el poder predictivo de cada uno de ellos a pesar de los diferentes orígenes de variabilidad que pueden existir.
- - **Variabilidad en el conjunto de datos de evaluación:** Hace referencia a la variación aleatoria en la selección del conjunto de datos de validación en donde evaluamos nuestros modelos.
- - **Variabilidad en el conjunto de datos de entrenamiento:** Hace referencia a la variación aleatoria en la selección del conjnuto de datos de entrenamiento con los que entrenamos nuestros modelos. Algoritmos que son especialmente sencibles a este tipo de variabilidad se los suele llamar inestables (Breiman 1994, 1996).
- - **Variabilidad interna del algoritmo de aprendizaje:** Por ejemplo, si consideramos algorimos como la redes neuronales, numerosos parámetros, como ser las pesos con los que se inicializa la red, son determinantes para asegurar la correcta convergencia del modelo. Estos parámetros a menu son inicializados con determinadas distribuciones probabilísticas. 
- - **Variabilidad por el error inherente de clasificación:** Hace referencia a la probabilidad de que las étiquetas que tenemos disponibles en nuestros conjuntos de datos no sean efectivamente correctas. Por lo tanto, si nuestros valores verdaderos tienen una probabilidad de error `e`, entonces ningún algoritmo de aprendizaje automático podrá tener una performance mejor que `e`.
+ 
+- **Variabilidad en el conjunto de datos de evaluación:** Hace referencia a la variación aleatoria en la selección del conjunto de datos de validación en donde evaluamos nuestros modelos.
+- **Variabilidad en el conjunto de datos de entrenamiento:** Hace referencia a la variación aleatoria en la selección del conjnuto de datos de entrenamiento con los que entrenamos nuestros modelos. Algoritmos que son especialmente sencibles a este tipo de variabilidad se los suele llamar inestables (Breiman 1994, 1996).
+- **Variabilidad interna del algoritmo de aprendizaje:** Por ejemplo, si consideramos algorimos como la redes neuronales, numerosos parámetros, como ser las pesos con los que se inicializa la red, son determinantes para asegurar la correcta convergencia del modelo. Estos parámetros a menu son inicializados con determinadas distribuciones probabilísticas. 
+- **Variabilidad por el error inherente de clasificación:** Hace referencia a la probabilidad de que las étiquetas que tenemos disponibles en nuestros conjuntos de datos no sean efectivamente correctas. Por lo tanto, si nuestros valores verdaderos tienen una probabilidad de error `e`, entonces ningún algoritmo de aprendizaje automático podrá tener una performance mejor que `e`.
 
 Para asegurarnos que nuestras comparaciones son confiables, una prueba estadística debe ser realizada que tenga en cuenta todos estos origenes de variaciones. 
 

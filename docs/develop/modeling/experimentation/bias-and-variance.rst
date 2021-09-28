@@ -2,6 +2,9 @@
 Sesgo-varianza
 ==============
 
+Enfoque clásico
+---------------
+
 El dilema o problema sesgo-varianza es el conflicto al tratar de minimizar simultáneamente dos fuentes de error:
 
 :El sesgo (bias): Es el error que se genera por suposiciones erróneas o inexactas en el algoritmo de aprendizaje. Un sesgo alto puede hacer que el modelo pierda detalles relevantes entre los predictores y la variable que queremos predecir (underfitting)
@@ -13,6 +16,9 @@ El dilema o problema sesgo-varianza es el conflicto al tratar de minimizar simul
    :width: 500
 
    *Sesgo-varianza*
+
+Enfoque moderno
+---------------
 
 Utilizando un enfoque más moderno o inspirado en las técnicas de aprendizaje profundo, dejamos de hablar de la tensión entre el sesgo y la varianza para hablar en su lugar de la relación entre la complejidad del modelo y el error, detectando las situaciones:
 

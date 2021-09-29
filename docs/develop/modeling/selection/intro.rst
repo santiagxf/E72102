@@ -74,10 +74,10 @@ Ejemplos
   code/fairlearn.ipynb
 
 
-Estimación de la métrica elegida
---------------------------------
+Comparando multiples modelos
+----------------------------
 
-Estimar la métrica elegida para un determinado modelo puede ser un poco más complejo en la práctica que simplemente calcular la misma sobre el conjunto de datos de validación. En muchos casos, necesitamos estimar que tan seguros estamos de que la métrica efectivamente tiene ese valor, es deci, estimar la incertidumbre. En otros casos, nuestros modelos requieren interactuar con el usuario para verificar si la predicción del mismo fué correcta o no. Esto es el caso de un modelo de recomendaciones por ejemplo. Cómo instrumentar estas evaluaciones depende del problema, pero revisaremos varios ejemplos en :doc:`offlineEval`
+Estimar una métrica para un modelo particular puede realizarse utilizando las típicas técnicas de separación de :ref:`rst_training_datasets`. Sin embargo, comparar multiples modelos puede resultar un poco más complejo en la práctica que simplemente comparar la misma métrica sobre el conjunto de datos de validación. En muchos casos, necesitamos estimar que tan seguros estamos de que la métrica efectivamente tiene ese valor, es deci, estimar la incertidumbre. Revisaremos varios ejemplos en :doc:`offlineEval`
 
 
 .. toctree::

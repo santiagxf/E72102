@@ -16,6 +16,7 @@ Durante el :doc:`experimentation/intro` buscamos generar una arquitectura de un 
 
 Una vez que disponemos de un modelo o un conjunto de modelos candidatos, debemos de poder seleccionar si el modelo que obtuvimos es (1) mejor que el que teníamos anteriormente y/o (2) ofrece una mejora para la organización en el proceso de negocio que intenta atacar. Esto último requiere poder estimar la performance que el modelo tendrá en el mundo real. Esta métrica se la conoce como métrica de :doc:`selection/offlineEval`. Adicionalmente, esperaremos que nuestros modelos cometan errores, sin embargo, podemos estar interesado en detectar que tipo de errores comenten y así poder seleccionar el modelo que comente los errores menos dañinos para nuestro negocio. Todo este proceso lo revisaremos en la sección :doc:`selection/intro`
 
+.. _rst_training_datasets:
 
 Conjuntos de datos
 ------------------
@@ -55,13 +56,13 @@ Finalmente, el modelo resultante debe ser construido usando alguna de las siguie
 - Entrenar un nuevo modelo con todo el conjunto de datos.
 - Generar un voting ensamble con los K diferentes modelos.
 
-A pesar de que estas estrategias son válidas, requieren el entrenamiento de un nuevo modelo como resultado. Generalmente, la validación cruzada se utiliza durante la fase de entrenamiento, mientras que la evaluación y selección utiliza el método de hold-out.
+A pesar de que estas estrategias son válidas, requieren el entrenamiento de un nuevo modelo como resultado. Generalmente, la validación cruzada se utiliza durante la fase de entrenamiento, mientras que la evaluación y selección utiliza el método de hold-out. Esta técnica se la llama **hold-out cross validation**.
 
 .. figure:: ../_images/train_cross_holdout.png
-   :alt: Validación cruzada
+   :alt: Hold-out cross validation
    :align: center
 
-   Cross-validation y hold-out combinados
+   Hold-out cross validation
 
 
 

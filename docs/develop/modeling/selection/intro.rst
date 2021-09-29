@@ -48,20 +48,6 @@ Diferentes métricas de performance responden a diferentes tipos de modelos y su
    "Normalized Root Mean Squared Log Error", "Es el error logarítmico cuadrático medio dividido por el rango de la variable a predecir."
 
 
-Estimación de la métrica elegida
---------------------------------
-
-Estimar la métrica elegida para un determinado modelo puede ser un poco más complejo en la práctica que simplemente calcular la misma sobre el conjunto de datos de validación. En muchos casos, necesitamos estimar que tan seguros estamos de que la métrica efectivamente tiene ese valor, es deci, estimar la incertidumbre. En otros casos, nuestros modelos requieren interactuar con el usuario para verificar si la predicción del mismo fué correcta o no. Esto es el caso de un modelo de recomendaciones por ejemplo. Cómo instrumentar estas evaluaciones depende del problema, pero revisaremos varios ejemplos en :doc:`offlineEval`
-
-
-.. toctree::
-    :maxdepth: 1
-    :caption: En esta sección
-    :hidden:
- 
-    Evaluación offline <offlineEval>
-
-
 .. _rst_error_analysis:
 
 Análisis de errores
@@ -76,7 +62,6 @@ Tomarse el tiempo para entender cómo y porqué nuestro modelo comete errores ti
  - Si sabemos que nuestro modelo tiene especiales complicaciones manejando determinado tipo de casos, podríamos decidir imponer algunas restricciones en su uso para prevenir fallas más gráves en los procesos de negocio que lo utilizan. Vea :doc:`../../ops/validation/riskmodel`. 
  - Puede ayudarnos a identificar problemas fundamentales en nuestro modelo que nos hagan replantearnos si el modelo debería llegar a producción. Por ejemplo, si nuestro modelo comete determinados errores con determinado género de las personas, quizás deberíamos evaluar no utilizarlo.
 
-
 Ejemplos
 ^^^^^^^^
 
@@ -87,3 +72,17 @@ Ejemplos
   code/error_analysis.ipynb
   code/what_if.ipynb
   code/fairlearn.ipynb
+
+
+Estimación de la métrica elegida
+--------------------------------
+
+Estimar la métrica elegida para un determinado modelo puede ser un poco más complejo en la práctica que simplemente calcular la misma sobre el conjunto de datos de validación. En muchos casos, necesitamos estimar que tan seguros estamos de que la métrica efectivamente tiene ese valor, es deci, estimar la incertidumbre. En otros casos, nuestros modelos requieren interactuar con el usuario para verificar si la predicción del mismo fué correcta o no. Esto es el caso de un modelo de recomendaciones por ejemplo. Cómo instrumentar estas evaluaciones depende del problema, pero revisaremos varios ejemplos en :doc:`offlineEval`
+
+
+.. toctree::
+    :maxdepth: 1
+    :caption: En esta sección
+    :hidden:
+ 
+    Evaluación offline <offlineEval>

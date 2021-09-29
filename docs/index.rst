@@ -25,7 +25,6 @@ Implementación de modelos de aprendizaje automático
    Introducción <projects/intro>
    projects/agile/intro
    projects/mlops/intro
-   projects/teams/intro
 
 
 Indices and tables

@@ -18,8 +18,8 @@ Para asegurarnos que nuestras comparaciones son confiables, una prueba estadíst
 Técnicas
 --------
 
-Pruebas de diferencia o de no-inferioridad [1]_[2]_
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Pruebas de diferencia o de no-inferioridad [1]_ [2]_
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Tradicionalmente, las métricas son comparadas utilizando una prueba de hipótesis de diferencia (inequidad) o no-inferioridad. En una prueba de hipótesis de diferencia intentamos probar que existe una diferencia estadísticamente significativa entre las métricas. En una prueba de no-inferioridad, intentamos probar que un modelo de aprendizaje nuevo no es peor que el anterior.
 
 .. note:: Las pruebas de hipótesis de equidad o no-superioridad, aunque configuraciones válidas, no resultarán útiles en nuestro caso dado al `principio de refutabilidad <https://es.wikipedia.org/wiki/Falsabilidad>`_.

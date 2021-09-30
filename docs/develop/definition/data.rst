@@ -6,6 +6,15 @@ Adquisición de datos
 
 Una vez que tenemos el problema de negocio definido, una pregunta que nos podemos hacer es *¿Disponemos de los datos para resolver el problema?* O más aún *¿cuales son los datos que necesitaría para resolver el problema? ¿Qué calidad necesitamos que tengan?*. Estas preguntas no solo alcanzan al diseño del modelo sino que también a su puesta en producción: *¿Disponémos de los recursos para implementar los flujos de datos en producción? ¿Con que frecuencia necesitaré disponer de una nueva versión del conjunto de datos? ¿Cual es el costo total de manetener estos flujos de datos funcionando?*
 
+El proceso de adquisición de datos puede parecer sencillo a principio, pero en implementaciones más grandes o en organizaciones que utilizan técnicas de aprendizaje automático de forma prevasiva, pueden resultar similar al siguiente gráfico:
+
+.. figure:: ../_images/data_workflows.png
+   :alt: Flujo de datos en un proceso de aprendizaje automático.
+   :align: center
+   :width: 500
+
+   *Flujo de datos en un proceso de aprendizaje automático. Fuente:* `Data Platform for Machine Learning, Apple, 2019 <https://dl.acm.org/doi/pdf/10.1145/3299869.3314050>`_ 
+
 .. _rst_data_adquire_ingest_generate:
 
 Ingestar, adquirir o generar
@@ -52,9 +61,11 @@ Existen multiples diferencias entre diseñar una solución de software y diseña
 
 Conjunto de datos vs anotaciones
 --------------------------------
-En algunos casos, puede resultar útil diferencia entre *conjuntos de datos* y *conjuntos de anotaciones*. Los conjuntos de datos son colecciones de entidades, telemetría o cualquier información que será utilizada para entrenar nuestros modelos de aprendizaje automático. Los *conjuntos de anotaciones*, por el otro lado, son los valores de las etiquetas o incluso otras características que fueron extraidas de los mismos datos. Claramente las anotaciones siempre están asociados con un conjunto de datos, pero esta distinsión nos da una ventaja. En primer lugar, le permite a multiples proyectos y equipos etiquetar los datos de forma distinta. Aun más, dado que las anotaciones son información extra sobre las entidades, esta información puede evolucionar multiples veces sin necesidad de evolucionar el conjunto de datos. 
+En algunos casos, puede resultar útil diferencia entre *conjuntos de datos* y *conjuntos de anotaciones*. Los conjuntos de datos son colecciones de entidades, telemetría o cualquier información que será utilizada para entrenar nuestros modelos de aprendizaje automático. Los *conjuntos de anotaciones*, por el otro lado, son los valores de las etiquetas o incluso otras características que fueron extraidas de los mismos datos. Claramente las anotaciones siempre están asociados con un conjunto de datos, pero esta distinsión nos da una ventaja. En primer lugar, le permite a multiples proyectos y equipos etiquetar los datos de forma distinta. Más aun, dado que las anotaciones son información extra sobre las entidades, esta información puede evolucionar multiples veces sin necesidad de evolucionar el conjunto de datos. 
 
 .. note:: Esta distinción no siempre suele realizarse, y dependerá de la implementación que la organización haya realizado de la plataforma de analítica avanzada.
+
+Muchas veces esto puede ser incluso un requerimiento. La organización podría tener que auditar y controlar la evolución de algunos conjuntos de datos debido a regulaciones y cumplimiento. Al tener un solo conjunto de datos, las restricciones se imponen sobre el conjunto de datos independientemente de como cada equipo realiza las anotaciones.
 
 Versionamiento
 --------------

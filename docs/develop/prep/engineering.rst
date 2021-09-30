@@ -110,6 +110,18 @@ Almacenes de predictores (Feature stores)
 
 Los almacenes de predictores (Feature stores) son repositorios centralizados donde se almacenan todas las diferentes características asociadas con una organización o una vertical del negocio y cuyo objetivo es facilitar su reutilización. Por lo general, ofrecen la capacidad de consumir características de forma offline, es decir cuando se diseña el modelo, y online, es decir cuando el modelo está en ejecución, lo que asegura de que sean coherentes entre sí. Dado el tiempo que consume la ingeniería de predictores, estas implementaciones tienen un enorme potencial para aumentar la productividad de los cientificos de datos. 
 
+En general estos sistemas, tiene propiedades como:
+
+- Ofrecen un modelo conceptual para describir tanto características que cambian lentamente como aquellas que son altamente volátiles.
+- Mecanismos para la ingesta continua de información.
+- Permitir procesamiento del lado del servidor (como predictive push-down) para el filtrado y cálculo de agregaciones, asi como tambien procesamiento del lado del cliente utilizando streamming de datos.
+- Flexibilidad para manejar volumenes de datos grandes, como asi tambien conjuntos de datos de menor tamaño pero con un gran valumen de actualización.
+- Flexibilidad para administrar el versionamiento de los datos y control de cambios.
+- Una interfaz de acceso integrada con la mayoria de los frameworks de aprendizaje automático.
+- Manejo de versiones explícito para poder asegurar reproducibilidad en los experimentos.
+- Seguimiento del linaje de los datos asi como herramientas para explorarlo.
+
+Un ejemplo de este tipo de plataformas es `Databricks` o `Feast`.
 
 
 

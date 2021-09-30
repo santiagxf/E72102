@@ -4,6 +4,11 @@ Entrenamiento del modelo
 
 Durante el proceso de experimentación o entrenamiento del modelo, nuestro objetivo definir una arquitectura para el modelo de aprendizaje automático y estimar los parámetros que obtienen la mejor performance.
 
+Definición de una linea base
+----------------------------
+
+Establecer una línea base para nuestro modelo es una tarea que muchas veces se pasa por alto, pero es increiblemente útil a la hora de experimentar e iterar sobre diferentes propuestas de modelos. Basicamente esta tarea consiste en identificar cual es la performance base a la que podríamos aspirar de mínima. Esto en general puede realizarse investigando pobremas similares o como la competencia resuelve el problema. Para muchas tareas, podemos utilizar como línea base la performance a la que alcanza una persona resolviendo el problema. En cualquiera de los casos es importante tener este concepto en mente y cuantificarlo para luego poder determinar si, por ejemplo, un accuracy de 0.78 es bueno o malo.
+
 
 Definición de la arquitectura
 -----------------------------

@@ -4,7 +4,7 @@
 Adquisición de datos
 ====================
 
-Una vez que tenemos el problema de negocio definido, una pregunta que nos podemos hacer es *¿Disponemos de los datos para resolver el problema?* O más aún *¿cuales son los datos que necesitaría para resolver el problema? ¿Qué calidad necesitamos que tengan?*. Estas preguntas no solo alcanzan al diseño del modelo sino que también a su puesta en producción: *¿Disponémos de los recursos para implementar los flujos de datos en producción? ¿Con que frecuencia necesitaré disponer de una nueva versión del conjunto de datos? ¿Cual es el costo total de manetener estos flujos de datos funcionando?*
+Una vez que tenemos el problema de negocio definido, una pregunta que nos podemos hacer es *¿Disponemos de los datos para resolver el problema?* O más aún *¿cuales son los datos que necesitaría para resolver el problema? ¿Qué calidad necesitamos que tengan?*. Estas preguntas no solo alcanzan al diseño del modelo sino que también a su puesta en producción: *¿Disponémos de los recursos para implementar los flujos de datos en producción? ¿Con que frecuencia necesitaré disponer de una nueva versión del conjunto de datos? ¿Cual es el costo total de mantener estos flujos de datos funcionando?*
 
 El proceso de adquisición de datos puede parecer sencillo a principio, pero en implementaciones más grandes o en organizaciones que utilizan técnicas de aprendizaje automático de forma prevasiva, pueden resultar similar al siguiente gráfico:
 
@@ -69,6 +69,13 @@ Muchas veces esto puede ser incluso un requerimiento. La organización podría t
 
 Versionamiento
 --------------
-Herramientas como Git son ampliamente utilizadas a la hora de mantener un control de cambios en un repositorio de código. Sin embargo, git realiza comparaciones linea a linea, y por lo tanto no resulta apropiado para realizar versionamiento de conjuntos de datos. Sin embargo, es importante poder mantener una práctica de versionamiento de los conjuntos de datos lo cual nos permita que nuestros experimentos sean repetibles. Adicionalmente, esto puede ser un requerimiento de :doc:`../ops/validation/auditing`.
 
-Dependiendo de la infraestructura que tengamos disponible, podemos contar con herramientas que nos ayuden a implementar versionamiento de datos. Muchas de las plataformas de nube ofrecen características para implementar repositorios de datos con versionado de conjuntos de datos.
+Como mencionamos, los sistemas basados en aprendizaje automático son una combinación de datos y código:
+
+.. math::
+
+   Sistemas\; de\; AI = codigo + datos
+
+De igual forma que la ingeniería de software necesita versionar el código en las iteraciones para asegurar un control de cambios, en nuestros proyectos basados en datos deberemos de proveer los mísmos mecanismos para los datos.
+
+Herramientas como `Git <https://en.wikipedia.org/wiki/Git>`_ son ampliamente utilizadas a la hora de mantener un control de cambios en un repositorio de código y podría decirse que hoy es un estandar. Sin embargo, Git realiza comparaciones linea a linea para identificar los cambios en versiones, y por lo tanto no resulta apropiado para realizar versionamiento de conjuntos de datos y las organizaciones suelen descansar en mecanismos especificos dependiendo de la infraestructura disponible. Estos métodos pueden ir desde versionamientos manuales utilizando estructuras de carpetas, hasta técnologias avanzadas como `Delta Time Travel <https://databricks.com/blog/2019/02/04/introducing-delta-time-travel-for-large-scale-data-lakes.html>`_. Independientemente de lo que la organización tenga disponible, es importante poder mantener una práctica de versionamiento de los conjuntos de datos lo cual nos permita que nuestros experimentos sean repetibles. Es más, esto puede ser un requerimiento de :doc:`../ops/validation/auditing` del cual no podamos escapar.

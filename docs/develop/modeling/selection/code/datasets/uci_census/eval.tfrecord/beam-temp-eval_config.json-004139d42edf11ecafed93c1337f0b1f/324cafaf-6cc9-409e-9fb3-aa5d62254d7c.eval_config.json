@@ -1,0 +1,17 @@
+{
+  "evalConfig": {
+    "modelSpecs": [
+      {}
+    ],
+    "options": {
+      "computeConfidenceIntervals": false,
+      "minSliceSize": 1
+    }
+  },
+  "version": "0.34.1",
+  "dataLocation": "datasets/uci_census/adult.tfrecord",
+  "fileFormat": "tfrecords",
+  "modelLocations": {
+    "": "./datasets/uci_census/model/1"
+  }
+}

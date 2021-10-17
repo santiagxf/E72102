@@ -6,7 +6,7 @@ Las técnicas de aprendizaje automático han logrado resolver problemas que ser�
 
 Dos tareas forman parte de este proceso:
 
-- :doc:`dataprep`, dore realizamos tareas de integración de datos, resolución de problemas de conversión de tipos, limpieza y generación de un conjunto de datos completo e utilizable.
+- :doc:`dataprep`, donde realizamos tareas de integración de datos, resolución de problemas de conversión de tipos, limpieza y generación de un conjunto de datos completo y consumible.
 - :doc:`engineering`, donde realizamos tareas de selección y extracción de predictores que nos permitan diseñar modelos de aprendizaje más efectivos sobre el conjunto de datos con el que estamos trabajando.
 
 

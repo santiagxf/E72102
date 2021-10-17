@@ -1,2 +1,4 @@
 tensorflow-model-analysis
 tensorflow
+jupyter_contrib_nbextensions
+widgetsnbextension

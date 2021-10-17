@@ -53,7 +53,7 @@ Diferentes métricas de performance responden a diferentes tipos de modelos y su
 Análisis de errores
 -------------------
 
-Más allá del valor de la métrica específica, es importante entender cómo nuestro modelo se comporta. La práctica de análisis de errores trata de identificar cómo nuestro modelo comete los errores y cómo se distribuyen esos errores dentro del conjunto de datos y, en particular, en algunos subconjuntos con determinados atributos. En muchos casos es importante diseñar *prubeas* que dividan el conjunto de datos en subpoblaciones o *slices* basandose en atributos protegidos (los cuales prodrían o no ser predictores utilizados por el modelo). Esta técnica también suele utilizarse para asegurar que nuestro modelo sea justo (*fairness*), un procedimiento mandatorio para cualquier modelo que utilize datos de personas ya que podría haber requerimientos de negocio, regulatorios o legales que penalizen a la organización por no realizarlo. Por ejemplo, podríamos preguntarnos "¿Cúal es la performance de nuestro modelo de reconocimiento de voz cuando el interlocutor tiene un acento determinado?".
+Más allá del valor de la métrica específica, es importante entender cómo nuestro modelo se comporta. La práctica de análisis de errores trata de identificar cómo nuestro modelo comete los errores y cómo se distribuyen esos errores dentro del conjunto de datos y, en particular, en algunos subconjuntos con determinados atributos. En muchos casos es importante diseñar *pruebas* que dividan el conjunto de datos en subpoblaciones o *slices* basandose en atributos protegidos (los cuales prodrían o no ser predictores utilizados por el modelo). Esta técnica también suele utilizarse para asegurar que nuestro modelo sea justo (*fairness*), un procedimiento mandatorio para cualquier modelo que utilize datos de personas ya que podría haber requerimientos de negocio, regulatorios o legales que penalizen a la organización por no realizarlo. Por ejemplo, podríamos preguntarnos "¿Cúal es la performance de nuestro modelo de reconocimiento de voz cuando el interlocutor tiene un acento determinado?".
 
 Hacer este tipo de preguntas llevan a nuestro análisis de performance mucho más lejos que cuando miramos simplemente una métrica en particular como la presición o el coeficiente de determinación. 
 
@@ -71,6 +71,7 @@ Ejemplos
 
   code/error_analysis.ipynb
   code/what_if.ipynb
+  code/model_analysis.ipynb
   code/fairlearn.ipynb
 
 

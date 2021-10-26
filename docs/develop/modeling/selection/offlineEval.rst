@@ -69,6 +69,15 @@ Donde :math:`C _ {i,j}` es la cantidad de instancias que el modelo *i* clasific√
 
 Utilizando el `p-value` que se retorna, con un nivel de confidencia del 95% por ejemplo, podemos rechazar la idea de que los modelos cometen los mismos errores (son distintos) si el valor es menor a 0.05. De lo contrario no podremos derivar ninguna conjetura.
 
+Ejemplos
+^^^^^^^^
+
+.. toctree::
+  :maxdepth: 1
+  :titlesonly:
+
+  code/mcnemar.ipynb
+
 
 5√ó2 Cross-Validation
 ^^^^^^^^^^^^^^^^^^^^

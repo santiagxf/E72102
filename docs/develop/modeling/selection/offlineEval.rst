@@ -94,7 +94,7 @@ Donde:
 - :math:`{p_i}^{(j)}` es la diferencia en la performance de los modelos para la partición j en la iteración i.
 - :math:`p_i = \frac{p_i^1+p_i^2}{2}`
 
-Lo importante de este método es que bajo la hipótesis nula, la cual indica que los dos modelos son estadisticamente similares, la diferencia de la performance debería seguir una distribución normal. Con esta suposición, el valor estadístico debería seguir una distribución *t* con 5 grados de libertad.
+Lo importante de este método es que, bajo la hipótesis nula (la cual indica que los dos modelos son estadísticamente similares), la diferencia de la performance debería seguir una distribución normal. Con esta suposición, el valor estadístico debería seguir una distribución *t* con 5 grados de libertad.
 
 Ejemplos
 ~~~~~~~~

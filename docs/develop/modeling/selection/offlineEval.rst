@@ -70,7 +70,7 @@ Donde :math:`C _ {i,j}` es la cantidad de instancias que el modelo *i* clasific�
 Utilizando el `p-value` que se retorna, con un nivel de confidencia del 95% por ejemplo, podemos rechazar la idea de que los modelos cometen los mismos errores (son distintos) si el valor es menor a 0.05. De lo contrario no podremos derivar ninguna conjetura.
 
 Ejemplos
-^^^^^^^^
+~~~~~~~~
 
 .. toctree::
   :maxdepth: 1
@@ -97,7 +97,7 @@ Donde:
 Lo importante de este método es que bajo la hipótesis nula, la cual indica que los dos modelos son estadisticamente similares, la diferencia de la performance debería seguir una distribución normal. Con esta suposición, el valor estadístico debería seguir una distribución *t* con 5 grados de libertad.
 
 Ejemplos
-^^^^^^^^
+~~~~~~~~
 
 .. toctree::
   :maxdepth: 1

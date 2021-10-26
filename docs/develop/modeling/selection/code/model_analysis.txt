@@ -1,4 +1,5 @@
-tensorflow-model-analysis
+tensorflow-model-analysis==0.34.1
 tensorflow
 jupyter_contrib_nbextensions
 widgetsnbextension
+apache-beam[interactive]=2.32.0

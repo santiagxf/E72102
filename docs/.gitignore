@@ -46,3 +46,4 @@ Thumbs.db
 
 .ipynb_checkpoints
 great_expectations
+*.index:Zone.Identifier

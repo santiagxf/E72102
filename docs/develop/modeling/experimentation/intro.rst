@@ -7,7 +7,7 @@ Durante el proceso de experimentación o entrenamiento del modelo, nuestro objet
 Definición de una linea base
 ----------------------------
 
-Establecer una línea base para nuestro modelo es una tarea que muchas veces se pasa por alto, pero es increiblemente útil a la hora de experimentar e iterar sobre diferentes propuestas de modelos. Basicamente esta tarea consiste en identificar cual es la performance base a la que podríamos aspirar de mínima. Esto en general puede realizarse investigando pobremas similares o como la competencia resuelve el problema. Para muchas tareas, podemos utilizar como línea base la performance a la que alcanza una persona resolviendo el problema. En cualquiera de los casos es importante tener este concepto en mente y cuantificarlo para luego poder determinar si, por ejemplo, un accuracy de 0.78 es bueno o malo.
+Establecer una línea base para nuestro modelo es una tarea que muchas veces se pasa por alto, pero es increíblemente útil a la hora de experimentar e iterar sobre diferentes propuestas de modelos. Básicamente esta tarea consiste en identificar cual es la performance base a la que podríamos aspirar de mínima. Esto en general puede realizarse investigando problemas similares o cómo la competencia resuelve el problema. Para muchas tareas, podemos utilizar como línea base la performance a la que alcanza una persona resolviendo el problema. En cualquiera de los casos es importante tener este concepto en mente y cuantificarlo para luego poder determinar si, por ejemplo, un accuracy de 0.78 es bueno o malo.
 
 
 Definición de la arquitectura
@@ -38,7 +38,7 @@ Determinadas arquitecturas realizan suposiciones sobre los datos que deben de co
 .. note:: Esta dependencia es importante de mantenerla ya que cuando implemente procesos de :ref:`rst_mlops` donde hay procesos de integración de datos automáticos, esta reingeniería debe ser aplicada.
 
 
-Estrategías de entrenamiento
+Estrategias de entrenamiento
 ----------------------------
 
 Si bien está fuera del alcance de este documento, existen una serie de consideraciones que se pueden tener a la hora de implementar un procedimiento de entrenamiento. Estos detalles de implementación pueden alterar la forma en que los datos son recolectados y procesados.
@@ -47,6 +47,14 @@ Entrenamiento estratificado de modelos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Supongamos que una organización quiere predecir la demanda de productos de los clientes para optimizar la cantidad su cadena de suministro. Sin embargo, el comportamiento varía mucho de una ciudad a la otra, o de un estado al otro. Incluso podría ser que varia de cada una de las locaciones. El modelado estratificado consiste en entrenar un modelo por cada ubicación que la organización dispone en lugar de buscar entrenar un modelo que pueda resolver todas las ubicaciones correctamente.
+
+Centralizado vs federado
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Cuando los modelos de aprendizaje automático serán desplegados en millones de dispositivos, como ser teléfonos celulares, sensores o incluso autos hoy en día, el entrenamiento de estos modelos puede ser desafiante. Quizás la opción mas sencilla de visualizar es recolectar toda la información de estos dispositivos en una ubicación centralizada para confirmar el conjunto de datos sobre el que se va a trabajar. Luego, un modelo se entrena de forma centralizado y se despliega en cada uno de los dispositivos en cuestión. Por ejemlo, el sistema de autompiloto de Tesla (Tesla Autopilot System), que se ejecuta en mas de 500.000 autos hoy en día funciona de esta forma.
+
+Otra alternativa a esta es, en lugar de utilizar un proceso centralizado de entrenamiento, realizar "pequeños entrenamientos de ajuste" (técnica conocida como fine tunning) en cada uno de los dispositivos en cuestión. Estos ajustes o mejoras que cada uno de los dispositivos encuentra, son luego reportadas a un servidor centralizado que recolecta el feedback de cada uno de los dispositivos y los condenza. Estas actualizaciones pueden luego ser "empujadas" a cada uno de los modelos nuevamente para que todos se beneficien. Esta técnica de entrenamiento se conoce como **Federated Learning** y tiene ademas la ventaja de que los datos de cada uno de los dispositivos no viaja a una ubicación centralizada, lo cual puede tener implicancias desde el punto de vista regulatorio.
+
 
 Ensembles
 ^^^^^^^^^
@@ -93,13 +101,6 @@ Por lo general, esto implica el uso de árboles de decisiones muy simples que so
    Boosting
 
 .. note:: Lectura recomendada: `https://machinelearningmastery.com/tour-of-ensemble-learning-algorithms/ <https://machinelearningmastery.com/tour-of-ensemble-learning-algorithms/>`_.
-
-Centralizado vs federado
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Cuando los modelos de aprendizaje automático serán desplegados en millones de dispositivos, como ser teléfonos celulares, sensores o incluso autos hoy en día, el entrenamiento de estos modelos puede ser desafiante. Quizás la opción mas sencilla de visualizar es recolectar toda la información de estos dispositivos en una ubicación centralizada para confirmar el conjunto de datos sobre el que se va a trabajar. Luego, un modelo se entrena de forma centralizado y se despliega en cada uno de los dispositivos en cuestión. Por ejemlo, el sistema de autompiloto de Tesla (Tesla Autopilot System), que se ejecuta en mas de 500.000 autos hoy en día funciona de esta forma.
-
-Otra alternativa a esta es, en lugar de utilizar un proceso centralizado de entrenamiento, realizar "pequeños entrenamientos de ajuste" (técnica conocida como fine tunning) en cada uno de los dispositivos en cuestión. Estos ajustes o mejoras que cada uno de los dispositivos encuentra, son luego reportadas a un servidor centralizado que recolecta el feedback de cada uno de los dispositivos y los condenza. Estas actualizaciones pueden luego ser "empujadas" a cada uno de los modelos nuevamente para que todos se beneficien. Esta técnica de entrenamiento se conoce como **Federated Learning** y tiene ademas la ventaja de que los datos de cada uno de los dispositivos no viaja a una ubicación centralizada, lo cual puede tener implicancias desde el punto de vista regulatorio.
 
 
 .. toctree::

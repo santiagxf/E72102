@@ -9,9 +9,9 @@ Origenes de variabilidad
 Una buena metodología que determine si dos algorimtos de aprendizaje automático son diferentes o no debe poder estimar el poder predictivo de cada uno de ellos a pesar de los diferentes orígenes de variabilidad que pueden existir.
  
 - **Variabilidad en el conjunto de datos de evaluación:** Hace referencia a la variación aleatoria en la selección del conjunto de datos de validación en donde evaluamos nuestros modelos.
-- **Variabilidad en el conjunto de datos de entrenamiento:** Hace referencia a la variación aleatoria en la selección del conjnuto de datos de entrenamiento con los que entrenamos nuestros modelos. Algoritmos que son especialmente sencibles a este tipo de variabilidad se los suele llamar inestables (Breiman 1994, 1996).
-- **Variabilidad interna del algoritmo de aprendizaje:** Por ejemplo, si consideramos algorimos como la redes neuronales, numerosos parámetros, como ser las pesos con los que se inicializa la red, son determinantes para asegurar la correcta convergencia del modelo. Estos parámetros a menu son inicializados con determinadas distribuciones probabilísticas. 
-- **Variabilidad por el error inherente de clasificación:** Hace referencia a la probabilidad de que las étiquetas que tenemos disponibles en nuestros conjuntos de datos no sean efectivamente correctas. Por lo tanto, si nuestros valores verdaderos tienen una probabilidad de error `e`, entonces ningún algoritmo de aprendizaje automático podrá tener una performance mejor que `e`.
+- **Variabilidad en el conjunto de datos de entrenamiento:** Hace referencia a la variación aleatoria en la selección del conjunto de datos de entrenamiento con los que entrenamos nuestros modelos. Algoritmos que son especialmente sensibles a este tipo de variabilidad se los suele llamar inestables (Breiman 1994, 1996).
+- **Variabilidad interna del algoritmo de aprendizaje:** Por ejemplo, si consideramos algoritmos como las redes neuronales, numerosos parámetros, como ser los pesos con los que se inicializa la red, son determinantes para asegurar la correcta convergencia del modelo. Estos parámetros a menudo son inicializados con determinadas distribuciones probabilísticas. 
+- **Variabilidad por el error inherente de clasificación:** Hace referencia a la probabilidad de que las etiquetas que tenemos disponibles en nuestros conjuntos de datos no sean efectivamente correctas. Por lo tanto, si nuestros valores verdaderos tienen una probabilidad de error `e`, entonces ningún algoritmo de aprendizaje automático podrá tener una performance mejor que `e`.
 
 Para asegurarnos que nuestras comparaciones son confiables, una prueba estadística debe ser realizada que tenga en cuenta todos estos origenes de variaciones. 
 
@@ -36,7 +36,7 @@ El tamaño del efecto se calcula utilizando alguna medida estadística especific
 Prueba de McNemar
 ^^^^^^^^^^^^^^^^^
 
-La prueba de McNemar es especialmente útil cuando no podemos acceder a entrenar el mismo modelo múltiples veces debido a las restricciones de computo. Los modelos de aprendizaje profundo en general suelen tener estas características. **El objetivo de la prueba es determinar si dos modelos cometen el mismo tipo de errores o no**. Esto es importante porque no hace ninguna supocion de que cual de los modelos es mejor que el otro. Esto deberemos identificarlo de otra manera. Sin embargo, este test nos sirve para saber si vale la pena o no volver a implementar un modelo en producción por ejemplo.
+La prueba de McNemar es especialmente útil cuando no podemos acceder a entrenar el mismo modelo múltiples veces debido a las restricciones de computo. Los modelos de aprendizaje profundo en general suelen tener estas características. **El objetivo de la prueba es determinar si dos modelos cometen el mismo tipo de errores o no**. Esto es importante porque no hace ninguna suposición de que cual de los modelos es mejor que el otro. Esto deberemos identificarlo de otra manera. Sin embargo, este test nos sirve para saber si vale la pena o no volver a implementar un modelo en producción por ejemplo.
 
 La prueba de McNemar se base en una matrix de contingencia de 2x2 donde en las filas tenemos las diferentes instancias de datos, y en las columnas tenemos un idicador mencionando si el modelo realizó una predicción correcta o no:
 
@@ -72,7 +72,7 @@ Utilizando el `p-value` que se retorna, con un nivel de confidencia del 95% por 
 
 5×2 Cross-Validation
 ^^^^^^^^^^^^^^^^^^^^
-Como el nombre sugiere, este método ejecuta 5 veces 2-fold cross validation para cada uno de los modelos a comparar. Las diferencias en las predicciones son luego utilizadas para computar un valor estadístinco de la siguiente forma:
+Como el nombre sugiere, este método ejecuta 5 veces 2-fold cross validation para cada uno de los modelos a comparar. Las diferencias en las predicciones son luego utilizadas para computar un valor estadístico de la siguiente forma:
 
 .. math::
 

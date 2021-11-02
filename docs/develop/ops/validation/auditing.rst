@@ -7,7 +7,7 @@ La reproducibilidad y auditabilidad de un modelo de aprendizaje automático est�
 Reproducibilidad
 ----------------
 
-Reproducibilidad se refiere a la habilidad de poder recrear exactamente el mismo modelo que se está considerando. La misma requiere que el modelo esté correctamente documentado, que los datos utilizados para su entrenamiento estén disponibles en su misma forma que se encontraron cuando se entrenó (vea :ref:`rst_dataset_versioning` ), y toda la especificación de los requerimientos de software para recrear el ambiente en el que fue entrenado. Reproducibilidad es una propiedad escencial no solo para poder replicar los resultados que se encontraron durante desarrollo, pero también considerando implicaciones de alta disponibilidad y recuperación ante desastres del servicio del del modelo. 
+Reproducibilidad se refiere a la habilidad de poder recrear exactamente el mismo modelo que se está considerando. La misma requiere que el modelo esté correctamente documentado, que los datos utilizados para su entrenamiento estén disponibles en su misma forma que se encontraron cuando se entrenó (vea :ref:`rst_dataset_versioning` ), y toda la especificación de los requerimientos de software para recrear el ambiente en el que fue entrenado. Reproducibilidad es una propiedad esencial no solo para poder replicar los resultados que se encontraron durante desarrollo, pero también considerando implicaciones de alta disponibilidad y recuperación ante desastres del servicio del del modelo. 
 
 .. _rst_auditability:
 
@@ -21,7 +21,7 @@ La auditabilidad de un modelo está relacionada con la Reproducibilidad, pero ag
 :Conjunto de datos: Cada uno de los conjuntos de datos utilizados para entrenar y validar el modelo deben de ser referenciados de forma única. Los datos deben estar acompañados por evaluaciones de calidad y relevancia. En el caso de que el conjunto de datos no sea 100% representativo, es importante que se documenten estas suposiciones para hacer evitente las limitaciones del modelo.
 :Pruebas de calidad: Un correcto control de calidad debe ser ejecutado para asegurar la robustes y estabilidad del modelo en el tiempo y a lo largo de diferentes condiciones de ejecución. Tanto las rutinas como los resultados de las mismas deben ser documentadas.
 :Explicaciones: La auditabilidad debe también poder ofrecer un entendimiento de cada una de las partes del sistema, incluyendo explicaciones de por qué el modelo se comporta de la manera que se comporta. Si bien la interpretación de modelos de aprendizaje automático es un área de investigación que requiere extenso entrenamiento y capacitación, se deberá disponer de informes de interpretabilidad para que una audiencia más amplia pueda comprenderlos. Vea :doc:`../interpret/intro`.
-:Metricas: TODO
+:Métricas: Se debe ofrecer los valores de todas las métricas que se utilizaron para evaluar el modelo y también cualquier otra métrica que pueda ofrecer conocimiento sobre el mismo.
 
 Si bien no todas las organizaciones tienen requerimientos de auditabilidad, es fácil ver las ventajas que ofrece para cualquier organización desde un punto de vista de observabilidad de la operación.
 

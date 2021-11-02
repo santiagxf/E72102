@@ -24,15 +24,15 @@ Un modelo de riesgos debería de considerar:
  - Mala representación de los datos de producción en los datos de entrenamiento.
  - Uso incorrecto del modelo por mala interpretación de su salida.
  - Ataques adversarios. Vea :doc:`security`.
- - Riesgos de reputación debido a sezgo en el modelo o el uso antiético de la tecnología de aprendizaje automático.
+ - Riesgos de reputación debido a sesgo en el modelo o el uso antiético de la tecnología de aprendizaje automático.
 
 Existen situaciones en las cuales un riesgo puede tener un impacto mucho mayor debido a la forma en la que se consumo el modelo, el alcance del despliegue o incluso si sus efectos impactan en otros procesos de negocio.
 
 Los riesgos deben ser amplificados cuando existe:
  - Amplia utilización del modelo en la organización.
  - Amplia superficie de despliegue: Cuanto más grande es la cantidad de ubicaciones en las que se despliega un modelo, más alto será el riesgo.
- - Despliegue del modelo en ambientes que cambian frecuentemente: Esto puede representar un problema especialmente en sistemas que cambian tan rapidamente que los sistemas de alerta y monitoreo no logran emitir una advertencia a tiempo. Incluso, esta frecuencia de cambios podría modificar las condiciones de ejecución solo *ligamente* lo cual, si bien no representaría un problema grave que se debe resolver inmediatamente, el modelo nunca termina ejecutandose en sus condiciones normales o esperadas.
- - Complejas interacciones entre diferentes modelos: Probablemente son una de las condiciones más complejas a la hora de evaluar el riesgo. En algunos casos las interacciones pueden ser directas y evidentes, como ser que la salida de un modelo es consumida como un predictor de otro modelo. Incluso podria ser que la salida de un modelo representa los datos de entrenamiento de otro modelo. Sin embargo, este podría no ser siempre el caso y tener modelos que interactuan entre si en procesos de negocio donde incluso la ineración sucede a traves de personas.
+ - Despliegue del modelo en ambientes que cambian frecuentemente: Esto puede representar un problema especialmente en sistemas que cambian tan rápidamente que los sistemas de alerta y monitoreo no logran emitir una advertencia a tiempo. Incluso, esta frecuencia de cambios podría modificar las condiciones de ejecución solo *ligeramente* lo cual, si bien no representaría un problema grave que se debe resolver inmediatamente, el modelo nunca termina ejecutándose en sus condiciones normales o esperadas.
+ - Complejas interacciones entre diferentes modelos: Probablemente son una de las condiciones más complejas a la hora de evaluar el riesgo. En algunos casos las interacciones pueden ser directas y evidentes, como ser que la salida de un modelo es consumida como un predictor de otro modelo. Incluso podría ser que la salida de un modelo representa los datos de entrenamiento de otro modelo. Sin embargo, este podría no ser siempre el caso y tener modelos que interactúan entre si en procesos de negocio donde incluso la interacción sucede a través de personas.
 
 
 Analizaremos aquí dos ejemplos de modelos de riesgos, que son Matriz de costos y Failure Modes and Effects Analysis (FMEA).

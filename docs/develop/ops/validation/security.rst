@@ -11,7 +11,7 @@ La seguridad debe ser abordada desde dos perspectivas:
 
 Seguridad de los datos
 ----------------------
-TODO
+Los modelos de aprendizaje automático extraen conocimiento a partir de los datos, por lo cual, existe una relación bidireccional entre los conjuntos de datos que utilizamos para entrenarlos y los modelos resultantes. Si un atacante tiene acceso de alguna forma a alterar los datos que utilizamos para entrenamiento entonces podría tender una forma de inducir a nuestro modelo a que se comporte de determinada manera. De forma inversa, el atacante podría comenzar a realizar diferentes solicitudes al modelo para entender si alguna instancia en particular fué utilizada en el entrenamiento.
 
 Data Poisoning
 ^^^^^^^^^^^^^^
@@ -24,7 +24,6 @@ Muchos modelos de aprendizaje automático pueden considerarse como *resumenes* d
 
 Seguridad del modelo
 --------------------
-
 
 .. _rst_adversarial_examples:
 

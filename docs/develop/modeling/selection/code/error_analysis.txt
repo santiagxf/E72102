@@ -1,3 +1,4 @@
-interpret-community
-raiwidgets
+interpret-community==0.19
+interpret==0.2.6
+raiwidgets==0.9.4
 lightgbm

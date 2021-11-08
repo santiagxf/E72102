@@ -1,4 +1,4 @@
 interpret-community==0.19
-interpret==0.2.6
 raiwidgets==0.9.4
+scikit-learn==1.0.1
 lightgbm

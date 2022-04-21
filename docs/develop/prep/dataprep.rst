@@ -31,7 +31,7 @@ En algunos casos, algunas de las instancias de datos con las que trabajamos podr
 - Algunos atributos no son aplicables a todos los registros
 - Hubo un error de conversión de tipos 
 
-Hay varias estrategias (y variaciones) para tratar con datos faltantes, las cuales puedne ser apropiadas en determinadas circunstancias.
+Hay varias estrategias (y variaciones) para tratar con datos faltantes, las cuales pueden ser apropiadas en determinadas circunstancias.
 
 - Eliminar los registros con valores faltantes
 - Estimar los valores faltantes (imputar)
@@ -43,7 +43,7 @@ Hay varias estrategias (y variaciones) para tratar con datos faltantes, las cual
 
 - Ignorar los valores faltantes
  
-  - Algunos algoritmos, como los arboles, pueden trabajar con valores faltantes (En general, la mayoría de los algoritmos no pueden manejar datos faltantes y debemos tomar una estrategia)
+  - Algunos algoritmos, como los árboles, pueden trabajar con valores faltantes (en general, la mayoría de los algoritmos no pueden manejar datos faltantes y debemos tomar una estrategia)
 
 Valores inconsistentes
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -63,7 +63,7 @@ Mas allá de que estos problemas se originan durante el proceso de recolección 
 Reproducibilidad
 ----------------
 
-Sea cual sea el preprocesamiento de datos que elijamos hacer, es importante obtener un proceso que sea repetible y que produzca el mismo resultado independientemente del conjunto de datos que se le ingrese. Esto es importante ya que cuando llevemos nuestros modelos a producción y se encuentren con nuevas instancias de datos, deberemos de implementar las misma rutinas de preprocesameinto para que los datos sobre los que nuestro modelo fue entrenado y los datos que nuestro modelo ve en producción sean los mismos.
+Sea cual sea el preprocesamiento de datos que elijamos hacer, es importante obtener un proceso que sea repetible y que produzca el mismo resultado independientemente del conjunto de datos que se le ingrese. Esto es importante ya que cuando llevemos nuestros modelos a producción y se encuentren con nuevas instancias de datos, deberemos de implementar las misma rutinas de preprocesamiento para que los datos sobre los que nuestro modelo fue entrenado y los datos que nuestro modelo ve en producción sean los mismos.
 
 Esto implica:
 
@@ -77,7 +77,7 @@ El resultado del proceso de preparación de datos es un nuevo conjunto de datos 
 
 Expectativas
 ^^^^^^^^^^^^
-Una `expectativa` o `expectation` es una directiva que describe una propiedad verificable en un conjunto de datos. Si está familiarizado con el desarrollodo de código, al igual que `assertion` describe el comportamiento deseado del código, `expectation` describe el comportamiento deseado en los datos. Su utilización nos permite no solo mejorar la calidad de los datos al hacer explicito nuestras demandas/suposiciones sobre los mismos sino que también es una forma efectiva para los propietarios de los datos de comunicar qué deben y qué no deben esperar de los datos los ingenieros de datos/cientificos de datos al utilizar tales conjuntos. 
+Una `expectativa` o `expectation` es una directiva que describe una propiedad verificable en un conjunto de datos. Si está familiarizado con el desarrollodo de código, al igual que `assertion` describe el comportamiento deseado del código, `expectation` describe el comportamiento deseado en los datos. Su utilización nos permite no sólo mejorar la calidad de los datos al hacer explicito nuestras demandas/suposiciones sobre los mismos sino que también es una forma efectiva para los propietarios de los datos de comunicar qué deben y qué no deben esperar de los datos los ingenieros de datos/cientificos de datos al utilizar tales conjuntos. 
 
 Ejemplos
 ^^^^^^^^

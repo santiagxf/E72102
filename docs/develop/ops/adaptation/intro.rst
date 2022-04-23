@@ -1,8 +1,8 @@
-=====================
-Adaptación del modelo
-=====================
+======================
+Preparación del modelo
+======================
 
-Adaptación del modelo hace referencia al proceso por el cual un modelo de aprendizaje automático es preparado y empaquetado para poder ejecutar en un ambiente productivo. La adaptación del modelo puede seguir dos caminos, **uno feliz** y otro **no tan feliz**. El camino feliz sería el caso donde tanto el ambiente de desarrollo como el productivo utilizan la misma tecnología o al menos tecnologías compatibles. Esto sería: mismo framework de Machine Learning, mismo lenguaje de programación, mismo sistema operativo, misma plataforma, etc. En este caso, el trabajo que se debe realizar es relativamente poco.
+Preparación y Adaptación del modelo hace referencia al proceso por el cual un modelo de aprendizaje automático es preparado y empaquetado para poder ejecutar en un ambiente productivo. La adaptación del modelo puede seguir dos caminos, **uno feliz** y otro **no tan feliz**. El camino feliz sería el caso donde tanto el ambiente de desarrollo como el productivo utilizan la misma tecnología o al menos tecnologías compatibles. Esto sería: mismo framework de Machine Learning, mismo lenguaje de programación, mismo sistema operativo, misma plataforma, etc. En este caso, el trabajo que se debe realizar es relativamente poco.
 
 El camino *no tan feliz*, en el otro extremo, sería el caso donde el modelo debe ser completamente reimplementado, incluso en otro lenguaje y por otro equipo. Esto se puede deber a:
  - Requerimientos de performance debido a la escala (computo distribuido)

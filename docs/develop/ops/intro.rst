@@ -14,7 +14,7 @@ Los ambientes productivos dentro de una organización pueden tomar diferentes fo
 
    *Separación de ambientes dentro del proceso de desarrollo de modelos de aprendizaje automático.*
 
-Idealmente, esperariamos poder empaquetar nuetro modelo desarrollado con mínimos cambios a un ambiente productivo, ya que de esa forma, minimizariamos el riesgo de que nuestro modelo se comporte distinto a como lo hacía en desarrollo. Sin embargo, en la práctica frecuentemente este no es el caso. Por diversas cuestiones se deben realizar adaptaciones al modelo para que pueda ser disponibilizado en producción de forma correcta. Este proceso se conoce como :doc:`adaptation/intro`.
+Idealmente, esperariamos poder empaquetar nuetro modelo desarrollado con mínimos cambios a un ambiente productivo, ya que de esa forma, minimizariamos el riesgo de que nuestro modelo se comporte distinto a como lo hacía en desarrollo. Sin embargo, pocas veces en la práctica es este el caso. Existen diversas razones por las cuales debemos realizar adaptaciones y modificaciones al modelo para que pueda ser desplegado en producción de una forma escalable, sólida, segura y confiable. Este proceso se conoce como :doc:`adaptation/intro`.
 
 Cuando nuestro modelo fue adaptado para alcanzar su ubicación final, una serie de procesos de :doc:`validation/intro` se aplican para asegurarse que el mismo cumple con los requisitos de calidad, auditabilidad y reproducibilidad: características que el negocio probablemente demande. También será necesario poder comunicar efectivamente los resultados que se esperan de nuetro modelo mediante un proceso de :doc:`interpret/intro`. Finalmente, deberemos empaquetar e instalar nuestro modelo en su ubicación final a traves del proceso de :doc:`deployment/intro` donde evaluaremos diferentes alternativas para minimizar el riesgo asociado al cambio. Por último, los equipos operativos de la organización deben poder monitorear que nuestro modelo se comporta de las forma que se esperaba y tal como fué diseñado, a través de su :doc:`monitoring/intro`.
 
@@ -23,7 +23,7 @@ Cuando nuestro modelo fue adaptado para alcanzar su ubicación final, una serie 
    :caption: En esta sección
    :hidden:
 
-   Adaptación del modelo <adaptation/intro>
+   Preparación del modelo <adaptation/intro>
    Validación del modelo <validation/intro>
    Interpretación <interpret/intro>
    Despliegue del modelo <deployment/intro>

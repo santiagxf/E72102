@@ -2,11 +2,11 @@
 Desviaciones
 ============
 
-La mayoria de los modelos de aprendizaje automático asumen que el conjunto de datos de entrenamiento ha sido generado de un origen de datos estático. Sin embargo, sabemos que está suposición es probablemente incorrecta, sobre todo si los datos han sido recolectados durante un periodo largo de tiempo. Los datos evolucionan ya que nuestro mundo también lo hace. En estos casos, es probable que la distribución de los datos que generó nuestro conjunto de datos cambie en algún momento.
+La mayoria de los modelos de aprendizaje automático asumen que el conjunto de datos de entrenamiento proviene de un proceso estático. Sin embargo, sabemos que está suposición es probablemente incorrecta, sobre todo si los datos han sido recolectados durante un periodo largo de tiempo. Los datos evolucionan ya que nuestro mundo también lo hace. En estos casos es de esperar que la distribución de los datos que generó nuestro conjunto de datos cambie en algún momento. Como consecuecnia es probable que la performance de nuestro modelo se vea impactadata, dependiendo de las características del cambio de distribución.
 
 Cuando un modelo de aprendizaje automático es desplegado de forma productiva, detectar estos cambios en la distribución de los datos es clave para asegurarse que las predicciones que generamos son válidas y que pueden ser consumidas de forma segura por otros procesos dentro de la organización.
 
-Una desviación, o *data drift*, es una cambio en la distribución de los datos que se utilizan en un modelo de aprendizaje automático. Este cambio se da entre la distribución de los datos que se utilizó para entrenar el modelo, llamada *distribución de origen*, y la nueva distribución de los datos que se observa una vez que está desplegado, llamada *distribución objetivos*.
+Una desviación, o *data drift*, es una cambio en la distribución de los datos que se utilizan en un modelo de aprendizaje automático. Este cambio se da entre la distribución de los datos que se utilizó para entrenar el modelo, llamada *distribución de origen*, y la nueva distribución de los datos que se observa una vez que está desplegado, llamada *distribución objetivo*.
 
 Tipos de desviaciones
 ---------------------
@@ -22,21 +22,26 @@ Cambio covariable (covariate shift o feature drift)
 Este tipo de desviación se da cuando la distribución de las variables predictoras (features) cambia, mientras que la distribución de la variable objetivo permanece igual. Un ejemplo tipico de este caso es cuando alguno de los valores de los predictores, previamente poco frecuente o incluso nunca visto (no está presente en el conjunto de entrenamiento) se vuelve más frecuente. 
 
 .. math::
-  P(x_s) \ne P(x_t) \textrm{ and } P(y_s|x_s)=P(y_t|x_t)
+   P(y_s|x_s)=P(y_t|x_t) \textrm{ and } P(x_s) \ne P(x_t)
+
+Es importante marcar que en un cambio covariable la distribución condicional de :math:`P(y_s|x_s)` no cambia, la cual es la probabilidad que muchos tipos de modelos tratan de modelar. En principio no habría información para suponer que nuestro modelo se verá impactado por este cambio en la distribución de los predictores. Sin embargo, veremos que asegurar que tal distribución condicional no ha cambiado requiere acceso a los valores verdaderos, lo cual no es sencillo en la práctica.
+
+.. note:: En la práctica, un cambio covariable es un indicador de que nuestro modelo puede estar performando mal. Se basa en el principio de que el modelo solo performará correctamente si los datos con los que fué entrenado (muestra) reflejan correctamente el comportamiento y valores en el mundo real (población). Por lo tanto, si una comparación entre los datos que se utilizaron durante el entrenamiento y los datos que el modelo ve en producción arrojan diferencias, entonces tenemos evidencia para sostener la idea que el modelo no performará bien.
 
 Cambio en la distribución previa (prior shift)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Este tipo de desviación se da cuando la distribución de la variable objetivo cambia, mientras que la distribución de los restantes predictores permanece igual. Este tipo de cambios tipicamente se da cuando cambia la proporción de las muetras de alguna de las clases por ejemplo. Algo típico cuando trabajamos con conjuntos de datos que no están balanceados.
+Este tipo de desviación se da cuando la distribución de la variable objetivo cambia, mientras que la distribución de los restantes predictores por sigo mismos permanece igual. Este tipo de cambios tipicamente se da cuando cambia la proporción de las muetras de alguna de las clases. Se trata de un caso típico de cuando trabajamos con conjuntos de datos que no están balanceados, por ejemplo.
 
+.. math::
+  P(y_s|x_s) \ne P(y_t|x_t) \textrm{ and } P(x_s) = P(x_t)
+
+Introducir un cambio en la distribución previa puede tener consecuencias positivas o negativas en el algoritmo de aprendizaje, lo cual las vuelve un fenomeno peligroso si tendemos a ignorar aquellas situaciones donde nuestro modelo performa mejor de lo que esperamos (o de lo que debería).
 
 Cambio de concepto (concept shift)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Se trata de un problema multifacético que se puede dividir en 2 categorías: real y virtual. Una desviación de concepto real es un cambio en la **distribución condicional** de la variable objetivo, independientemente de si la distribución de las variables predictores haya cambiado o no. 
 
-.. math::
-  P(y_s|x_s) \ne P(y_t|x_t) \textrm{ and } P(x_s) = P(x_t)
-
-Una desviación de concepto virtual, también conocidas como temporales, puede ocurrir como resultado de una representación incompleta de la distribución real de los datos mas que como una cambio en el concepto que se intenta capturar. Esta separación es importante ya que para resolver una desviación de concepto real, se requiere de técnicas basadas en feedback para evaluar la performance del modelo de aprendizaje automático, mientras que una virutal puede realizarse sin tales técnicas.
+Una desviación de concepto virtual, también conocidas como temporales, puede ocurrir como resultado de una representación incompleta de la distribución real de los datos - mas que como una cambio en el concepto que se intenta capturar. Esta separación es importante ya que una desviación de concepto virtual podría no manifestarse como una degradación de performance en nuestro modelo. En este punto es importante notar que para poder distinguir entre una desviación de concepto virtual y un cambio covariable es necesario tener acceso a los valores verdaderos de la distribución objetivo.
 
 .. image:: _images/concept_drifts.png
   :alt: Tipos de desviaciones de concepto
@@ -72,7 +77,7 @@ Algoritmos de detección
 Existen numerosas técnicas para detectar desviaciones de datos. En general todos entran en alguna de las siguientes 3 categorias: 1) Basados en análisis secuencial, 2) Basados en la distribución de los datos, 3) Basados en las predicciones del modelo.
 
 1) **Basados en análisis secuencial:** En estos métodos, los datos son analizados para inferir patrones a medida que son observados. Una desviación es detectada cuando la probabilidad de observar una secuencia de datos bajo la distribución actual de los datos es más grande que la probabilidad de detectar la secuencia en la distribución de los datos original. Ejemplos de estos métodos son Cumulative Sum (CUSUM) y su variante PageHinkley (PH).
-2) **Basados en la distribución de los datos:** Analizan parámetros estadísticos como la media y la desviación estándar asociados con las predicciones para detectar desviaciones. Ejemplos de estos métodos incluyen The Drift Detection Method (DDM), Early Drift Detection Method (EDDM), Exponentially Weighted Moving Average (EWMA), y Reactive Drift Detection Method (RDDM), Kullback–Leibler divergence y Wasserstein metric.
+2) **Basados en la distribución de los datos:** Analizan parámetros estadísticos como la media y la desviación estándar asociados con las predicciones para detectar desviaciones. Ejemplos de estos métodos incluyen The Drift Detection Method (DDM), Early Drift Detection Method (EDDM), Exponentially Weighted Moving Average (EWMA), y Reactive Drift Detection Method (RDDM), Kullback–Leibler divergence, Wasserstein distance y Energy Distance.
 3) **Basados en las predicciones del modelo:** Si tenemos acceso a los valores verdaderos de la variable objetivo, una forma sencilla de detectar las desviaciones es corriendo el modelo sobre el conjunto de datos objetivo y comparar la performance de las métricas con el conjunto de datos de entrenamiento. Sin embargo, en la vida real, la adquisición de los valores verdaderos de la variable objetivo puede ser costoso y adicionalmente, tener demora en el tiempo. Ejemplos de estos métodos incluyen Adaptive Windowing (ADWIN), SeqDrift, Hoeffding’s Bound (HDDMA-test and HDDMW-test) y Fast Hoeffding Drift Detection Method (FHDDM).
 
 .. note:: No todos los métodos son apropiados para detectar todos los tipos de desviaciones. Recomendamos revisar la documentación de cada una de las técnicas para determinar que método es apropiado en cada ocasión.
@@ -88,5 +93,6 @@ Ejemplos
 
     code/domain_classifier.ipynb
     code/wasserstein.ipynb
+    code/psi_csi.ipynb
 
 .. [Referencia] Gama, J., Zliobaite, I., Bifet, A., Pechenizkiy, M., and Bouchachia, A. 2013. A Survey on Concept Drift Adaptation. ACM Comput. Surv. 1, 1, Article 1 (January 2013).

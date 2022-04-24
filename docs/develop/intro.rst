@@ -5,7 +5,7 @@ Ciclo de desarrollo de modelos de aprendizaje automático
 Introducción
 ------------
 
-Cuando pensamos en toda las piezas que son necesarias para llevar adelante un proyecto que está basado en aprendizaje automático en el contexto de una organización, el modelo propiamente dicho, ocupa solo una pequeña parte de todo el andamiaje que la organización debe de disponibilizar para que el mismo pueda ejecutarse de forma segura y confiable. Si incluso mantuvieramos los componentes a lo mínimo e indispensable, encontraríamos que necesitamos al menos datos sobre los cuales entrenar nuestro modelo, infraestructura donde ejecutarlo y alguna forma de consumirlo.
+Cuando pensamos en toda las piezas que son necesarias para llevar adelante un proyecto que está basado en aprendizaje automático en el contexto de una organización, el modelo propiamente dicho, ocupa sólo una pequeña parte de todo el andamiaje que la organización debe de disponibilizar para que el mismo pueda ejecutarse de forma segura y confiable. Si incluso mantuvieramos los componentes a lo mínimo e indispensable, encontraríamos que necesitamos al menos datos sobre los cuales entrenar nuestro modelo, infraestructura donde ejecutarlo y alguna forma de consumirlo.
 
 .. figure:: _images/infraestructure.png
   :alt: Infraestructura relacionado con Machine Learning

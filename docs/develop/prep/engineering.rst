@@ -40,8 +40,8 @@ En general eliminaremos predictores:
 
 Existen varias alternativas para implementar este método:
 
-:Probar todos los subsets posibles: Costo computacionalmente, pero efectivo.
-:Búsqueda: Buscan una combinación de predictores utilizando métodos de búsqueda. Este sub set luego se evalúa o bien utilizando algún criterio o contra la tarea especifica. Vea :doc:`selection` para más detalle.
+:Probar todos los subsets posibles: Es un método costoso computacionalmente, pero efectivo.
+:Búsqueda: Busca una combinación de predictores utilizando un método de búsqueda. Este subset luego se evalúa o bien utilizando algún criterio o contra la tarea especifica. Vea :doc:`selection` para más detalle.
 :Mantener los K predictores más relevantes: Utilizando algún algoritmo de ranking, por ejemplo, Correlación de Pearson, Jaccard, similaridad del coseno, etc; con la variable a predecir. Esto se lo conoce como *Filtering*.
 :Utilizar un algoritmo que haga selección de predictores automáticamente: Ejemplos de estos algoritmos son *Lasso* o *Random Forest*.
 

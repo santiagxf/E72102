@@ -3,6 +3,14 @@ Implementación de modelos de aprendizaje automático
 
 .. toctree::
    :maxdepth: 1
+   :caption: Arquitecturas de datos
+
+   Introducción <architecture/concept/intro>
+   Arquitecturas de datos empresariales <architecture/arch/intro>
+   Gobierno de datos <architecture/governance/intro>
+
+.. toctree::
+   :maxdepth: 1
    :caption: Ciclo de desarrollo
 
    Introducción <develop/intro>

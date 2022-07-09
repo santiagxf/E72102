@@ -39,24 +39,12 @@ Existen problemas donde disponer de un conjunto de datos más rico que quizás o
 La generación sintética de datos nos permite generar nuevas instancias de datos a partir de datos pre-existentes, o, porque no, a partir de reglas de generación que definamos.
 
 
-¿Por qué es importante focalizarse en los datos?
-------------------------------------------------
+Por qué es importante focalizarse en los datos
+----------------------------------------------
 
-Una estrategia para evolucionar la performance de un modelo de aprendizaje automático es evolucionar el modelo. Esto quiere decir, probar nuevas arquitecturas, nuevas configuraciones, nuevos conjuntos de parámetros, etc. A esta estrategía, donde básicamente mantenemos los datos estáticos e introducimos modificaciones iterativamente sobre el código, se la conoce como *model-centric*.
+Existen varias formas de evolucionar o mejorar la performance de un modelo de aprendizaje automática (teoricamente). Una estrategia es evolucionar el modelo o su arquitectura. Esto quiere decir, probar nuevas arquitecturas (en general más grandes o más complejas), nuevas configuraciones, nuevos conjuntos de parámetros, etc. A esta estrategía, donde básicamente mantenemos los datos estáticos e introducimos modificaciones iterativamente sobre el código, se la conoce como *model-centric*.
 
-En los sitemas basados en aprendizaje automático, aquellos que utilizan la mayor cantidad y calidad de datos son los ganadores. Esta realidad hace que muchos equipos de desarrollo se focalizen en la mejora continua de sus datos, es decir en una estrategia *data-centric*. Aquellas organizaciones que toman esta iniciativa en general la desarrollan junto a una política de adquisición de datos que les permite tener intención sobre la información que almacenan.
-
-En general, los equipos que están involucrados en el desarrollo de modelos de aprendizaje automático están familiarizados o bien con las tareas de administración de datos o con las tareas de modelado, pero por separado. 
-
-Existen multiples diferencias entre diseñar una solución de software y diseñar una solución de aprendizaje automático:
-
-.. csv-table:: Diferencias entre diseñar una solución de software y diseñar una solución de aprendizaje automático
-   :header: "Caracteristica", "Software", "Modelos de aprendizaje automático"
-   :widths: 20, 50, 50
-
-   "Objetivo", "Correctitud", "La optimización de una métrica"
-   "Calidad*", "Depende deterministicamente del código", "Depende de los datos, de la arquitectura del modelo y sus hiperparámetros"
-
+Sin embargo, en la práctica vemos que aquellos modelos que utilizan la mayor cantidad y calidad de datos posible en general consiguen mejoras de performance mucho mas notables que si invirtieran la misma cantidad de tiempo en evoluacionar la arquitectura del modelo. Esta realidad hace que muchos equipos de desarrollo se focalizen en la mejora continua de sus datos, es decir en una estrategia *data-centric*. Aquellas organizaciones que toman esta iniciativa en general la desarrollan junto a una política de adquisición de datos que les permite tener **intención** sobre la información que almacenan.
 
 
 Conjunto de datos vs anotaciones
@@ -74,7 +62,7 @@ Como mencionamos, los sistemas basados en aprendizaje automático son una combin
 
 .. math::
 
-   Sistemas\; de\; AI = codigo + datos
+   Sistemas\; de\; AA = codigo + datos
 
 De igual forma que la ingeniería de software necesita versionar el código en las iteraciones para asegurar un control de cambios, en nuestros proyectos basados en datos deberemos de proveer los mísmos mecanismos para los datos.
 

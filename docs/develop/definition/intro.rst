@@ -13,6 +13,15 @@ Claro está que de nada nos sirve tener un modelo de aprendizaje automático que
 
 Y es que cada vez que persistimos datos también persistimos *ideas* y *significados*, los cuales **deben ser re-interpretados más tarde** por otras personas (o máquinas). Esto sería trivial si existiera un significado único, pero en general los datos capturan la realidad con cierta *distancia digital*. Esta distancia, analogá al concepto de *distancia congnitiva*, representa una tensión interna entre lo que se cree que se almacena y lo que efectivamente se almacena. Más aún, tal distancia no es estática sino que varía en el tiempo ya que la realidad es un *moving target*. El mantenimiento de estos datos (así como también el de los sistemas que los instancian) es una tarea que - además de resultar para nada sencilla - también puede alterar el significado.
 
+El entendimiento del problema es más relevante aún cuando consideramos las multiples diferencias que existen entre diseñar una solución de software y diseñar una solución de aprendizaje automático:
+
+.. csv-table:: Diferencias entre diseñar una solución de software y diseñar una solución de aprendizaje automático
+   :header: "Caracteristica", "Software tradicional", "Modelos de aprendizaje automático"
+   :widths: 20, 50, 50
+
+   "Objetivo", "Correctitud", "La optimización de una métrica"
+   "Calidad*", "Depende deterministicamente del código", "Depende de los datos, de la arquitectura del modelo y sus hiperparámetros"
+
 .. [1] `Reframing them can reveal unexpected solutions. by Thomas Wedell-Wedellsborg <https://hbr.org/2017/01/are-you-solving-the-right-problems>`_
 
 .. toctree::

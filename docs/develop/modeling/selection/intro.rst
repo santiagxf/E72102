@@ -9,8 +9,8 @@ Métrica de comparación
 
 Al momento de seleccionar un modelo es importante determinar la métrica con la cual los vamos a comparar. Diferentes métricas nos pueden apuntar en direcciones distintas. Por ejemplo, la métrica `accuracy` podría ser una mala elección en un problema de detección de anomalías. Desafortunadamente, no existe una métrica de oro que podamos utilizar siempre por lo cual es importante definir la métrica teniendo en cuenta el problema a resolver. 
 
-Métricas de clasificación
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Clasificación
+^^^^^^^^^^^^^
 
 Diferentes métricas de performance responden a diferentes tipos de modelos y suposiciones sobre lo que se busca optimizar. Las métricas de clasificación más comunes son:
 
@@ -29,8 +29,8 @@ Diferentes métricas de performance responden a diferentes tipos de modelos y su
    "Matthews Correlation Coefficient", "Tiene en cuenta los verdaderos y falsos positivos y negativos y, en general, se considera una métrica “justa” que se puede utilizar incluso si las clases son de tamaños muy diferentes. El MCC es un coeficiente de correlación entre las clasificaciones binarias verdaderas y predichas; devuelve un valor entre -1 y +1."
 
 
-Métricas de regresión
-^^^^^^^^^^^^^^^^^^^^^
+Regresión
+^^^^^^^^^
 
 Diferentes métricas de performance responden a diferentes tipos de modelos y suposiciones sobre lo que se busca optimizar. Las métricas de regresión más comunes son:
 
@@ -46,6 +46,32 @@ Diferentes métricas de performance responden a diferentes tipos de modelos y su
    "Median Absolute Percentage Error (MAPE)", "Nos da una medida relativa del error típico. Alternativamente, podríamos calcular el percentil 90 del error porcentual absoluto, lo que daría una indicación de un comportamiento 'casi en el peor de los casos'."
    "Root Mean Squared Log Error", "Es la raíz cuadrada del error logarítmico cuadrático."
    "Normalized Root Mean Squared Log Error", "Es el error logarítmico cuadrático medio dividido por el rango de la variable a predecir."
+
+Sistemas de recomendación
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Las métricas en los sistemas de recomendación evaluan la capacidad de realizar recomendaciones relevantes para el usuario. En aquellos casos donde el orden de las recomendaciones no es relevante, las siguientes métricas pueden ser utilizadas:
+
+.. csv-table:: Métricas en sistemas de recomendación
+   :header: "Métrica", "Descripción"
+   :widths: 20, 80
+
+   "Precision@k", "Mide la proporción de items que son relevantes entre los K primeros items recomendados. Responde la pregunta 'de los primeros K elementos recomendados al usuario, cuantos son realmente relevantes."
+   "Recall@k", "Recall@k o HitRatio@k es la facción de los primeros K items recomendados que son relevantes entre todos los items relevantes para el usuario. Notar que cuanto mas grande es K, más alta sera la métrica ya que hay mayor probabilidad de recomendar algo que es relevante."
+   "F1@k", "F1@k es la média armónica entre Precision@k y Recall@k, lo cual simplifica la evaluación al combinar ambas métricas en una sola. Es interesante ver que F1 no considera los verdaderos negativos en su calculo (los items que el sistema no recomendó porque son irrelevantes)."
+   "Matthews correlation coefficient (MCC)", "Es una métrica simétricamente opuesta a F1. Mide la correlación entre lo que se predice y la realidad. Cuando el sistema de recomendación es perfecto, MCC es 1. Cuando el systema predice incorrectamente siempre, MCC = -1."
+
+
+En algunos casos donde los algoritmos de recomendación retornan una lista rankeada de recomendaciones - y sobre todo considerando aquellos casos donde items mas cercanos al final de la lista tienen menos probabilidades ser ser notados por el usuario - las siguientes métricas pueden ser utilizadas:
+
+.. csv-table:: Métricas en sistemas de recomendación (ranking)
+   :header: "Métrica", "Descripción"
+   :widths: 20, 80
+
+   "Average precision (AP@k)", "Mientras precision@k (P(k)) considera solo el subconjunto de las primeras *k* recomendaciones, *average precision* premia el ubicar recomendaciones correctas sobre el principio de la lista. Es el promedio de todas las precision@k para k [1..k]"
+   "Mean average precision (MAP)", "Mientras *AP* puede computarse sobre un usuario dado, *MAP* computa el promedio sobre todos los usuarios del sistema."
+   "Mean reciprocal rank (MRR)", "Es una métrica relevante en aquellos sistemas donde a) existe solo un elemento relevante para recomendar, y b) solo el primer item recomendado por el sistema es utilizado. "
+   "Discounted cumulative gain (DCG)", "Es una métrica de calidad de rankeo. Utiliza el concepto de *ganancia acumulativa*, la cual es la suma de los valores de relevancia de todos los resultados de la lista. Finalmente, DCG penaliza los items de gran relevancia que aparecen más abajo en la lista de recomendaciones al reducir el valor de su relevancia de forma logarítmicamente proporcional a la posición del item."
 
 
 .. _rst_error_analysis:

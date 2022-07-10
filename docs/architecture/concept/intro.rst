@@ -21,7 +21,7 @@ Las definiciones teóricas de qué es "Big Data" y cómo pueden ser utilizadas p
 
    *Volumen, Variedad y Velocidad.*
 
-El **volumen** representa la cantidad - cada vez mayor - de datos que se generan y que se ponen a disposición de las organizaciones, ya sea de forma intencional o no. Por otro lado aunque relacionado, existe un crecimiento en la **variedad** de datos producidos como consecuencia de la multitud de fuentes (sensores, dispositivos inteligentes, redes sociales, telemetría, etc). Esta variedad incluye datos sin procesar, semiestructurados y no estructurados lo que complica aún más el procesamiento y el almacenamiento de datos. Finalmente, el aspecto de **velocidad** (:doc:`velocity`) describe qué tan rápido se recuperan, almacenan y procesan los datos. 
+El **volumen** representa la cantidad - cada vez mayor - de datos que se generan y que se ponen a disposición de las organizaciones, ya sea de forma intencional o no. Por otro lado aunque relacionado, existe un crecimiento en la **variedad** (:doc:`data-types`) de datos producidos como consecuencia de la multitud de fuentes (sensores, dispositivos inteligentes, redes sociales, telemetría, etc). Esta variedad incluye datos sin procesar, semiestructurados y no estructurados lo que complica aún más el procesamiento y el almacenamiento de datos. Finalmente, el aspecto de **velocidad** (:doc:`velocity`) describe qué tan rápido se recuperan, almacenan y procesan los datos. 
 
 La combinación de estas tres **V's** representan un nuevo desafío para las arquitecturas de datos empresariales actual. Lidiar con formatos de datos definidos de manera imprecisa, tamaños de datos cada vez mayores y requisitos con tiempos de procesamiento variables ponen en jaque las capacidades técnologicas de las organizaciones al punto de que dejarlas fuera del juego.
 
@@ -61,6 +61,7 @@ Esta estrategia, sin embargo, tiene un costo. Requiere poder evolucionar los dat
 
     lifecycle
     velocity
+    data-types
 
 
 

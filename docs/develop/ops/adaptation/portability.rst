@@ -6,8 +6,8 @@ Una vez que un modelo específico ha sido seleccionado para producción, deberem
 
 .. warning:: Es importante verificar que los modelos de aprendizaje automático podrán ser portados a la plataforma de destino de forma temprana en el desarrollo. De no hacerlo, corremos el riesgo de iniciar un proyecto de desarrollo que luego fallará en su etapada de validación. Como veremos en :ref:`rst_model_validation` mas adelante, el proceso de validación se realiza en un ambiente similar al de producción ya que será ese el modelo que finalmente será puesto productivo y no el que trabajamos en desarrollo. 
 
-Persistir un modelo
--------------------
+Formatos de almancenamiento de modelos
+--------------------------------------
 
 La siguiente trabla muestra los formatos más comunes que se utilizan dependiendo del la plataforma y framework de machine learning utilizado:
 
@@ -24,6 +24,7 @@ La siguiente trabla muestra los formatos más comunes que se utilizan dependiend
    ".mlmodel", "iOS", "Formato especifico para la plataforma de Apple iOS."
    ".onnx", "Múltiples frameworks", "Es un formato que permite abstraerse de la plataforma donde se entrenó el modelo. Soportado por PyTorch, TensorFlow, ScikitLearn, Spark, entre otros."
    ".pmml", "Múltiples frameworks", "Es un formato interoperable basado en XML que permite representar multiples tipos de modelos. Si bien su ultima versión (4.3) data de 2016, `multiples organizaciones lo soportan <http://dmg.org/pmml/products.html>`_ "
+   "MLmodel", "MLflow", "Se trata de un formato especifico utilizado por la popular librería MLflow (el cual soporta una gran variedad de frmeworks de aprendizaje automático). Este formato es auto-contenido y permite no solo almacenar el modelo sino que también todos los componentes necesarios para su ejecución."
 
 
 Conversión a formatos interoperables

@@ -24,6 +24,12 @@ Variabilidad y la Veracidad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Desde la perspectiva del procesamiento de la información, las tres características *Volumen, Variedad y Velocidad* juntas describen con precisión qué es Big Data. No obstante, además de las 3V, que describen la característica cuantitativa de los sistemas de Big Data, existen características cualitativas adicionales como la Variabilidad y la Veracidad. 
 
+.. figure:: _images/data-5v.png
+   :alt: Volumen, Variedad, Velocidad, Variabilidad y Veracidad.
+   :align: center
+
+   *Volumen, Variedad, Velocidad, Variabilidad y Veracidad. Origen: Visualization of the Extended V-Model (adopted from E. G. Caldarola, Sacco, and Terkaj (2014)*
+
 El aspecto **Variabilidad** define las diferentes interpretaciones que pueden tener ciertos datos cuando se ponen en diferentes contextos. Se centra en la semántica de los datos, en lugar de su variedad en términos de estructura o representación. El aspecto **Veracidad** define la precisión de los datos o qué tan veraces son. Si los datos están corruptos, son imprecisos o inciertos, esto tiene un impacto directo en la calidad de los resultados finales. **Tanto la variabilidad como la veracidad tienen influencia directa en el valor cualitativo de los datos procesados**. El valor real obtenido del análisis de datos, también llamado *data insights*, es otra medida cualitativa que no es posible definir de forma precisa y determinista. 
 
 Costos
@@ -58,8 +64,30 @@ Esta estrategia, sin embargo, tiene un costo. Requiere poder evolucionar los dat
 
    *De análitica tradicional a analítica avanzada.*
 
-:Analítica tradicional: En el analisis de datos tradicional, los datos se procesan para proporcionar informacion relacionada con el rendimiento pasado de las operaciones empresariales. Los datos se recopilan y se formatean con fines de presentacion de informes, y los usuarios y/o los encargados de tomar decisiones obtienen informacion despues de la interpretacion.
-:Analítica avanzada: La analítica avanzada emplea modelos predictivos, métodos estadísticos, aprendizaje automático y técnicas de automatización de procesos (Ops) más allá de las capacidades de las herramientas tradicionales de inteligencia de negocio (BI) para analizar datos o información en las organizaciones.
+Analítica tradicional
+^^^^^^^^^^^^^^^^^^^^^
+
+En el analisis de datos tradicional, los datos se procesan para proporcionar informacion relacionada con el rendimiento pasado de las operaciones empresariales. Los datos se recopilan y se formatean con fines de presentacion de informes, y los usuarios y/o los encargados de tomar decisiones obtienen informacion despues de la interpretacion.
+
+Reportes
+~~~~~~~~
+Son utilizado cuando la organización desea distribuir informes financieros u operacionales estandarizados a todos aquellos involucrados o interesados en ella (empleados, accionistas, clientes, etc.). Central su contenido el pasado. Desde los años cincuenta, las organizaciones han encontrado retornos de inversión claros en reportes operacionales y financieros. Es por ello que este es el estilo de BI más difundido.
+
+Diagnóstico
+~~~~~~~~~~~
+Son una evolución de los reportes tradicionales. Se centran el proveedor a los intereados con formas interactivas de visualizar y consultar los datos desde diferentes angulos, combinarlos con otros y tomar conclusiones. Centran su contenido el proveer al usuario formas para indagar el motivo por el cual el reporte menciona lo que menciona.
+
+Analítica avanzada
+^^^^^^^^^^^^^^^^^^
+La analítica avanzada emplea modelos predictivos, métodos estadísticos, aprendizaje automático y técnicas de automatización de procesos (Ops) más allá de las capacidades de las herramientas tradicionales de inteligencia de negocio (BI) para analizar datos o información en las organizaciones.
+
+Predictivo
+~~~~~~~~~~
+La análitica predictiva involucra aplicar modelos sobre los datos para poder predecir su comportamiento. En general, utilizan técnicas estadísticas avanzadas o de aprendizaje automático que modelan los datos observados. Centran su contenido en proveer herramientas que permitan generalizar más alla de los datos que se disponen actualmente.
+
+Prescriptivo
+~~~~~~~~~~~~
+La analítica prescriptiva involucra un proceso de optimización y, en algunos casos, simulación. Intenta realizar recomendaciones sobre acciones que los interesados pueden realizar para minimizar o maximizar un determinado resultado.
 
 
 .. toctree::

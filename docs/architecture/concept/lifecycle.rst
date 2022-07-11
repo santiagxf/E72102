@@ -47,15 +47,23 @@ La primera fase en el ciclo de vida de los datos comienza con su creación, en d
 
 Cada método supone importantes retos. Por ejemplo, la adquisición de datos suele implicar la creación de contratos o normas uqe definen la forma en que la organización hace uso de los datos del exterior. La creación de datos implica un detallado control de seguridad para asegurarse que solo procesos válidos están generando datos. En el caso de ingesta, desafíos como la velocidad y mantenimiento de los procesos que mueven datos de un origen a otro suponen una arquitectura de datos que lo soporte.
 
+En las seccion :doc:`../arch/components/ingest` veremos las diferentes piezas de la :doc:`../arch/intro` que son utilizadas en esta fase.
+
 Almacenamiento
 ^^^^^^^^^^^^^^
 
 Una vez que el dato fué capturado, debemos almacenar los mismos en un sistema que pueda disponibilizar su consumo. El sistema de almacenamiento también definirá las políticas de acceso a los mismos y los requerimientos de seguridad necesarios. Estos últimos en general suelen depender de la industria en donde la organización opera, el marco regulatorio del pais y leyes o tratados que limiten la forma en que se almacenan datos.
 
+En las seccion :doc:`../arch/components/store` veremos las diferentes piezas de la :doc:`../arch/intro` que son utilizadas en esta fase, dependiendo de los :doc:`data-types` de los activos.
+
 Procesamiento
 ^^^^^^^^^^^^^
 
-Esta es la fase en donde se realizan transformaciones sobre los datos para agregar valor o para integrarlos con otros datos. En general encontraremos dos actividades:
+Esta es la fase en donde se realizan transformaciones sobre los datos para agregar valor o para integrarlos con otros datos. 
+
+En las seccion :doc:`../arch/components/process` veremos las diferentes piezas de la :doc:`../arch/intro` que son utilizadas en esta fase, dependiendo de los :doc:`data-types` de los activos y de la :doc:`velocity` que el caso de negocio demanda.
+
+En general encontraremos dos actividades:
 
 Mantenimiento
 ~~~~~~~~~~~~~
@@ -78,6 +86,8 @@ Publicación
 La publicación de los datos incluye el envío de los mismos a sistemas externos, dentro o fuera de la organización. Un ejemplo es una agencia de inversiones que envía infromes mensuales a sus clientes con recomendaciones de operaciones.
 
 La diferencia fundamental entre el **Uso del dato** y su **Publicación** es que una vez que ha sido publicado, los datos no pueden ser recuperados para una modificación (o al menos no es una operación trivial). 
+
+En las seccion :doc:`../arch/components/consume` veremos las diferentes piezas de la :doc:`../arch/intro` que son utilizadas en esta fase.
 
 Archivado
 ^^^^^^^^^

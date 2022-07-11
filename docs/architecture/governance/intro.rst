@@ -6,7 +6,7 @@ El gobierno de datos es un conjunto de controles, políticas y procedimientos qu
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: En esta sección
  
     Gobierno de datos <data>

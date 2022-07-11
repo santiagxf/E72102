@@ -24,7 +24,6 @@ Implementación de modelos de aprendizaje automático
    :caption: Proyectos basados en datos
 
    Introducción <projects/intro>
-   projects/agile/intro
    projects/mlops/intro
 
 

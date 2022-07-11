@@ -9,18 +9,21 @@ Una característica importante para destacar sobre los sistemas de software basa
 .. figure:: _images/ai_systems.png
    :align: center
    :alt: Los sistemas basados en aprendizaje automático
+   :width: 500
 
 
 ¿Qué es MLOps?
 --------------
 MLOps, si bien inspirado en la ya madura práctica de DevOps, es un campo nuevo por lo que su significado aún es objeto de debate. Entre las definiciones más utilizadas están:
 
-nVidia
- - Un conjunto de prácticas para que los negocios puedan implementar AI satisfactoriamente.
 ml-ops.org
  - MLOps apunta a unificar el ciclo de publicación de modelos de aprendizaje automático con el ciclo de publicación de software.
 Google
  - MLOps es una cultura y práctica de ingeniería que apunta a unificar los sistemas de desarrollo de modelos de aprendizaje con los sistemas de operacionalización. La práctica de MLOps abarca la automatización y monitoreo de todos los pasos en la construcción de un modelo de aprendizaje automático; incluyendo integración, testeo, publicación, despliegue y administración de la infraestructura.
+Microsoft
+ - MLOps se basa en los principios y prácticas de DevOps que aumentan la eficiencia de los flujos de trabajo; incluyendo integración continua, entrega e implementación. MLOps aplica estos principios al proceso de aprendizaje automático, con el objetivo de obtener una experimentación y desarrollo de modelos más rápidos, una implementación más rápida de modelos en producción, y una garantía de calidad y seguimiento de punta a punta.
+ NVidia
+ - Un conjunto de prácticas para que los negocios puedan implementar AI satisfactoriamente.
 
 
 Desafíos para las organizaciones
@@ -44,4 +47,5 @@ En los sitemas basados en aprendizaje automático, aquellos que utilizan la mayo
    :caption: En esta sección
    :hidden:
    
+   agile
    CI/CD <cicd>

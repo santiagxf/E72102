@@ -14,6 +14,7 @@ Una base de datos es un sistema de almacenamiento de datos donde los mismos se p
 Debido a que una base de datos está estrechamente relacionada con las transacciones, una base de datos realiza un procesamiento transaccional en línea (OLTP).
 
 Características principales de las bases de datos:
+
 * Estructurado de acuerdo con las operaciones y aplicaciones de la organización.
 * Reglas rígidas establecidas en torno al almacenamiento/organización de datos (específico de RDBMS).
 * Almacenamiento de datos flexible (específico de NoSQL).
@@ -55,6 +56,7 @@ Un tercer beneficio es la velocidad. Como habrá menos datos en el data mart, se
 Finalmente, debido a que los datos en el data mart se agregan y preparan para ese departamento de manera adecuada, se reduce la posibilidad de mal uso de los datos. También se reduce el potencial de informes contradictorios.
 
 Principales Características de un Data Mart:
+
 * Se centra en un tema o unidad de negocio
 * Actúa como un mini-Data Warehouse, manteniendo datos agregados
 * Los datos tienen un alcance limitado
@@ -70,6 +72,7 @@ Un Data Lake almacena los datos sin procesar y procesados ​​(estructurados, 
 Para su procesamiento y análisis se utilizan diferentes aplicaciones y tecnologías que pueden procesar los datos almacenados aqui. Debido al nivel de complejidad y habilidad requerido para aprovechar un Data Lake ,requieren usuarios con experiencia en lenguajes de programación y técnicas de ciencia de datos. Por último, a diferencia de un Data Warehouse, un Data Lake no aprovecha un plataforma de procesamiento de datos para su limpieza.
 
 Características principales de un Data Lake:
+
 * Recopila todos los datos de muchas fuentes de datos dispares durante un período prolongado.
 * Satisface las necesidades de varios usuarios en la organización.
 * Son sistemas de almacenamiento altamente económicos.
@@ -86,7 +89,7 @@ Anonimización y emascaramiento
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 El *enmascaramiento*, también conocido como *ofuscamiento*, *anonimización* o *pseudonimización*, hace referencia al proceso por el cual aquella información clasificada como confidencial es ocultada a quien la consume mediante su remplazo por otros valores de datos o incluso caracteres especiales. Cuando trabajamos con datos que incluyen información sensible o regulada por la industria, los procesos de adquisición de datos deberán tener en cuenta la protección de esta información no solo para los diferentes roles que están involucrados en el ciclo de desarrollo del modelo sino que también durante el tránsito de la información (*data in motion*) y durante su almacenamiento (*data at rest*).
 
-.. figure:: _images/3_states_of_data.jpg
+.. figure:: ../_images/3_states_of_data.jpg
    :alt: Estados de los datos
    :align: center
 

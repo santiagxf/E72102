@@ -25,8 +25,9 @@ Objetivos
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: En esta sección
 
     Organización y componentes <components/intro>
+    cloud
     Arquitecturas estandar <architectures>

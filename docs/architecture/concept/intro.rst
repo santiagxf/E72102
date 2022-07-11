@@ -3,11 +3,6 @@ Introducción a las arquitecturas de datos
 
 Las arquitecturas de datos son un elemento fundamental en aquellas organizaciones con una estrategia basada en información. Las mismas establecen las formas en las que se capturaran (o generarán), procesaran, almacenaran e utilizarán los datos, y cómo se podrá acceder a los mismos. 
 
-Rol de las arquitecturas de datos
----------------------------------
-
-Sin duda, el crecimiento exponencial de los datos y su rol estratégico en la toma de decisiones han desafiado las capacidades de procesamiento y almacenamiento de los sistemas de información modernos, especialmente en la última década. La capacidad de manejar y gestionar grandes volúmenes de datos se ha convertido gradualmente en una capacidad fundamental de las :doc:`../arch/intro`. 
-
 Desafios actuales
 -----------------
 
@@ -37,6 +32,18 @@ Mientras que el modelo 3V proporciona un marco intuitivo, esta representación d
 
 Los requerimientos de negocio en diferentes organizaciones e incluso en diferentes sectores de la misma organización no son los mismos. Alcanzar un determinado nivel en caulquiera de las Vs tiene asociado un costo. Es importante abordar y entender los mismos para lograr saturar la infraestructura existente considerando los factores de costo asociados con el mantenimiento de los sistemas que soportan la arquitectura de datos.
 
+Rol de las arquitecturas de datos
+---------------------------------
+
+Sin duda, el crecimiento exponencial de los datos y su rol estratégico en la toma de decisiones han desafiado las capacidades de procesamiento y almacenamiento de los sistemas de información modernos, especialmente en la última década. La capacidad de manejar y gestionar grandes volúmenes de datos se ha convertido gradualmente en una capacidad fundamental de las :doc:`../arch/intro`. 
+
+Dependiendo de la arquitectura, la comprensión de las 3V puede ser diferente. Sin embargo, un requisito arquitectónico en las organizaciones modernas es que la arquitectura debe ser capaz de manejar datos cada vez en mayor volumen, alta velocidad o que cambia dinámicamente en velocidad, y con gran variedad de formatos de datos. Por lo tanto, la infraestructura de Big Data debería poder manejar cualquier combinación de las 3V. Además, en este contexto, el factor costo no es una dimensión, sino una función de las otras tres, por lo que un cambio en un componente afectará el valor del costo.
+
+.. math::
+
+   Factor\; costo = f(volumen, variedad, velocidad, v...)
+
+
 
 Organizaciones impulsadas por datos
 -----------------------------------
@@ -56,8 +63,9 @@ Esta estrategia, sin embargo, tiene un costo. Requiere poder evolucionar los dat
 
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: En esta sección
+    :hidden:
 
     lifecycle
     velocity

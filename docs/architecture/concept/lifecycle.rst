@@ -61,7 +61,7 @@ Procesamiento
 
 Esta es la fase en donde se realizan transformaciones sobre los datos para agregar valor o para integrarlos con otros datos. 
 
-En las seccion :doc:`../arch/components/process` veremos las diferentes piezas de la :doc:`../arch/intro` que son utilizadas en esta fase, dependiendo de los :doc:`data-types` de los activos y de la :doc:`velocity` que el caso de negocio demanda.
+En las seccion :doc:`../arch/components/process` veremos las diferentes piezas de la :doc:`../arch/intro` que son utilizadas en esta fase, dependiendo de los :doc:`data-types` de los activos y de las :doc:`velocity` que el caso de negocio demanda.
 
 En general encontraremos dos actividades:
 
@@ -69,7 +69,7 @@ Mantenimiento
 ~~~~~~~~~~~~~
 El objetivo de esta fase es procesar el dato, pero sin que genere aún un valor claro para la organización. Este procesamiento incluye tareas de integración, limpieza, enriquecimiento, así como proceso de extracción, transformación y carga del dato (ETL).
 
-.. important:: El mentenimiento del dato podría darse de forma reiterada ya que involucra mantener el valor del activo de dato en el tiempo.
+.. important:: El mantenimiento del dato podría darse de forma reiterada a lo largo del tiempo ya que involucra mantener el valor del activo durante todo su ciclo de vida. Por ejemplo, considere el caso donde los códigos de clientes evolucionaron de un sistema a otro.
 
 Sintesis
 ~~~~~~~~
@@ -78,7 +78,7 @@ Esta fase consiste en la creación de datos de valor aplicando un procesamiento 
 Uso del dato
 ^^^^^^^^^^^^
 
-En la fase de uso del ciclo de vida de los datos, la informacion es la base para la toma de decisiones. Los usuarios pueden recuperar datos, procesarlos, e integrarlos a otras aplicaciones. El uso del dato incluye desaríos importantes como es el uso légitimo o no de los datos dentro del contexto de negocio que el usuario pretende.
+En la fase de uso del ciclo de vida de los datos, la información es la base para la toma de decisiones. Los usuarios pueden recuperar datos, procesarlos, e integrarlos a otras aplicaciones. El uso del dato incluye desafíos importantes como es el uso légitimo o no de los datos dentro del contexto de negocio que el usuario pretende.
 
 Publicación
 ^^^^^^^^^^^

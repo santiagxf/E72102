@@ -8,7 +8,7 @@ Las Arquitecturas de datos Empresariales son los modelos, políticas, reglas y e
 Desafios de las arquitecturas de datos Empresariales
 ----------------------------------------------------
 
-.. figure:: images/data-challenges.png
+.. figure:: _images/data-challenges.png
    :alt: Desafíos en una arquitectura de datos empresarial
    :align: center
 
@@ -17,7 +17,7 @@ Desafios de las arquitecturas de datos Empresariales
 Objetivos
 ---------
 
-.. figure:: images/data-desires.png
+.. figure:: _images/data-desires.png
    :alt: Objetivos en una arquitectura de datos empresarial
    :align: center
 

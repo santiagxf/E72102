@@ -6,24 +6,6 @@ En el momento que una organización identifica al dato como un activo de valor, 
 
 .. note:: Entendemos como ciclo de vida de un activo a las diferentes etapas por las que pasa un activo desde su nacimiento hasta su decomisación.
 
-El valor del dato
------------------
-
-Al entender a los datos como activos también nos preguntaremos ¿cúal es el valor de tal activo?. Gestionar el dato no solo consiste en saber ónde está el dato, cómo ha evolucionado o qué significa. También es necesario conocer el valor que aporta un dato a la organización y, consecuentemente, como medirlo.
-
-Según la contabilidad, un activo posee un valor proveniente de dos fuentes:
-
-1. Uso del activo, caso en el que hbalamos del valor en uso.
-2. Venta del activo, caso en el que hablamos de valor de intercambio.
-
-A partir de estas fuentes, se han usado tres métdoso para calcular el valor del dato:
-
-1. **Fundamentado en el coste**, es decir el valor del activo está basado en el precio pagado par adquirir el activo.
-2. **Fundamentado en el mercado**, es decir el valor del activo se fundamentará en el precio que está dispuesto a pagar un tercero por adquirirlo.
-3. **Fundamentado en la utilidad**, es decir el valor del activo está basado en el valor actual de los beneficios esperados futuros.
-
-.. note:: Para mas información sobre este tema recomendamos la lectura de: Laney, D. (2015), *Why and how to measure the value of your information assets*, Gartner.
-
 Fases del ciclo de vida de los datos
 ------------------------------------
 
@@ -105,6 +87,12 @@ Linaje del dato
 ---------------
 
 Los activos digitales, a diferencia de los activos físicos, tienen la capacidad de ser duplicados y distribuidos rápidamente. Esto, combinado con el hecho de que el dato no es un activo estático durante su ciclo de vida, genera desafios a la hora de mantener un registro de como los mismos se mueven y se utilizan dentro de la organización.
+
+.. figure:: _images/lineage-process.png
+   :alt: Linaje de datos.
+   :align: center
+
+   *Los datos se transforman y evolucionan en el sistema. El lineaje permite detectar que transformaciones sufrió el dato y porque se dieron.*
 
 El linaje de los datos propone métodos para mantener la trazabiliadd de los datos, conociendo todas las transformaciones que el mismo ha sufrido desde el momento que es creado hasta que es destruido. El linaje le permite a la organización rastrear e identificar errores, aplicar protocolos más rigurosos de :doc:`../governance/data`, reducción de risgos y asegurar su protección.
 

@@ -7,6 +7,8 @@ Velocidades de datos
 Datos en lotes (batch)
 ----------------------
 
+Mover datos en grandes cantidades conlleva tiempo. Aspectos como la velocidad de la red, el tamaño de los datos, la cantidad de archivos, y los tiempos de lectura y escritura de los sistemas de almacenamiento impactan en el tiempo total que le toma a un conjunto de datos en moverse de una ubicación a la otra.
+
 Desafios de los datos en lotes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

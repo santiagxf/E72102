@@ -4,7 +4,7 @@ Introducción a las arquitecturas de datos
 Las arquitecturas de datos son un elemento fundamental en aquellas organizaciones con una estrategia basada en información. Las mismas establecen las formas en las que se capturaran (o generarán), procesaran, almacenaran e utilizarán los datos, y cómo se podrá acceder a los mismos. 
 
 Rol de las arquitecturas de datos
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+---------------------------------
 
 Sin duda, el crecimiento exponencial de los datos y su rol estratégico en la toma de decisiones han desafiado las capacidades de procesamiento y almacenamiento de los sistemas de información modernos, especialmente en la última década. La capacidad de manejar y gestionar grandes volúmenes de datos se ha convertido gradualmente en una capacidad fundamental de las :doc:`../arch/intro`. 
 

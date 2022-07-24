@@ -121,7 +121,7 @@ En general estos sistemas, tiene propiedades como:
 - Manejo de versiones explícito para poder asegurar reproducibilidad en los experimentos.
 - Seguimiento del linaje de los datos asi como herramientas para explorarlo.
 
-Un ejemplo de este tipo de plataformas es `Databricks` o `Feast`.
+Un ejemplo de este tipo de plataformas es `Databricks`, `Feast` y `Feather`.
 
 
 

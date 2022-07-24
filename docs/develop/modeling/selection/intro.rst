@@ -4,10 +4,17 @@ Selección del modelo
 
 Una vez que disponemos de un modelo entrenado, es importante poder evaluarlo en el contexto en el que finalmente será utilizado y, sobre todo, compararlo con otros modelos existentes o con el estado actual del proceso de negocio donde esperamos utilizarlo. Esto nos dará una idea de si es una buena idea seleccionar este modelo e implementarlo dentro del proceso de negocio en cuestión.
 
-Métrica de comparación
-----------------------
+En general entonces, el proceso de selección puede divirse en dos subprocesos:
 
-Al momento de seleccionar un modelo es importante determinar la métrica con la cual los vamos a comparar. Diferentes métricas nos pueden apuntar en direcciones distintas. Por ejemplo, la métrica `accuracy` podría ser una mala elección en un problema de detección de anomalías. Desafortunadamente, no existe una métrica de oro que podamos utilizar siempre por lo cual es importante definir la métrica teniendo en cuenta el problema a resolver. 
+:Evaluación del modelo: Se trata del proceso en el cual evaluamos la performance del modelo utilizando diferentes técnicas, tanto quantitativas como qualitativas.
+:Selección del modelo: Se trata del proceso en el cual, tomando las métricas de evaluación collectadas anteriormente, tomamos una decisión sobre cual es el mejor modelo con el que desearemos continuar.
+
+Métrica de evaluación
+---------------------
+
+Al momento de evaluat y seleccionar un modelo es importante determinar la(s) métrica(s) con la(s) cual(es) compararemos los mismos. Cada métrica puede capturar distintas cualidades del modelo y por ende estas cualidades terminaran impactando la performance del proceso de negocio en cuestión. Por ejemplo, la métrica `accuracy` podría ser una mala elección en un problema de detección de anomalías. Desafortunadamente, no existe una métrica de oro que podamos utilizar siempre. Por lo tanto, es importante definir la métrica (o las métricas) teniendo en cuenta el problema a resolver, prestando especial atención a las consecuencias de su elección.
+
+Podemos, sin embargo, distinguir 3 grandes grupos de métricas:
 
 Clasificación
 ^^^^^^^^^^^^^

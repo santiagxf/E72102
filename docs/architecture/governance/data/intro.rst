@@ -18,7 +18,7 @@ Complejidad de los sistemas modernos
 
 Un flujo de datos no controlado entre los sistemas de procesamiento de transacciones puede paralizar la capacidad de responder al cambio y limitar a la organización en el mediano y largo plazo.
 
-.. figure:: _images/governance_mess.png
+.. figure:: ../_images/governance_mess.png
    :alt: Diagrama ejemplo de la complejidad de un solo proceso en un país.
    :align: center
 
@@ -26,7 +26,7 @@ Un flujo de datos no controlado entre los sistemas de procesamiento de transacci
 
 Sumada a la complejidad de los procesos, la cantidad de aplicaciones que las organización despliegan en la actualidad y que por consiguiente deben administrar también está aumentando.
 
-.. figure:: _images/governance_marketing.png
+.. figure:: ../_images/governance_marketing.png
    :alt: Diagrama de aplicaciones de marketing en la actualidad (2020).
    :align: center
 
@@ -49,7 +49,7 @@ Las empresas ahora deben proteger la información de identificación personal (P
 Reputación de la organización
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: _images/governance_damage.png
+.. figure:: ../_images/governance_damage.png
    :alt: Ungoverned data can lead to data breaches and brand damage.
    :align: center
 

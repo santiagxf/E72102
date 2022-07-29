@@ -31,4 +31,4 @@ Optaremos por tomar una definición mas similar a esta última, y la abordaremos
     :caption: En esta sección
  
     El gobierno de datos <data/intro>
-    Gobierno de procesos de datos <process/intro>
+    Gobierno del proceso de datos <process/intro>

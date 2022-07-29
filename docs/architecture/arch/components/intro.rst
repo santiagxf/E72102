@@ -35,7 +35,7 @@ Desde un punto de vista de arquitectura, las tareas que se mencionaron anteriorm
 La mayoría de las arquitecturas de procesamiento de datos consisten en operaciones de procesamiento de datos que se ejecutan de forma repetida. Estas operaciones están encapsuladas en procesos que transforman los datos, los mueven entre múltiples sistemas de almacenamiento, o envían los resultados directamente a un informe o tablero. Estos procesos deben estar orchestrados en la plataforma para que funcionen de forma coherente y puedan entregar los resultados que el negocio espera. Este es el rol de los componentes de orquestración.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: En esta sección
 
     sources

@@ -26,6 +26,8 @@ Una vista un poco más holística:
 
 Optaremos por tomar una definición mas similar a esta última, y la abordaremos en detalle en la sección :doc:`data/intro`. Es preciso tambien diferenciar el Gobierno de datos del :doc:`process/intro`. Mientras el primero se focaliza en los activos, el segundo se focaliza en los procesos que operan sobre estos activos.
 
+.. note:: El gobierno de datos es un tema lo suficientemente extenso como poder dedicar un libro completo al respecto. En este apartado solo mencionaremos una introducción al mismo y los principales aspectos a tener en cuenta. Sugerimos al lector consultar material complementario si es una temática que le interesa abordar en mas profundidad.
+
 .. toctree::
     :maxdepth: 1
     :caption: En esta sección

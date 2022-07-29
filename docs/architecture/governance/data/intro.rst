@@ -2,8 +2,6 @@
 El gobierno de datos
 ====================
 
-.. note:: El gobierno de datos es un tema lo suficientemente extenso como poder dedicar un libro completo al respecto. En este apartado solo mencionaremos una introducción al mismo y los principales aspectos a tener en cuenta. Sugerimos al lector consultar material complementario si es una temática que le interesa abordar en mas profundidad.
-
 Definiremos el gobierno de datos como un conjunto de controles, políticas y procedimientos que habilita a una organización a asegurar la existencia de datos de alta cálidad durante todo el ciclo de los datos que soportan los objetivos de negocio. Existen 5 áreas claves en los que se focaliza el gobierno de datos incluyendo disponibilidad, usabilidad, consistencia, integridad y seguridad.
 
 

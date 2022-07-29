@@ -114,7 +114,6 @@ La analítica prescriptiva involucra un proceso de optimización y, en algunos c
 
    *Un típico reporte de analítica prescriptiva, donde vemos que el usuario recibe recomendaciones de acciones concretas que realizar basandose en las predicciones y escenarios calculados para la información que se está mostrando.*
 
-
 .. toctree::
     :maxdepth: 1
     :caption: En esta sección

@@ -2,8 +2,29 @@
 Gobierno de datos
 =================
 
-El gobierno de datos es un conjunto de controles, políticas y procedimientos que habilita a una organización a asegurar la existencia de datos de alta cálidad durante todo el ciclo de los datos que soportan los objetivos de negocio. Existen 5 áreas claves en los que se focaliza el gobierno de datos incluyendo disponibilidad, usabilidad, consistencia, integridad y seguridad.
+Todas las organizaciones deben planificar cómo usan sus activos para alcanzar sus metas de negocio. Si consideramos :doc:`../concept/assets`, entonces no deberia sorprendernos la necesidad de aplicar esta planificación también a ellos.
 
+Las organizaciones que planifician cómo usan sus datos con éxito consideran el "quién, qué, cómo, cuándo, dónde y por qué" de los datos; no solo para garantizar la seguridad y el cumplimiento, sino también para extraer valor de toda la información recopilada en toda la organización y mejorando así su competitividad.
+
+A la actividad descripta se la conoce como **Gobierno de datos**, y es un concepto que se puede abordar desde multiples puntos de vista.
+
+    "El gobierno de datos se define como el ejercicio de la autoridad y el control (planificación, seguimiento y ejecución) sobre la gestión de los activos de datos."
+
+    -- DAMA Data Management Body of Knowledge V2 (DMBOK2).
+
+Desde un punto de vista organizacional:
+
+    "El gobierno de datos abarca las personas, los procesos y la tecnologías necesarias para crear un manejo coherente y adecuado de los datos de una organización a lo largo de toda la misma."
+
+    -- Wikipedia
+
+Una vista un poco más holística:
+
+    "El gobierno de datos es la orquestación de personas, procesos, políticas y tecnología para administrar y proteger formalmente los activos de datos estructurados y no estructurados para garantizar datos seguros, confiables y de comprensión común en toda la organización."
+
+    -- Mike Ferguson, Intelligent Business Strategies
+
+Nosotros tomaremos una definición mas similar a esta última y la abardaremos en detalle en :doc:`data`. Es preciso tambien diferencia el Gobierno de datos del :doc:`process`. Mientras el primero se focaliza en los activos, el segundo se focaliza en los procesos que operan sobre estos activos.
 
 .. toctree::
     :maxdepth: 1

@@ -1,6 +1,6 @@
-======================
-El dato como un activo
-======================
+========================
+Los datos como un activo
+========================
 
 
 El valor del dato

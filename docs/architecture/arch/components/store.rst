@@ -2,6 +2,7 @@
 Componentes de almacenamiento
 =============================
 
+Los componentes de almacenamiento de datos diferen entre si dependiendo de los :doc:`../../concept/data-types.rst` a almacenar. Los datos estructurados suelen almacenarse en sistemas tradicionales de bases de datos. Los datos no estructurados generalmente se almacenan en un almacén de archivos distribuido que puede contener grandes volúmenes de archivos de diversos tamaños y en varios formatos. Este tipo de almacenamiento a menudo se denomina data lake.
 
 Técnologías
 -----------
@@ -81,3 +82,9 @@ Lakehouse
 ^^^^^^^^^
 
 Una Lakehouse es una nueva arquitectura que combina los mejores elementos de los Data Lake y los Data Warehouse. Los mismos implementan estructuras de datos y funciones de administración de datos similares a las de un Data Warehouse pero directamente sobre la misma técnología de almacenamiento utilizada por los Data Lakes.
+
+.. figure:: ../_images/components_store_lakehouse.jpeg
+   :alt: Lakehouse
+   :align: center
+
+   *Un lakehouse combina las capacidades de almacenamiento de datos no estructurados de un data lake con las capacidades de manejo de datos estructurados de un Data Warehouse.*

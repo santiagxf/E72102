@@ -4,6 +4,8 @@ Velocidades de datos
 
 .. important:: La velocidad de los datos no solo es importante en el diseño de las arquitecturas de datos que los deben procesar, sino que también tienen un impacto en el diseño de modelos de aprendizaje automático. Por ejemplo, podemos estar muy tentados en utilizar un determinado predictor en nuestros modelos y, que incluso, ofrece un poder predictivo muy alto. Sin embargo, podría ser que la velocidad a la que este dato llega a la plataforma es demasiada lenta. Un predictor que se calcula una vez al mes podría no ser útil si debemos esperar justamente 1 mes para conocer su valor.
 
+.. _rst_data_batch:
+
 Datos en lotes (batch)
 ----------------------
 
@@ -12,6 +14,7 @@ Mover datos en grandes cantidades conlleva tiempo. Aspectos como la velocidad de
 Desafios de los datos en lotes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. _rst_data_stream:
 
 Datos en alta velocidad (stream)
 --------------------------------

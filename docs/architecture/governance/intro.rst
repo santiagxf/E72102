@@ -2,7 +2,7 @@
 Gobierno de datos
 =================
 
-Todas las organizaciones deben planificar cómo usan sus activos para alcanzar sus metas de negocio. Si consideramos :doc:`../concept/assets`, entonces no deberia sorprendernos la necesidad de aplicar esta planificación también a ellos.
+Todas las organizaciones deben planificar cómo usan/usaran sus activos para alcanzar sus metas de negocio. Si consideramos :doc:`../concept/assets`, entonces no deberia sorprendernos la necesidad de aplicar esta planificación también a tales activos digitales.
 
 Las organizaciones que planifician cómo usan sus datos con éxito consideran el "quién, qué, cómo, cuándo, dónde y por qué" de los datos; no solo para garantizar la seguridad y el cumplimiento, sino también para extraer valor de toda la información recopilada en toda la organización y mejorando así su competitividad.
 
@@ -24,11 +24,11 @@ Una vista un poco más holística:
 
     -- Mike Ferguson, Intelligent Business Strategies
 
-Nosotros tomaremos una definición mas similar a esta última y la abardaremos en detalle en :doc:`data`. Es preciso tambien diferencia el Gobierno de datos del :doc:`process`. Mientras el primero se focaliza en los activos, el segundo se focaliza en los procesos que operan sobre estos activos.
+Optaremos por tomar una definición mas similar a esta última, y la abordaremos en detalle en la sección :doc:`data/intro`. Es preciso tambien diferenciar el Gobierno de datos del :doc:`process/intro`. Mientras el primero se focaliza en los activos, el segundo se focaliza en los procesos que operan sobre estos activos.
 
 .. toctree::
     :maxdepth: 1
     :caption: En esta sección
  
-    Gobierno de datos <data>
-    Gobierno de procesos de datos <process>
+    El gobierno de datos <data/intro>
+    Gobierno de procesos de datos <process/intro>

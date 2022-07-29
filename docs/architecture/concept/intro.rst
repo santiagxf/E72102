@@ -123,6 +123,7 @@ La analítica prescriptiva involucra un proceso de optimización y, en algunos c
     lifecycle
     velocity
     data-types
+    versioning
 
 
 

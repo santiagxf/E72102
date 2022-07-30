@@ -45,5 +45,6 @@ Es posible que se necesiten múltiples versiones de políticas en diferentes jur
 .. figure:: ../_images/governance_policies.png
    :alt: Las politicas se aplican de acuerdo a como están clasificados los datos.
    :align: center
+   :width: 400
 
    *Las politicas se aplican de acuerdo a como están clasificados los datos.*

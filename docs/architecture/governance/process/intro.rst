@@ -73,33 +73,33 @@ Procesos de gobierno de datos y cómo se aplican al ciclo de vida de los datos
 
 * Procesos de descubrimiento
 
-    * Descubrimiento, mapeo y catalogación de datos y entidades de datos
-    * Perfilado de datos para determinar la calidad
-    * Descubrimiento de datos confidenciales y clasificación de gobernanza
-    * Descubrimiento de mantenimiento de datos para análisis CRUD (por ejemplo, de archivos de registro)
+  * Descubrimiento, mapeo y catalogación de datos y entidades de datos
+  * Perfilado de datos para determinar la calidad
+  * Descubrimiento de datos confidenciales y clasificación de gobernanza
+  * Descubrimiento de mantenimiento de datos para análisis CRUD (por ejemplo, de archivos de registro)
 
 * Procesos de definición de gobierno de datos
 
-    * Crear y mantener un vocabulario empresarial común en un glosario empresarial
-    * Entidades de datos (incluidos datos maestros), nombres de atributos de datos, reglas de integridad y formatos válidos
-    * Definir datos de referencia: para estandarizar conjuntos de códigos en toda la empresa
-    * Definir esquemas de clasificación de gobierno de datos para etiquetar datos y determinar cómo gobernarlos
-    * Definir políticas y reglas de gobierno de datos para gobernar la entidad de datos y los ciclos de vida de los documentos
-    * Definir métricas y umbrales de éxito
+  * Crear y mantener un vocabulario empresarial común en un glosario empresarial
+  * Entidades de datos (incluidos datos maestros), nombres de atributos de datos, reglas de integridad y formatos válidos
+  * Definir datos de referencia: para estandarizar conjuntos de códigos en toda la empresa
+  * Definir esquemas de clasificación de gobierno de datos para etiquetar datos y determinar cómo gobernarlos
+  * Definir políticas y reglas de gobierno de datos para gobernar la entidad de datos y los ciclos de vida de los documentos
+  * Definir métricas y umbrales de éxito
 
 * Procesos de cumplimiento/aplicación de reglas y políticas de gobierno de datos
 
-    * Aplicación/ejecución automatizada de políticas y reglas
-    * Aplicación manual y cumplimiento de políticas y reglas.
-    * Servicios de gobierno de datos basados en eventos, bajo demanda y controlados por temporizador (lotes)
-    * Controle la ingesta de datos: catalogación, clasificación, asignación de propietarios y almacenamiento
-    * Gobernar la calidad de los datos
-    * Gobernar la seguridad del acceso a los datos
-    * Gobernar la privacidad de los datos
-    * Controlar el uso de datos, p. incluido el intercambio y para garantizar que los datos con licencia solo se utilicen para fines aprobados
-    * Gobernar el mantenimiento de datos
-    * Gobernar la retención de datos
-    * Controle la sincronización de datos maestros y datos de referencia
+  * Aplicación/ejecución automatizada de políticas y reglas
+  * Aplicación manual y cumplimiento de políticas y reglas.
+  * Servicios de gobierno de datos basados en eventos, bajo demanda y controlados por temporizador (lotes)
+  * Controle la ingesta de datos: catalogación, clasificación, asignación de propietarios y almacenamiento
+  * Gobernar la calidad de los datos
+  * Gobernar la seguridad del acceso a los datos
+  * Gobernar la privacidad de los datos
+  * Controlar el uso de datos, p. incluido el intercambio y para garantizar que los datos con licencia solo se utilicen para fines aprobados
+  * Gobernar el mantenimiento de datos
+  * Gobernar la retención de datos
+  * Controle la sincronización de datos maestros y datos de referencia
 
 * Procesos de seguimiento
 

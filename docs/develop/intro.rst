@@ -46,8 +46,8 @@ Iteraciones
 -----------
 Mencionamos que uno de los conceptos fundamentales dentro del desarrollo de modelos de aprendizaje automático es la capacidad de iterar en el proceso de desarrollo múltiples veces. En algunas organizaciones, estas iteraciones pueden darse bastante rápido. Por ejemplo, es posible que nuevas muestras de datos estén disponibles todos los días y que existen requerimientos de negocio para reentrenar el modelo considerando estas nuevas observaciones. Si bien reentrenar no implica volver a realizar ingeniería de predictores o selección de modelos, si requerirá verificar que el conjunto de datos luce como se espera, por ejemplo. Lo que no debemos perder de vista es que **el qué tan lejos llegaremos con nuestro modelo no está controlado por el tiempo invertimos en cada iteración, sino por cuantas veces iteramos sobre el proceso**. Esto es un cambio importante en la filosofía de desarrollo.
 
-Velocidad
-^^^^^^^^^
+Velocidad de desarrollo
+-----------------------
 
 La velocidad en la que iteramos en el proyecto también pondrá presión, como podrá esperar, en las personas y recursos que soportan el proceso. En aquellas organizaciones que desean iterar rápidamente (por ejemplo, requieren de reentrenar el modelo de aprendizaje todos los días para capturar nuevos patrones en los datos), la presión podría ser tal que no es fáctible de alcanzar la velocidad necesaria. En este caso, disponer de procesos automáticos para implementar todo el ciclo que describiremos a continuación es fundamental. Vea :ref:`rst_mlops` para una visión mas ámplia sobre este último concepto.
 

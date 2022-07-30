@@ -72,7 +72,7 @@ Requerimientos para un gobierno de datos
 
 
 ¿Qué necesitamos definir para comenzar a gobernar los datos?
-------------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * ¿Qué datos existen y dónde están?
 * ¿Cuantas copias existen?

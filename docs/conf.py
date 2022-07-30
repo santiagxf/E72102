@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'E72.1.02'
-copyright = '2021, Universidad de Buenos Aires (FCE-UBA)'
+copyright = '2022, Universidad de Buenos Aires (FCE-UBA)'
 html_title = 'E72.1.02'
 author = 'Facundo Santiago'
 

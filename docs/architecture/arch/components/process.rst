@@ -2,6 +2,7 @@
 Componentes de procesamiento
 ============================
 
+.. important:: Esta sección no esta disponble actualmente.
 
 Procesamiento por lotes (batch)
 -------------------------------

@@ -16,16 +16,16 @@ Desafios de las arquitecturas de datos Empresariales
 
 Las arquitecturas de datos empresariales juegan un rol muy importante en las organizaciones. Sin embargo, la naturales de las 3Vs que vimos anteriormente pone en jaque a las arquitecturas en la ardua tarea de entregar el valor que el negocio espera:
 
-:Silos de datos: La mayoría de las organizaciones tradicionales preservaron la privacidad de los datos al mantener los datos específicos de la función en silos departamentales. En ese escenario, los datos utilizados por un departamento no estaban disponibles o accesibles para otro departamento. Sin embargo, eso causó un problema grave en el mundo de la analítica avanzada, donde los datos de clientes de 360 grados o los datos de marketing empresarial son necesidades cotidianas. Las organizaciones, independientemente de su tamaño, tipo o naturaleza del negocio, pronto se dieron cuenta de que para tener éxito en la era digital, los datos debían ser accesibles y compartibles.
-:Performance: El valor de las arquitecturas de datos está en el volumen de los datos que procesan. Sin embargo, esto también puede convertirse en un problema importante. Si no diseñamos la arquitectura para escalar, esto puede convertirse en un problemas rápidamente - principalmente el escalamiento y la performance.
-:Costos: Como consecuencia de una mala performance en el diseño de al arquitectura, los costos operativos pueden incrementarse rápidamente - y lo que es peor, no seguir un escalamiento lineal.
-:Complejidad: Cada vez que trabajamos con diversas fuentes de datos, la complejidad del sistema es un desafío, sobre todo cuando ademas tenemos en cuenta a las diferentes velocidad en las que se mueven los datos.
-
 .. figure:: _images/data-challenges.png
    :alt: Desafíos en una arquitectura de datos empresarial
    :align: center
 
    *Desafíos en una arquitectura de datos empresarial*
+
+:Silos de datos: La mayoría de las organizaciones tradicionales preservaron la privacidad de los datos al mantener los datos específicos de la función en silos departamentales. En ese escenario, los datos utilizados por un departamento no estaban disponibles o accesibles para otro departamento. Sin embargo, eso causó un problema grave en el mundo de la analítica avanzada, donde los datos de clientes de 360 grados o los datos de marketing empresarial son necesidades cotidianas. Las organizaciones, independientemente de su tamaño, tipo o naturaleza del negocio, pronto se dieron cuenta de que para tener éxito en la era digital, los datos debían ser accesibles y compartibles.
+:Performance: El valor de las arquitecturas de datos está en el volumen de los datos que procesan. Sin embargo, esto también puede convertirse en un problema importante. Si no diseñamos la arquitectura para escalar, esto puede convertirse en un problemas rápidamente - principalmente el escalamiento y la performance.
+:Costos: Como consecuencia de una mala performance en el diseño de al arquitectura, los costos operativos pueden incrementarse rápidamente - y lo que es peor, no seguir un escalamiento lineal.
+:Complejidad: Cada vez que trabajamos con diversas fuentes de datos, la complejidad del sistema es un desafío, sobre todo cuando ademas tenemos en cuenta a las diferentes velocidad en las que se mueven los datos.
 
 Objetivos
 ---------

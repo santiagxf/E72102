@@ -10,7 +10,7 @@ EL dato como activo en la organización
 
 La transformación digital por la que estan pasando las organizaciones en la actualidad (con mayor o menor exito), tiene distintos efectos entre los cuales aparecen nuevas oportunidades de diferenciación. Entre las mismas, se destaca la generación de datos como subproducto (o incluso como principal derivado) de la trasnformación y del los proceso de negocio.
 
-Cuando la orgaización gestiona el dato de forma consciente, es capaz de tomar decisiones mas eficaces y eficientes, y de entrar a competir en mercados donde el resto no puede. Y es que estas organizaciones han cambiado su percepción con respecto al dato. Básicamente, según Higsony Waltho, estas organización han pasado de considerar al dato como un activo tóxico cuyo uso es necesario *controlar e limitar*, a un activo de valor cuyo uso hay que *gestioner y maximizar*.
+Cuando la orgaización gestiona el dato de forma consciente, es capaz de tomar decisiones mas eficaces y eficientes, y de entrar a competir en mercados donde el resto no puede. Y es que estas organizaciones han cambiado su percepción con respecto al dato. Básicamente, según Higsony Waltho  [1]_, estas organización han pasado de considerar al dato como un activo tóxico cuyo uso es necesario *controlar e limitar*, a un activo de valor cuyo uso hay que *gestioner y maximizar*.
 
 El dato como herramieneta de agilidad
 -------------------------------------

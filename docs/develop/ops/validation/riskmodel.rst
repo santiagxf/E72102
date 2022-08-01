@@ -95,7 +95,7 @@ Supongamos el mismo problema de riesgo crediticio que mencionamos anteriormente.
 |                     | incorrecto        |                               |     | incorrectas         |     |                                 |     |    |
 +---------------------+-------------------+-------------------------------+-----+---------------------+-----+---------------------------------+-----+----+
 | Despliegue          | Modelo errático   | Solicitud denegada o          | 10  | Nueva versión del   | 5   | :ref:`rst_canary_releases`      | 5   | 5  |
-|                     |                   | aprobada incorrectamente      |     | modelo              |     | :ref:`rst_progressive_rollouts` |     |    |
+|                     |                   | aprobada incorrectamente      |     | modelo              |     | :ref:`rst_ring_rollouts` |     |    |
 +---------------------+-------------------+-------------------------------+-----+---------------------+-----+---------------------------------+-----+----+
 
 Interpretación:
@@ -111,7 +111,7 @@ Riesgo                                                Mitigación
 ====================================================  ==================================
 Modelos con una amplia superficie de despliegue         :ref:`rst_canary_releases`
 Amplia utilización del modelo en la organización        | :ref:`rst_canary_releases`
-                                                        | :ref:`rst_progressive_rollouts`
+                                                        | :ref:`rst_ring_rollouts`
 Complejas interacciones entre modelos                   Test de regresión
 Ambientes que cambian frecuentemente                    | :ref:`rst_mlops`
                                                         | :ref:`rst_deployment_bg`

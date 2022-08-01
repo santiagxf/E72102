@@ -10,8 +10,12 @@ En algunos casos estos dos procesos se dan al unísono, pero no necesariamente. 
 
 A contuación veremos varias técnicas para controlar tanto el proceso de despliegue y el proceso de versiones o lanzamientos.
 
-Despliegues controlados
+Despliegues progresivos
 -----------------------
+
+Los despliegues progresivos tienen como objetivo desplegar nuevas versiones del modelo de aprendizaje automático a pequeños grupos de usuarios en lugar de realizarlo sobre toda la base de usuarios finales. Esto permitiría a los equipos de despliegue trabajar con los comentarios que los primeros usuarios realizan para asi optimizar el lanzamiento detectando y corrigiendo cualquier error antes que el modelo alcance a todos los usuarios - donde el riesgo es alto.
+
+Dependiendo de cómo se seleccionan estos primeros grupos de usuario, existen diferentes técnicas para realizar estos depliegues de forma progresiva: 
 
 .. _rst_deployment_bg:
 
@@ -23,10 +27,12 @@ Este tipo de despliegue también tiene la ventaja de que permite una rápida *vu
 
 Una vez que el despliegue finaliza y es aceptado, el ambiente *green* pasa a llamarse *blue*, y el antiguo ambiente *green* queda disponible para desplegar las proximas versiones del modelo en cuestión.
 
-.. _rst_progressive_rollouts:
+.. _rst_ring_rollouts:
 
-Progressive Rollouts
-^^^^^^^^^^^^^^^^^^^^
+Ring deployments
+^^^^^^^^^^^^^^^^
+
+En esta estrategia, los usuarios se dividen en anillos y cada anillo representa un grupo que se somete a la nueva versión del modelo. El despliegue comienza por los anillos "mas cercanos" que estan representatos por los usuarios donde un mal comportamiento representa menos riesgo o donde podemos iterar o indagar sobre lo sucedido más facilmente. Por lo tanto, el proceso podría comenzar con sus usuarios internos y luego, una vez que se prueba el correcto funcionamiento del nuevo modelo, el mismo se lanza al próximo anillo y así sucesivamente.
 
 .. figure:: _images/rings.png
    :alt: Despliegues progresivos utilizando rings o anillos

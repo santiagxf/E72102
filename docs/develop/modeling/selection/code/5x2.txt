@@ -1,5 +1,6 @@
 numpy
-sklearn
+scikit-learn
 lightgbm
 pandas
 scipy
+mlxtend

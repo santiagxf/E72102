@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Implementación de modelos de aprendizaje automático'
+project = 'E72.1.02'
 copyright = '2022, Universidad de Buenos Aires (FCE-UBA) - Profesores: Facundo Santiago, Yamila Adriana Zakhem'
-html_title = 'E72.1.02'
+html_title = 'Implementación de modelos de aprendizaje automático'
 author = 'Facundo Santiago'
 
 

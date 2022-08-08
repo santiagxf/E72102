@@ -17,9 +17,11 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'E72.1.02'
+project = 'E72.1.02 Implementación de modelos de aprendizaje automático'
 copyright = '2022, Universidad de Buenos Aires (FCE-UBA) - Profesores: Facundo Santiago, Yamila Adriana Zakhem'
 html_title = 'E72.1.02 Implementación de modelos de aprendizaje automático'
+html_short_title = 'E72.1.02'
+# html_logo = ''
 author = 'Facundo Santiago'
 
 
@@ -86,7 +88,7 @@ nbsphinx_prolog = """
       transition: box-shadow 0.2s;
       display: flex;
       align-items: center"
-        target="_blank" href="http://colab.research.google.com/github/santiagxf/{{ env.config['project'].replace('.','') }}/blob/master/docs/{{ env.doc2path(env.docname, base=None) }}">
+        target="_blank" href="http://colab.research.google.com/github/santiagxf/{{ env.config['html_short_title'].replace('.','') }}/blob/master/docs/{{ env.doc2path(env.docname, base=None) }}">
       <img src="https://www.tensorflow.org/images/colab_logo_32px.png" style="margin-right: 8px">Abrir en Google Colab</a>
     </td>
         <td>
@@ -98,7 +100,7 @@ nbsphinx_prolog = """
       transition: box-shadow 0.2s;
       display: flex;
       align-items: center"
-        href="https://raw.githubusercontent.com/santiagxf/{{ env.config['project'].replace('.','') }}/master/docs/{{ env.doc2path(env.docname, base=None) }}">
+        href="https://raw.githubusercontent.com/santiagxf/{{ env.config['html_short_title'].replace('.','') }}/master/docs/{{ env.doc2path(env.docname, base=None) }}">
       <img src="https://www.tensorflow.org/images/download_logo_32px.png" style="margin-right: 8px">Descargar notebook</a>
     </td>
   </tr>

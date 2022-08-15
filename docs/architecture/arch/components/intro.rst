@@ -10,7 +10,7 @@ Organización
 Estas arquitecturas generalmente involucran uno o más componentes que son responsables de llevar adelante las siguientes tareas:
 
 * Procesamiento de :ref:`rst_data_batch` y en reposo.
-* Procesamiento en tiempo real de :ref:`rst_data_stream`.
+* Procesamiento en :ref:`rst_data_stream`.
 * Exploración interactiva de datos.
 * Analítica predictiva y aprendizaje automático.
 

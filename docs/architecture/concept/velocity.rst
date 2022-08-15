@@ -24,10 +24,10 @@ Aunque el procesamiento por lotes es eficiente, rentable y rápido, tiene alguna
 
 .. _rst_data_stream:
 
-Datos en alta velocidad (stream)
---------------------------------
+Datos en alta velocidad (real-time y stream)
+--------------------------------------------
 
-Los datos que se mueven a alta velocidad (también denominados datos calientes - o stream) son conjuntos de datos donde las muestras se generan constantemente y a una velocidad elevada, haciendo que los mismos crezcan en tamaño rápidamente.
+Los datos que se mueven a alta velocidad (también denominados datos calientes) son conjuntos de datos donde las muestras se generan constantemente y a una velocidad elevada, haciendo que los mismos crezcan en tamaño rápidamente.
 
 El desafío de la velocidad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

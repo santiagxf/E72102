@@ -20,8 +20,7 @@ En general podemos ingestar:
 * Origenes de terceros:
 
   * De ingeta permitida: Datos provenientes o colectados por terceros, que habilitan conexión a la organización. Ej: Redes Sociales.
-  * Open-data: Datos publicados por organizaciones públicas o privadas.
-
+  * Open-data: Datos publicados por organizaciones públicas o privadas. Los datos abiertos son datos que pueden ser utilizados, reutilizados y redistribuidos libremente por cualquier persona, y que se encuentran sujetos, cuando más, al requerimiento de atribución y de compartirse de la misma manera en que aparecen.
 
 Tipos de ingesta
 ----------------

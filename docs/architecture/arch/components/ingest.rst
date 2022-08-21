@@ -34,11 +34,13 @@ De igual forma que vimos en :doc:`../../concept/velocity`, la velocidad impacta 
 Fase de la ingesta
 ------------------
 
+En general, durante la ingesta de datos, las siguientes operaciones se realizan:
+
 :Extracción: Los datos se recolectan desde el origen.
 :Transformación: Los datos son transformados para conformar el destino donde serán almacenados. Esto puede incluir validar, limpiar, normalizar o vincular datos asegurandose su precisión y confiabilidad.
 :Carga: Colocar los datos en el silo o base de datos de destino.
 
-Los sistemas que realizar las operaciones en el orden presentado se los conoce como ETL. Por las siglas de cada uno de los pasos en inglés. Sin embargo, no es mandatorio hacerlos en ese orden - o incluso - no es mendatorio hacerlos a todos, especialmente el de **Transformación**. Por ejemplo, muchos sistemas de análitica avanzada optan por realizar la transformación de los datos en otras herramientas de procesamiento no ligadas a la ingesta. Estas estrategias se las llama ELT (nuevamente por sus siglas en inglés).
+Los sistemas que realizar las operaciones en el orden presentado se los conoce como **ETL** (por las siglas em inglés de cada uno de los pasos). Sin embargo, no es mandatorio hacerlos en ese orden - o incluso - no es mendatorio hacerlos a todos, especialmente el de **Transformación**. Por ejemplo, muchos sistemas de análitica avanzada optan por realizar la transformación de los datos en otras herramientas de procesamiento no ligadas a la ingesta. Estas estrategias se las conoce como **ELT** (nuevamente por sus siglas en inglés).
 
 Desafíos en arquitecturas de datos
 ----------------------------------

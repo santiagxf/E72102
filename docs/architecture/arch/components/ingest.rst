@@ -13,7 +13,7 @@ En general podemos ingestar:
 * Origines propios:
 
   * Bases de datos transaccionales como ser sistemas ERP, CRM, BPM, etc.
-  * Archivos de la orgnanización.
+  * Archivos de la organización.
   * Datos provenientes de aplicaciones.
   * Telemetría de la operación o dispositivos conectados de la organización.
 
@@ -27,7 +27,7 @@ Tipos de ingesta
 
 De igual forma que vimos en :doc:`../../concept/velocity`, la velocidad impacta en todos los componentes de la arquitectura de datos. En general, encontraremos 3 tipos de ingesta de datos:
 
-:En tiempo real (real-time): En una ingesta en tiempo real, los datos son adquiridos tan rápido como es posible. En general, para que esto sea posible es dato es capturado incluso antes de ser persistido en almacenamiento permanente en el origen (on-the-fly).
+:En tiempo real (real-time): En una ingesta en tiempo real, los datos son adquiridos tan rápido como es posible. En general, para que esto sea posible el dato es capturado cuando la transacción es confirmada y antes de que se realice cualquier otro procesamiento en el origen.
 :En stream (streaming): En un principio, stream podría parecer similar a real-time, sin embargo existe una gran diferencia. En una ingesta en tiempo real, el dato se adquiere tan pronto como es posible, independientemente de si otros datos han sido adquiridos o no. Sin embargo, en una ingesta en stream, el orden es importante y existen elementos que deben ser ingestados antes que otros.
 :En lotes (batch): Los datos son ingresados en cantidades específicas en periodos definidos.
 

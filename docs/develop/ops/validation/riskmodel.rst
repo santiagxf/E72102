@@ -76,7 +76,7 @@ FMEA es un método que puede ser aplicado a cualquier disciplina, pero en el ám
 
 - **Severidad (SEV):** La severidad de la falla, medida desde la perspectiva del cliente. Podríamos preguntarnos *¿Qué tan significativo es el impacto para los clientes si la falla ocurre?*
 - **Ocurrencia (OCC):** La frecuencia con la cual la falla (real o potencial) puede o podría ocurrir. Podríamos preguntarnos *¿Qué tan frecuente ocurre o ocurriría esta falla debido a este modo?*
-- **Detection (DET):** La probabilidad de que detectemos la falla antes de que afecte a algún cliente. Podríamos preguntarnos *¿Qué tan probable es que el sistema detecte a falla antes de que ocurra o cuando se hace presente? ¿Qué tan detectable es este modo?*
+- **Detection (DET):** La probabilidad de que detectemos la falla antes de que afecte a algún cliente. Podríamos preguntarnos *¿Qué tan probable es que el sistema detecte la falla antes de que ocurra o cuando se hace presente? ¿Qué tan detectable es este modo?*
 
 .. note:: FMEA es una técnica muy amplia y está fuera del alcance de este curso. Para un detalle más profundo sobre la misma puede revisar `Guide to Failure Mode and Effect Analysis – FMEA en el sitio de Juran <https://www.juran.com/blog/guide-to-failure-mode-and-effect-analysis-fmea/>`_.
 

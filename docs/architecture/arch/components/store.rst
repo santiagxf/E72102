@@ -23,6 +23,8 @@ Características principales de las bases de datos:
 * Utilizado para el procesamiento de transacciones en línea (OLTP).
 * Capacidades de registro de datos, captura de transacciones a medida que ocurren y alojamiento de esas transacciones.
 
+.. _rst_data_warehouse:
+
 Data Warehouse
 ^^^^^^^^^^^^^^
 

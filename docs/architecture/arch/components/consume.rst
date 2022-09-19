@@ -55,7 +55,7 @@ fiables. A fin de cuentas, ni siquiera la analítica más sofisticada es exacta 
 
 El obstaculo de la adopción
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-¿Cuál es el obstáculo principal que impide que BI llegue a toda la empresa? Los empleados no cuentan con la suficiente alfabetización de los datos, es decir, la capacidad de leer y analizar datos y de trabajar e interactuar con ellos. Un estudio global realizado por Qlik en 2017/2018[1] mostró que solo el 24 % de los directivos en las empresas se consideraban alfabetizados en datos. 
+¿Cuál es el obstáculo principal que impide que BI llegue a toda la empresa? Los empleados no cuentan con la suficiente alfabetización de los datos, es decir, la capacidad de leer y analizar datos y de trabajar e interactuar con ellos. Un estudio global realizado por Qlik en 2017/2018 [1]_ mostró que solo el 24 % de los directivos en las empresas se consideraban alfabetizados en datos. 
 
 Tercera generación: Democratizada
 *********************************

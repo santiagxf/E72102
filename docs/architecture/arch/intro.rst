@@ -2,6 +2,13 @@
 Arquitecturas de datos empresariales
 ====================================
 
+   "The next morning, Nashe and Pozzi learned that building a wall was not as simple as they had imagined. Before the actual construction could get underway, all sorts of preparations had to be attended to. Lines had to be drawn, a trench has to be dug, a flat surface had to be created. 
+   
+   - *You can't just plop down stones and hope for the best*, Murks said. *You've got to do things right*."
+
+   -- The music of chance (Paul Auster, 1990)
+
+..
    "A la mañana siguiente Nashe y Pozzi descubrieron que construir un muro no era tan sencillo como habían imaginado. Antes de empezar la construcción en sí había que hacer toda clase de preparativos. Había que trazar líneas, cavar zanjas, crear una superficie plana.
 
    –No podéis dejar caer las piedras simplemente y esperar que quede bien – les dijo Murks. Tenéis que hacer las cosas como Dios manda."

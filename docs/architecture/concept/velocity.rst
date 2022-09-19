@@ -32,7 +32,9 @@ Los datos que se mueven a alta velocidad (también denominados datos calientes) 
 El desafío de la velocidad
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Los datos con estas características proponen desafíos importantes en las arquitecturas de datos ya que la velocidad de generación hace que los mismos solo pueden ser leidos una sola vez, procesados (si es necesario), y almacenados. En algunos casos, la cantidad de información (data por la velocidad x el tamaño) que los datos son leidos, procesados y descartados inmediatamente. Es más, los computos que se pueden hacer sobre estos datos deben ser muy sencillos ya que computos complejos retrasarian la llegada y procesamiento de los siguientes datos de la secuencia.
+Los datos con estas características proponen desafíos importantes en las arquitecturas de datos ya que la velocidad de generación hace que los complejizan lo que se puede hacer con ellos en terminos de procesamiento y almacenamiento. En algunos casos, la cantidad de información (la cual es función de la velocidad, la frecuencia y el tamño del dato) es tal que los mismos son leidos, procesados mediante funciones de agregación estadística y descartados inmediatamente. Este podría ser el caso de datos que se generan a una granularidad demasiado alta. Es más, los computos que se pueden hacer sobre estos datos deben ser muy sencillos ya que computos complejos retrasarian la llegada y procesamiento de los siguientes datos de la secuencia.
+
+En otros casos, los datos son de interes para la organización pero intentar procesarlos a medida que son generados requiere procesamiento masivo y desafíos de latencia que son prohivitivos. En tales casos, es preferible almacenarlos tan rápido como es posible para luego utilizar una modalidad de procesamiento por lotes donde las restricciones de tiempo no son tal altas.
 
 Otros desafios incluyen:
 

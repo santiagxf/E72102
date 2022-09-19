@@ -35,7 +35,8 @@ Los científicos de datos con un nivel de experiencia elevado prefieren solucion
 .. figure:: ../_images/arch-analytics-landscape.jpg
    :alt: Herramientas de análitica avanzada en las organizaciones
    :align: center
+   :target: ../_images/arch-analytics-landscape.jpg
 
-   *Herramientas de análitica avanzada en las organizaciones.*
+   *Herramientas de análitica avanzada en las organizaciones (haga clic para ver en pantalla completa).*
 
 

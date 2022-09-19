@@ -37,7 +37,7 @@ Una segunda generación puso sobre la mesa herramientas más rápidas a la par q
 #. Se desarrolló un sistema visual e intuitivo de interacción entre el usuario y los datos.
 #. Se desarrollaron motores de ejecución que permitieron a todos los usuarios (aunque no estén especializados) explorar con libertad sus datos, dirigirlos en cualquier dirección y descubrir sus interconexiones.
 
-.. figure:: ../_images/arch-viz-semantic.jpg
+.. figure:: ../_images/arch-viz-semantic.png
    :alt: Ejemplo de una arquitectura típica de soluciones decentralizadas para BI
    :align: center
 
@@ -58,7 +58,7 @@ Tercera generación: Democratizada
 *********************************
 Esta tercera generación ha conducido al mundo hacia una **democratización del dato absoluta**; una forma de entender su acceso como algo obligatorio para toda la organización con el fin de obtener mayores conocimientos. Las herramientas de visualización self-service han propulsado esta democratización con el uso de un motor de indexación de datos asociativa y su uso en multi-cloud y dispositivos móviles, concediendo al usuario final la capacidad de explorar los datos libremente y sin fronteras.
 
-.. figure:: ../_images/arch-viz-3rd.jpg
+.. figure:: ../_images/arch-viz-3rd.png
    :alt: Necesidades del usuario en torno a visualización de información
    :align: center
 

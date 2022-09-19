@@ -2,6 +2,9 @@
 Componentes de consumo y visualización
 ======================================
 
+Introducción
+------------
+
 Las organizaciones que quieren competir y ganar necesitan inteligencia, inteligencia aplicada a los clientes, proveedores, productos, partners y mercados. El último paso dentro de una arquitectura de procesamiento de datos debe poder materializar esta inteligencia y entregarla de forma correcta y a tiempo al negocio. Con los años, esta búsqueda de inteligencia ha recibido diferentes nombres: sistemas de soporte a la toma de decisiones, sistemas de información gerencial, gestión del desempeño empresarial, descubrimiento de datos, visualización de datos y, más recientemente, Business Intelligence (BI).
 
 Independientemente del nombre, el desafío siempre ha sido el mismo: ¿De qué manera pueden las organizaciones analizar los datos para hacer descubrimientos con los que obtener una ventaja competitiva?

@@ -64,6 +64,7 @@ Esta tercera generación ha conducido al mundo hacia una **democratización del 
 .. figure:: ../_images/arch-viz-3rd.png
    :alt: Necesidades del usuario en torno a visualización de información
    :align: center
+   :width: 400
 
    *Necesidades del usuario en torno a visualización de informació.*
 

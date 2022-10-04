@@ -11,6 +11,8 @@ Datos en lotes (batch)
 
 Mover datos en grandes cantidades conlleva tiempo. Aspectos como la velocidad de la red, el tamaño de los datos, la cantidad de archivos, y los tiempos de lectura y escritura de los sistemas de almacenamiento impactan en el tiempo total que le toma a un conjunto de datos en moverse de una ubicación a la otra.
 
+Cuando los datos se mueven y procesan en grandes cantidades, al mismo tiempo en ventanas de tiempo prefijadas, y donde no existen limitaciones de latencia (al menos extrictas) para obtener los resultados, entonces decimos que los datos se están procesando **por lotes** o en modalidad **batch**.
+
 Desafios de los datos en lotes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

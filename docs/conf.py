@@ -101,7 +101,7 @@ nbsphinx_prolog = """
       display: flex;
       align-items: center"
         target="_blank" href="https://mybinder.org/v2/gh/santiagxf/{{ env.config['html_short_title'].replace('.','') }}/HEAD?labpath=docs/{{ env.doc2path(env.docname, base=None) }}">
-      <img src="https://mybinder.org/static/logo.svg" style="margin-right: 8px">Abrir en Binder</a>
+      <img src="https://mybinder.org/static/logo.svg" style="margin-right: 8px; height: 32px">Abrir en Binder</a>
     </td>
     <td>
     <a style="border-radius: 8px;

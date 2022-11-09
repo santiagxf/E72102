@@ -91,7 +91,19 @@ nbsphinx_prolog = """
         target="_blank" href="http://colab.research.google.com/github/santiagxf/{{ env.config['html_short_title'].replace('.','') }}/blob/master/docs/{{ env.doc2path(env.docname, base=None) }}">
       <img src="https://www.tensorflow.org/images/colab_logo_32px.png" style="margin-right: 8px">Abrir en Google Colab</a>
     </td>
-        <td>
+    <td>
+    <a style="border-radius: 8px;
+      box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+      font-size: 14px;
+      color: #202124;
+      padding: 8px 14px;
+      transition: box-shadow 0.2s;
+      display: flex;
+      align-items: center"
+        target="_blank" href="https://mybinder.org/v2/gh/santiagxf/{{ env.config['html_short_title'].replace('.','') }}/HEAD?labpath=docs/{{ env.doc2path(env.docname, base=None) }}">
+      <img src="https://mybinder.org/static/logo.svg" style="margin-right: 8px">Abrir en Binder</a>
+    </td>
+    <td>
     <a style="border-radius: 8px;
       box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
       font-size: 14px;

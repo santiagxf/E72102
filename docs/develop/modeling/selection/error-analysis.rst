@@ -24,6 +24,6 @@ Ejemplos
   :titlesonly:
 
   code/error_analysis.ipynb
+  code/fairlearn.ipynb  
   code/what_if.ipynb
   code/model_analysis.ipynb
-  code/fairlearn.ipynb

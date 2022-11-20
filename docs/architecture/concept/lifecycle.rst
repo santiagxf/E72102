@@ -96,4 +96,4 @@ Los activos digitales, a diferencia de los activos físicos, tienen la capacidad
 
 El linaje de los datos propone métodos para mantener la trazabiliadd de los datos, conociendo todas las transformaciones que el mismo ha sufrido desde el momento que es creado hasta que es destruido. El linaje le permite a la organización rastrear e identificar errores, aplicar protocolos más rigurosos de :doc:`../governance/data`, reducción de risgos y asegurar su protección.
 
-.. important:: El linaje del dato es un paso necesario, pero no suficiente, hacia la gestión eficiente del dato. Este concepto se aborda más en detalle en la sección :doc:`../governance/data`.
+.. important:: El linaje del dato es un paso necesario, pero no suficiente, hacia la gestión eficiente del dato. En general, esto forma parte de un concepto mas amplio abordado en Gobierno de datos.

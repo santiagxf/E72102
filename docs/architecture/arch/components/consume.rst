@@ -51,7 +51,7 @@ Aproximadamente en 2005, la necesidad de tener información a tiempo real se vol
 El desafío de la gobernanza
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 En esta nueva tendencia de BI, la tecnología adquirió la capacidad de analizar muchos más tipos de datos, incluidos los datos no estructurados, los datos sociales e incluso conjuntos de datos personales administrados en hojas de cálculo de Excel. Esto provocó un nuevo problema: la desorganización causada por fuentes de datos múltiples, duplicadas o poco
-fiables. A fin de cuentas, ni siquiera la analítica más sofisticada es exacta si los datos no son seguros. La mayoría de los proveedores ignoraba este problema y dejaban que el cliente lo solucionase. En Qlik, entendimos desde el principio la importancia de tener datos exactos y desarrollamos una estructura segura y gobernada para proporcionar un análisis fiable.
+fiables. A fin de cuentas, ni siquiera la analítica más sofisticada es exacta si los datos no son seguros. La mayoría de los proveedores ignoraba este problema y dejaban que el cliente lo solucionase cuando era de vital importancia tener datos exactos y desarrollar una estructura segura y gobernada para proporcionar un análisis fiable.
 
 El obstaculo de la adopción
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -40,7 +40,13 @@ En el caso de un problema de clasificación por ejemplo, las métricas de `accur
 
 donde :math:`\hat{p}` corresponde a la proporción de la muestra disponible, *z* es el valor de la distribución estandar (para un nivel de significancia de 95%, el valor correspondiente es 1.96) y *n* es el tamaño de la muestra.
 
-.. warning:: A menudo no conocemos la distribución de una métrica de performance que estamos utilizando y por lo tanto que no conozcamos la forma de calcular un intervalo de confianza. En estos casos, podemos utilizar un método de remuestreo basado en `bootstrap` para calcular los intervalos de confianza. Estos CI se los suele nombrar `intervalos de confianza de bootstrap` o `bootstrap confidence intervals`. Vea :doc:`code/online_evaluation` para un ejemplo sobre como lograrlo.
+Distribuciones no conocidas
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+A menudo no conocemos la distribución de una métrica de performance que estamos utilizando y por lo tanto que no conozcamos la forma de calcular un intervalo de confianza. En estos casos, podemos utilizar un método de remuestreo basado en `bootstrap` para calcular los intervalos de confianza. Estos CI se los suele nombrar `intervalos de confianza de bootstrap` o `bootstrap confidence intervals`. 
+
+.. note:: La palabra "bootstrap" probablemente viene de la frase "to pull oneself up by one’s bootstraps" o "levantarse a si mismo tomandose de los cordones de los zapatos". Circa 1900 utilizó el termino figurativamente al referise a una tarea imposible "¿Por qué no puede un hombre levantarse a si mismo tirando de los cordones de sus propios zapatos (boot straps)". La idea de bootstrap aquí esta relacionado al ofrecer una forma de generar nuevas distribuciones a partir de muestreos sobre una misma muestra empírica.
+
+Vea :doc:`code/online_evaluation` para un ejemplo sobre como lograrlo.
 
 Número de observaciones
 ~~~~~~~~~~~~~~~~~~~~~~~

@@ -5,10 +5,6 @@ Evaluación en linea
 ===================
 De la misma forma que evaluamos la performance de nuestro modelo durante su desarrollo y validación para estimar su performance, una vez que un modelo de aprendizaje automático alcanza producción, deberemos de instrumentar mecanismos que nos aseguren de que dicha performance que estimamos anteriormente continua siendo la performance real que la organización obtiene como parte del proceso de negocio en el que el modelo está involucrado. Este procedimiento se lo conoce como **evaluación en linea**. La evaluación en linea no solo es útil para estimar la performance del modelo pero además para compararla con cualquier procedimiento anterior que el modelo está remplazando.
 
-Valores verdadedores o etiquetas
---------------------------------
-Los valores verdaderos (o ground truth) son simplemente la respuesta correcta a la pregunta de negocio que el modelo se suponía que debía responder. Por ejemplo, si estamos diseñando un modelo que predice si un cliente debería recibir o no un correo electrónico promocional, el valor verdadero para el modelo sería si finalmente el usuario tomó la promoción que le enviamos o no. Esta información es de gran interes porque básicamente nos permite calcular que tan bueno o malo es nuestro modelo en resolver este problema de negocio en la realidad.
-
 Evaluación de perfomance
 ------------------------
 La performance del modelo puede evaluarse vía 2 tipo de métricas:
@@ -16,16 +12,29 @@ La performance del modelo puede evaluarse vía 2 tipo de métricas:
 :Estadísticas: Son métricas de performance básicas como `accuracy`, `recall`, `precision`, etc. Estas métricas en general están bien definidas y son las mismas que en general nuestros modelos de aprendizaje automático intentan optimizar.
 :De negocio: Son métricas que están asociadas con el negocio y el valor que entrega el modelo al mismo. Las mismas están deribadas de las métricas estadísticas, pero incorporan información sobre comportamiento. Ejemplos de estás métricas pueden ser, por ejemplo `clic rate` en un modelo de recomendaciones o `lift` en un modelo de clasificación.
 
+Valores verdadedores y su implicancia en el calculo de la performance
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Los valores verdaderos (o ground truth) son simplemente la respuesta correcta a la pregunta de negocio que el modelo se suponía que debía responder. Por ejemplo, si estamos diseñando un modelo que predice si un cliente debería recibir o no un correo electrónico promocional, el valor verdadero para el modelo sería si finalmente el usuario tomó la promoción que le enviamos o no. Esta información es de gran interes porque básicamente nos permite calcular que tan bueno o malo es nuestro modelo en resolver este problema de negocio en la realidad.
+
 Cualquiera seá la métrica que estamos evaluando, la disponibilidad de los valores verdaderos o etiquetas será importante. En algunos casos, obtener los valores verdaderos de las predicciones es muy rápido, por ejemplo, cuando mostramos una publicidad en un sitio web - si el usuario le hace click antes de irse de la página entonces la predicción será correcta y si no lo hace entonces será incorrecta. Por el contrario, en otros procesos de negocio podría tomar tiempo determinar cual es el valor correcto. Este es el caso de un sistema de detección de fraudes por ejemplo, donde podría tomar meses antes de saber si la transacción es efectivamente fraudulenta o no. Esta demora en obtener los valores verdaderos no es trivial porque además condicionará que tan frecuentemente podemos reentrenar nuestro modelo.
 
 Cuando tenemos acceso a los valores verdaderos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 En los casos donde tenemos acceso a los valores verdaderos, podemos calcular cualquiera de las métricas que se definieron para nuestro modelo y tomar una decisión bansandonos en una comparativa de los resultados. Con el fin de asegurarnos tener la suficiente evidencia (datos) para sostener cualquier de los resultados que estamos observando, en general se utilizan intervalos de confianza para estimar las métricas de interes. La utilización de Intervalos de confianza para reportar este tipo de valores es alentado. [5]_
 
+Cuando no tenemos acceso a los valores verdaderos
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+En los casos donde la valores verdaderos de la variable objetivo no están disponibles, una alternativa para la evalución en linea es la evaluación de desviaciones covariable. Vea :ref:`rst_covariate_shift`
+
+.. note:: La evaluación via desviaciones covariables se basa en el principio de que el modelo solo performará correctamente si los datos con los que fué entrenado (muestra) reflejan correctamente el comportamiento y valores en el mundo real (población). Por lo tanto, si una comparación entre los datos que se utilizaron durante el entrenamiento y los datos que el modelo ve en producción arrojan diferencias, entonces tenemos evidencia para sostener la idea que el modelo no performará bien.
+
+Si bien esta alternativa nos permite detectar desviaciones, la solución a este problema no es tan sencilla de implementar. Al no disponer de los valores verdaderos en la variable objetivo, reentrenar el modelo no es una opción en el corto plazo. Intervención manual será requerida en este caso ya que es necesario identificar los factores que están causando la desviación en los datos de entrada. Los desarroladores del modelo pueden evaluar la situación y aplicar técnicas para corregirlo incluyendo eliminar algunos predictores o cambiar la estrategia de muestreo (resampling). Aquí es donde se vuelve piramidal la estrategia de :ref:`rst_alerts`.
+
+
 .. _rst_confidence_intervals:
 
 Intervalos de confianza (CI) [6]_
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Los intervalos de confianza proveen un rango de valores en donde es probable encontrar el valor verdadero de la métrica. En general podemos calcular el intervalo de confianza de una métrica utilizando:
 
 .. math::
@@ -57,15 +66,6 @@ Número de observaciones
     :caption: Ejemplos
 
     code/online_evaluation.ipynb
-
-Cuando no tenemos acceso a los valores verdaderos
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-En los casos donde la valores verdaderos de la variable objetivo no están disponibles, una alternativa para la evalución en linea es la evaluación de desviaciones covariable. Vea :ref:`rst_covariate_shift`
-
-.. note:: La evaluación via desviaciones covariables se basa en el principio de que el modelo solo performará correctamente si los datos con los que fué entrenado (muestra) reflejan correctamente el comportamiento y valores en el mundo real (población). Por lo tanto, si una comparación entre los datos que se utilizaron durante el entrenamiento y los datos que el modelo ve en producción arrojan diferencias, entonces tenemos evidencia para sostener la idea que el modelo no performará bien.
-
-Si bien esta alternativa nos permite detectar desviaciones, la solución a este problema no es tan sencilla de implementar. Al no disponer de los valores verdaderos en la variable objetivo, reentrenar el modelo no es una opción en el corto plazo. Intervención manual será requerida en este caso ya que es necesario identificar los factores que están causando la desviación en los datos de entrada. Los desarroladores del modelo pueden evaluar la situación y aplicar técnicas para corregirlo incluyendo eliminar algunos predictores o cambiar la estrategia de muestreo (resampling). Aquí es donde se vuelve piramidal la estrategia de :ref:`rst_alerts`.
-
 
 Degradación del modelo
 ----------------------

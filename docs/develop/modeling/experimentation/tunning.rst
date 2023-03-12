@@ -23,3 +23,12 @@ Típicamente existen 3 formas de elegir los hiperparámetros de nuestro modelo:
 :Explorar el espacio aleatoriamente: Probar cada una de las combinaciones o un subset de las combinaciones de hiperparámetros posibles. Esto se puede realizar de forma exahustiva o probando solo k combinaciones. Probar todas las combinaciones puede resultar prohivitivo en terminos de costos e incluso en terminos de tiempos si el espacio a explorar es demasiado grande. En este punto, probar solo k combinaciones de forma aleatoria parece ser una mejor elección. Sin embargo, no tenemos ninguna garantía de obtener algun resultado bueno.
 :Utilizar una búsqueda guiada: Consiste en probar diferentes combinaciones de parámetros, pero en lugar de elegir la próxima combinación de forma aleatoria la (próxima) combinación explora el espacio de parámetros moviendose en la dirección que maximiza la probabilidad de obtener un mejor resultado. Ejemplos de esto por ejemplo es la `Optimización Bayesiana <https://en.wikipedia.org/wiki/Bayesian_optimization>`_.
 
+Ejemplos
+--------
+
+.. toctree::
+  :glob:
+  :maxdepth: 1
+  :titlesonly:
+
+  code/*.ipynb

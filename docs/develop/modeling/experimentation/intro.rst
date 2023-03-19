@@ -109,4 +109,4 @@ Por lo general, esto implica el uso de árboles de decisiones muy simples que so
    :hidden:
 
    Sesgo-varianza <bias-and-variance>
-   Tuneo de hiperparámetros <tunning>
+   Tuneo de hiperparámetros <tuning>

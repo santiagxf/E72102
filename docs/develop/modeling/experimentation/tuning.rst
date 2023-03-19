@@ -27,8 +27,7 @@ Ejemplos
 --------
 
 .. toctree::
-  :glob:
   :maxdepth: 1
   :titlesonly:
 
-  code/*.ipynb
+  code/tuning_bayesian.ipynb

@@ -60,6 +60,15 @@ Un conjunto de datos puede tener múltiples entradas del mismo dato. En algunos 
 
 Mas allá de que estos problemas se originan durante el proceso de recolección de datos, es importante asegurarse de que el error no se propaga a nuestro modelado. ¿Por qué? Pues pueden introducir sesgo en los modelos de aprendizaje (bias).
 
+Ejemplos
+^^^^^^^^
+
+.. toctree::
+  :maxdepth: 1
+  :titlesonly:
+
+  code/dataprep.ipynb
+
 Reproducibilidad
 ----------------
 

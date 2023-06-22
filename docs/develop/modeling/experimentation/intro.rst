@@ -103,6 +103,10 @@ Por lo general, esto implica el uso de árboles de decisiones muy simples que so
 .. note:: Lectura recomendada: `https://machinelearningmastery.com/tour-of-ensemble-learning-algorithms/ <https://machinelearningmastery.com/tour-of-ensemble-learning-algorithms/>`_.
 
 
+Seguimiento de experimentos y ejecuciones
+-----------------------------------------
+El proceso de experimentación puede requirer multiples iteraciones, donde se cambian las estrategias de entrenamiento, diferentes parámeteros y configuraciones. Durante este proceso, disponer de una herramienta que nos permita realizar el seguimiento, registrar todos los valores que estamos utilizando, y disponibilizarlos en un lugar centralizado es fundamental. Cuando se trabaja en equipos, este aspecto se vuelvo más relevante dado que es necesario comparar las ejecuciones que cada usuario realiza. Vea :doc:`code/tracking.ipynb`_.
+
 .. toctree::
    :maxdepth: 2
    :caption: En esta sección

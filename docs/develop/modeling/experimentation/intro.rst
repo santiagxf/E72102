@@ -20,7 +20,7 @@ El concepto de arquitectura hace referencia a los componentes que conforman nues
    :align: center
    :width: 600
 
-   La elección de una arquitectura para el modelo como un proceso iterativo
+   *La elección de una arquitectura para el modelo como un proceso iterativo*
 
 La elección de una arquitectura para el modelo es un proceso iterativo, donde el desarrollador propone diversas arquitecturas basado en la naturaleza del problema, su intuación y su experiencia. En general sabemos que determinadas arquitecturas tienden a funcionar bien en determinadas configuraciones. Por ejemplo, sabemos que redes neuronales del tipo CNN son útiles en problemas relacionados con clasificación de imágenes. Adicionalmente, la calidad de los datos disponibles también directará el tipo de arquitectura que podemos considerar.
 
@@ -106,6 +106,13 @@ Por lo general, esto implica el uso de árboles de decisiones muy simples que so
 Seguimiento de experimentos y ejecuciones
 -----------------------------------------
 El proceso de experimentación puede requirer multiples iteraciones, donde se cambian las estrategias de entrenamiento, diferentes parámeteros y configuraciones. Durante este proceso, disponer de una herramienta que nos permita realizar el seguimiento, registrar todos los valores que estamos utilizando, y disponibilizarlos en un lugar centralizado es fundamental. Cuando se trabaja en equipos, este aspecto se vuelvo más relevante dado que es necesario comparar las ejecuciones que cada usuario realiza. Vea :doc:`code/tracking`.
+
+.. figure:: ../../_images/tracking.png
+   :alt: Ejemplo de como se visualizan diferentes ejecuciones dentro de un experimento en una herramienta de seguimiento o tracking.
+   :align: center
+   :width: 600
+
+   *Ejemplo de como se visualizan diferentes ejecuciones dentro de un experimento en una herramienta de seguimiento o tracking.*
 
 .. toctree::
    :maxdepth: 2

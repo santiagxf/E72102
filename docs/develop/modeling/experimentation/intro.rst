@@ -105,7 +105,7 @@ Por lo general, esto implica el uso de árboles de decisiones muy simples que so
 
 Seguimiento de experimentos y ejecuciones
 -----------------------------------------
-El proceso de experimentación puede requirer multiples iteraciones, donde se cambian las estrategias de entrenamiento, diferentes parámeteros y configuraciones. Durante este proceso, disponer de una herramienta que nos permita realizar el seguimiento, registrar todos los valores que estamos utilizando, y disponibilizarlos en un lugar centralizado es fundamental. Cuando se trabaja en equipos, este aspecto se vuelvo más relevante dado que es necesario comparar las ejecuciones que cada usuario realiza. Vea :doc:`code/tracking.ipynb`.
+El proceso de experimentación puede requirer multiples iteraciones, donde se cambian las estrategias de entrenamiento, diferentes parámeteros y configuraciones. Durante este proceso, disponer de una herramienta que nos permita realizar el seguimiento, registrar todos los valores que estamos utilizando, y disponibilizarlos en un lugar centralizado es fundamental. Cuando se trabaja en equipos, este aspecto se vuelvo más relevante dado que es necesario comparar las ejecuciones que cada usuario realiza. Vea :doc:`code/tracking`.
 
 .. toctree::
    :maxdepth: 2

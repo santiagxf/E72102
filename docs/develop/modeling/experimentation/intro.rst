@@ -110,7 +110,6 @@ El proceso de experimentación puede requirer multiples iteraciones, donde se ca
 .. figure:: ../../_images/tracking.png
    :alt: Ejemplo de como se visualizan diferentes ejecuciones dentro de un experimento en una herramienta de seguimiento o tracking.
    :align: center
-   :width: 600
 
    *Ejemplo de como se visualizan diferentes ejecuciones dentro de un experimento en una herramienta de seguimiento o tracking.*
 

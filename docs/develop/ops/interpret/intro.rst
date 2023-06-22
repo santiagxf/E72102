@@ -3,8 +3,13 @@ Interpretación y explicaciones
 
 A pesar de su amplia adopción, los modelos de aprendizaje automático - y especialmente aquellos basados en aprendizaje profundo - siguen siendo cajas negras a la hoja de entender como toman las decisiones que toman [1]_ . Sin embargo, comprender las razones detrás de las predicciones es importante para evaluar la confianza, que es fundamental si uno planea tomar acciones basadas en una predicción o al elegir si implementar un nuevo modelo en el contexto de una organización o proceso de negocio. Esta comprensión también proporciona información sobre el modelo, que se puede utilizar para transformar un modelo o una predicción que no son confiables en uno confiable.
 
+.. note::
+    Lectura recomendada: `¿Qué significa que un modelo sea justo? <https://santiagof.medium.com/qu%C3%A9-significa-que-un-modelo-sea-justo-793be6741b95>`_.
+
 Técnicas de interpretación
 --------------------------
+
+El área de interpretación de modelos de aprendizaje automático es un área de activa investigación en este momento. Es importante tener en cuenta que no es un problema *resuelto* y por lo tanto todas las técnicas disponibles tienen sus limitaciones. Sin embargo, esto no implica que no sean útiles. Si este es un tema de interés, recomendamos la léctura de la serie de posts `Model interpretability — Making your model confesses <https://santiagof.medium.com/model-interpretability-making-your-model-confess-shapley-values-5fb95a10a624>`_, aunque el contenido se encuentra en inglés.
 
 Mimic
 ^^^^^

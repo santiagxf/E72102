@@ -2,7 +2,7 @@
 Componentes de almacenamiento
 =============================
 
-Los componentes de almacenamiento de datos diferen entre si dependiendo de los :doc:`../../concept/data-types` a almacenar. Los datos estructurados suelen almacenarse en sistemas tradicionales de bases de datos. Los datos no estructurados generalmente se almacenan en un almacén de archivos distribuido que puede contener grandes volúmenes de archivos de diversos tamaños y en varios formatos. Este tipo de almacenamiento a menudo se denomina data lake.
+Los componentes de almacenamiento de datos diferen entre si dependiendo de los :doc:`../../concept/data-types` a almacenar. Los datos estructurados suelen almacenarse en sistemas tradicionales de bases de datos. Los datos no estructurados generalmente se almacenan en un almacén de archivos distribuido que puede contener grandes volúmenes de archivos de diversos tamaños y en varios formatos. Este tipo de almacenamiento a menudo se denomina data lake. Sin embargo, esta separación no es tan definida y existen otros aspectos a tener en cuenta a la hora de elegir una técnología de almacenamiento, que se mencionan a continuación.
 
 Técnologías
 -----------

@@ -110,3 +110,4 @@ Por lo general, esto implica el uso de árboles de decisiones muy simples que so
 
    Sesgo-varianza <bias-and-variance>
    Tuneo de hiperparámetros <tuning>
+   Experimentos y ejecuciones <code/tuning_bayesian.ipynb>

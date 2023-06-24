@@ -2,12 +2,14 @@
 Organización y componentes
 ==========================
 
-Una arquitectura de procesamiento de datos empresariales están diseñada para manejar la ingesta, el procesamiento y el análisis de datos en aquellos casos donde los mismos son demasiado grandes o complejos para los sistemas de bases de datos tradicionales.
+Las arquitecturas de procesamiento de datos empresariales están diseñadas para manejar la ingesta, el procesamiento y el análisis de datos en aquellos casos donde los mismos son demasiado grandes o complejos para los sistemas de bases de datos tradicionales. Estos sistemas están diseñados para escalar a un gran número de usuarios, y volumen de datos. Sin embargo, los conceptos aplican tanto para organizaciones pequeñas como grandes. Para pequeñas organizaciones, verán que muchos de los componentes que se mencionan aquí están concentrados en el mismo producto o componente de arquitectura. En grandes organizaciones, disponer de componentes específicos puede ayudar a la organización a reducir costos de escalamiento o a alcanzar un objetivo en particular.
+
+No existe una receta única de cómo o qué tan grande/pequeña una arquitectura de datos debe ser, sino que tiene dependerá de los objetivos de negocio, tiempos, presupuestos, y objetivos. El rol del arquitecto de datos es el de diseñar estas arquitecturas.
 
 Organización
 ------------
 
-Estas arquitecturas generalmente involucran uno o más componentes que son responsables de llevar adelante las siguientes tareas:
+Las arquitecturas de datos empresariales generalmente involucran uno o más componentes que son responsables de llevar adelante las siguientes tareas:
 
 * Procesamiento de :ref:`rst_data_batch` y en reposo.
 * Procesamiento en :ref:`rst_data_stream`.

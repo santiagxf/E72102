@@ -44,4 +44,5 @@ Existen diferentes técnicas para generar estos mapas:
     :caption: Ejemplos
     :glob:
 
+    code/rfpimp.ipynb
     code/lime.ipynb

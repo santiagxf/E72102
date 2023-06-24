@@ -18,7 +18,7 @@ El área de interpretación de modelos de aprendizaje automático es un área de
 Técnicas de interpretación globales
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Esta técnica de interpretación global consiste en entrenar un nuevo modelo, interpretable, que realiza las mismas predicciones que el modelo que queremos interpretar, el cual es de caja negra. El objetivo es que, al interpretar el modelo "imitador", podamos deducir las razones por la cual el modelo "imitado" predice lo que predice. Si bien es sencillo de implementar, numerosos estudios demuestran que esta técnica no es confiable ya que no existe ninguna garantía de que el modelo "imitado" esté siguiendo el mismo patrón que el modelo "imitador". Y, en caso de que así lo fuera, entonces sería conveniente finalmente utilizar el modelo "imitador" en su lugar (ya que ambos predicen los mismos resultados).
+Una de las técnicas más sencillas de implementar es la de *surrogate*. Esta técnica de interpretación global consiste en entrenar un nuevo modelo, interpretable, que realiza las mismas predicciones que el modelo que queremos interpretar, el cual es de caja negra. El objetivo es que, al interpretar el modelo "imitador", podamos deducir las razones por la cual el modelo "imitado" predice lo que predice. Si bien es sencillo de implementar, numerosos estudios demuestran que esta técnica no es confiable ya que no existe ninguna garantía de que el modelo "imitado" esté siguiendo el mismo patrón que el modelo "imitador". Y, en caso de que así lo fuera, entonces sería conveniente finalmente utilizar el modelo "imitador" en su lugar (ya que ambos predicen los mismos resultados).
 
 Técnicas de interpretación locales
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

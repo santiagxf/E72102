@@ -11,18 +11,19 @@ Técnicas de interpretación
 
 El área de interpretación de modelos de aprendizaje automático es un área de activa investigación en este momento. Es importante tener en cuenta que no es un problema *resuelto* y por lo tanto todas las técnicas disponibles tienen sus limitaciones. Sin embargo, esto no implica que no sean útiles. Existen 2 grandes grupos de técnias: globales o locales. Las técnicas globales describen el comportamiento general del modelo y por lo tanto son útiles cuando el desarrollador quiere entender la mecánica o heurística del modelo. Lás técnicas locales, por el contrario, intentan explicar las predicciones de una predicción en particular.
 
-En este curso, solo introduciremos el tema por lo cual mencionaremos un caso de cada uno de los grupos de técnicas. Si este es un tema de interés, recomendamos la léctura de la serie de posts `Model interpretability — Making your model confesses <https://santiagof.medium.com/model-interpretability-making-your-model-confess-shapley-values-5fb95a10a624>`_, aunque el contenido se encuentra en inglés.
+.. note::
+    En este curso, solo introduciremos el tema por lo cual mencionaremos un caso de cada uno de los grupos de técnicas. Si este es un tema de interés, recomendamos la léctura de la serie de posts `Model interpretability — Making your model confesses <https://santiagof.medium.com/model-interpretability-making-your-model-confess-shapley-values-5fb95a10a624>`_, aunque el contenido se encuentra en inglés.
 
 
-Surrogate
-^^^^^^^^^
+Técnicas de interpretación globales
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Esta técnica de interpretación global consiste en entrenar un nuevo modelo, interpretable, que realiza las mismas predicciones que el modelo que queremos interpretar, el cual es de caja negra. El objetivo es que, al interpretar el modelo "imitador", podamos deducir las razones por la cual el modelo "imitado" predice lo que predice. Si bien es sencillo de implementar, numerosos estudios demuestran que esta técnica no es confiable ya que no existe ninguna garantía de que el modelo "imitado" esté siguiendo el mismo patrón que el modelo "imitador". Y, en caso de que así lo fuera, entonces sería conveniente finalmente utilizar el modelo "imitador" en su lugar (ya que ambos predicen los mismos resultados).
 
-Saliency maps
-^^^^^^^^^^^^^
+Técnicas de interpretación locales
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-En el contexto de aprendizaje profundo, los *saliency maps* se introdujeron por primera vez en el artículo titulado "Deep Inside Convolutional Networks: Visualizing Image Classification Models and Saliency Maps" [2]_. Este método de interpretación local se deriva del concepto de *saliency* en las imágenes el cual se refiere a características únicas (píxeles, resolución, etc.) de la imagen en el contexto del procesamiento visual. Estas características únicas representan las ubicaciones visualmente atractivas en una imagen. El mapa es, finalmente, una representación topográfica de tales pixeles. 
+De las técnicas de interpretación locales, una gran cantidad están basadas en la idea de *saliency maps*. En el contexto de aprendizaje profundo, los *saliency maps* se introdujeron por primera vez en el artículo titulado "Deep Inside Convolutional Networks: Visualizing Image Classification Models and Saliency Maps" [2]_. Este método de interpretación local se deriva del concepto de *saliency* en las imágenes el cual se refiere a características únicas (píxeles, resolución, etc.) de la imagen en el contexto del procesamiento visual. Estas características únicas representan las ubicaciones visualmente atractivas en una imagen. El mapa es, finalmente, una representación topográfica de tales pixeles. 
 
 "El propósito del mapa es representar el nivel de atractividad en cada lugar del campo visual mediante una número escalar y guiar la selección de ubicaciones donde el modelo presta atención, según la distribución espacial de dicha atractividad. Los mapas de predictores (feature maps) proporciona información que se puede propagar ascendentemente al mapa, modelado como una red neuronal dinámica" - Laurent Itti, Christof Koch y Ernst Niebur.
 
@@ -43,4 +44,4 @@ Existen diferentes técnicas para generar estos mapas:
     :caption: Ejemplos
     :glob:
 
-    code/*
+    code/lime.ipynb

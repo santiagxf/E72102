@@ -23,6 +23,11 @@ Características principales de las bases de datos:
 * Utilizado para el procesamiento de transacciones en línea (OLTP).
 * Capacidades de registro de datos, captura de transacciones a medida que ocurren y alojamiento de esas transacciones.
 
+Herramientas
+~~~~~~~~~~~~
+
+Algunos ejemplos de estas técnologias incluyen: Microsoft SQL Sever, MySQL, PostgreSQL, SQLite, MongoDB, Redis, MariaDB, Oracle Database, Firebase, Elasticsearch, etc.
+
 .. _rst_data_warehouse:
 
 Data Warehouse
@@ -44,6 +49,11 @@ Características principales de un Data Warehouse:
 * Aplicación OLAP (procesamiento analítico en línea).
 * Son la principal fuente de datos para el análisis de datos.
 * Los informes y dashbords usan datos de Data Warehouses en general.
+
+Herramientas
+~~~~~~~~~~~~
+
+Algunos ejemplos de estas técnologias incluyen: Azure Synapse Analytics, Snowflake, Google BigQuery, Amazon Redshift, IBM Db2 Warehouse, Firebolt, Oracle Autonomous Data Warehouse, etc.
 
 Data Mart
 ^^^^^^^^^
@@ -80,6 +90,11 @@ Características principales de un Data Lake:
 * Satisface las necesidades de varios usuarios en la organización.
 * Son sistemas de almacenamiento altamente económicos.
 
+Herramientas
+~~~~~~~~~~~~
+
+Algunos ejemplos de estas técnologias incluyen: Azure Storage Accounts, Google Storage Account, Amazon S3, Hadoop File System (HDFS), etc.
+
 Lakehouse
 ^^^^^^^^^
 
@@ -90,3 +105,8 @@ Una Lakehouse es una nueva arquitectura que combina los mejores elementos de los
    :align: center
 
    *Un lakehouse combina las capacidades de almacenamiento de datos no estructurados de un data lake con las capacidades de manejo de datos estructurados de un Data Warehouse.*
+
+Herramientas
+~~~~~~~~~~~~
+
+Las herramientas de lakehouse suelen estar implementados sobre - o bien - la tecnología de data lake o de warehousing, pero extendido hacia el otro extremo. Ejemplos de estas técnologías incluyen delta lake, Snowflake, Databricks, Microsoft Fabric, etc.

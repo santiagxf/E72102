@@ -28,8 +28,8 @@ Tipos de ingesta
 De igual forma que vimos en :doc:`../../concept/velocity`, la velocidad impacta en todos los componentes de la arquitectura de datos. En general, encontraremos 3 tipos de ingesta de datos:
 
 :En tiempo real (real-time): En una ingesta en tiempo real, los datos son adquiridos tan rápido como es posible. En general, para que esto sea posible el dato es capturado cuando la transacción es confirmada y antes de que se realice cualquier otro procesamiento en el origen.
-:En stream (streaming): En un principio, stream podría parecer similar a real-time, sin embargo existe una gran diferencia. En una ingesta en tiempo real, el dato se adquiere tan pronto como es posible, independientemente de si otros datos han sido adquiridos o no. Sin embargo, en una ingesta en stream, el orden es importante y existen elementos que deben ser ingestados antes que otros.
-:En lotes (batch): Los datos son ingresados en cantidades específicas en periodos definidos.
+:En stream (streaming): En un principio, stream podría parecer similar a real-time, sin embargo existe una gran diferencia. En una ingesta en tiempo real, el dato se adquiere tan pronto como es posible, independientemente de si otros datos han sido adquiridos o no. Sin embargo, en una ingesta en stream, el orden es importante y por lo tanto son ingestados en el orden en el que son generados o capturados (dependiendo del caso).
+:En lotes (batch): Los datos son ingresados en cantidades específicas en periodos definidos en "lotes". Por ejemplo, cada día se podrían ingestar los datos generados durante el día anterior.
 
 Fase de la ingesta
 ------------------

@@ -22,6 +22,8 @@ El entendimiento del problema es más relevante aún cuando consideramos las mul
    "Objetivo", "Correctitud", "La optimización de una métrica"
    "Calidad*", "Depende deterministicamente del código", "Depende de los datos, de la arquitectura del modelo y sus hiperparámetros"
 
+Lecture recomendada: `ML system design: 200 case studies to learn from <https://www.evidentlyai.com/ml-system-design>`_
+
 .. [1] `Reframing them can reveal unexpected solutions. by Thomas Wedell-Wedellsborg <https://hbr.org/2017/01/are-you-solving-the-right-problems>`_
 
 .. toctree::

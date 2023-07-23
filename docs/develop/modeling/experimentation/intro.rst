@@ -120,4 +120,4 @@ El proceso de experimentación puede requirer multiples iteraciones, donde se ca
 
    Sesgo-varianza <bias-and-variance>
    Tuneo de hiperparámetros <tuning>
-   Experimentos y ejecuciones <code/tracking.ipynb>
+   Experimentos y ensayos <code/tracking.ipynb>

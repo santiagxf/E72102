@@ -1,7 +1,4 @@
-interpret-community==0.19
-raiwidgets==0.9.4
-scikit-learn==1.0.1
-erroranalysis==0.1.31
-markupsafe<=2.0.1
-flask<=1.1.4
+interpret_community==0.29.0
+erroranalysis==0.4.4
+scikit-learn==1.0.2
 lightgbm

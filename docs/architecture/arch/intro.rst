@@ -54,3 +54,4 @@ Idealmente, buscaremos diseñar una plataforma de procesamiento de datos que pue
     Organización y componentes <components/intro>
     cloud
     Arquitecturas estandar <architectures>
+    Equipos y personas <teams>

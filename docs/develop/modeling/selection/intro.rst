@@ -91,6 +91,6 @@ Estimar una métrica para un modelo particular puede realizarse utilizando las t
     :maxdepth: 1
     :caption: En esta sección
     :hidden:
-    
-    Análisis de errores <error-analysis>
+
     Evaluación offline <offlineEval>
+    Análisis de errores <error-analysis>

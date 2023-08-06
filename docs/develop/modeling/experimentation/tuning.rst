@@ -30,4 +30,5 @@ Ejemplos
   :maxdepth: 1
   :titlesonly:
 
+  code/tuning_grid.ipynb 
   code/tuning_bayesian.ipynb

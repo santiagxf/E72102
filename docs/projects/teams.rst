@@ -4,22 +4,25 @@ Equipos y personas
 
 Roles
 -----
-Cuando llevamos adelante un proyecto basado en datos, es necesario identificar los siguientes roles. Note que no siempre todos los roles están instanciados en personas distintas siendo muchos casos donde una persona ejecuta más de uno. En general, esto dependerá del tamaño de la organización y de su madurez/estructura.
+En organizaciones impulsadas por datos, podemos identificar un conjunto de roles que son ejecutados por diferentes personas dentro de la organización. Note que no siempre todos los roles están instanciados en personas distintas siendo muchos casos donde una persona ejecuta más de uno. En general, esto dependerá del tamaño de la organización y de su madurez/estructura.
+
+Los siguientes roles suelen encontrarse en diferentes organizaciones:
 
 Experto de negocio (SME)
 ^^^^^^^^^^^^^^^^^^^^^^^^
-El experto de negocio, también llamado Subject Matter Expert o SME, es la persona que tiene el conocimiento práctico sobre la problematica que se quiere resolver y quien puede no solo reconocer el valor para la organización del problema que se quiere resolver sino que también puede verificar cuando una solución es aceptable. Entre las responsabilidades del rol está:
+El experto de negocio, también llamado Subject Matter Expert o SME, es la persona que tiene el conocimiento práctico sobre la problematica que se quiere resolver y quien puede, no solo reconocer el valor para la organización del problema que se quiere resolver, sino que también puede verificar cuando una solución es aceptable. Entre las responsabilidades del rol está:
 
 - Provee las preguntas de negocio, objetivos, KPI y las métricas sobre las cuales los modelos de aprendizaje automático deben ser diseñados.
 - Evalúa constantemente que la performance del modelo está alineada (resuelve) la necesidad de negocio inicial.
 
-Cientifico de datos
+Científico de datos
 ^^^^^^^^^^^^^^^^^^^
-Son quienes construyen modelos de aprendizaje automático que solucionan el problema de negocio (hipótesis). En general:
+Son quienes construyen modelos de aprendizaje automático cómo solución a un determinado problema de negocio (hipótesis). En general:
 
-- Generan entregables que pueden ser desplegados en ambientes productivos.
-- Evalúan la performance del modelo (en conjunto con las métricas definidas por el experto de negocio) para asegurarse que se resuelve la problemática de negocio.
+- Exploran los conjuntos de datos disponibles para diseñar experimentos que modelen los mismos.
 - Desarrollan test para asegurar la performance de los modelos.
+- Evalúan la performance del modelo (en conjunto con las métricas definidas por el experto de negocio) para asegurarse que se resuelve la problemática de negocio.
+- Generan entregables que pueden ser desplegados en ambientes productivos.
 
 Ingeniero de datos
 ^^^^^^^^^^^^^^^^^^
@@ -44,7 +47,7 @@ Arquitecto de Aprendizaje Automático
 
 Ingeniero de Operaciones
 ^^^^^^^^^^^^^^^^^^^^^^^^
-Este rol colabora con el Arquitecto de Aprendizaje Automático, Ingenieros de Datos y Científicos de Datos para construir sistemas que puedan operacionalizar la puesta en producción del modelo.
+Este rol colabora con el Arquitecto de Aprendizaje Automático, Ingenieros de Datos, y Científicos de Datos para construir sistemas que puedan operacionalizar la puesta en producción del modelo.
 
 - Construyen los sistemas operacionales donde se construyen y despliegan los modelos, así como también asegurar su performance, seguridad y disponibilidad.
 - Son responsables de los pipelines de Integración Continua/Despliegue Continuo.

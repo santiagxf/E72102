@@ -79,3 +79,13 @@ Existen numerosas tecnologías que permiten utilizar este concepto. Entre las ma
 * TensorFlow Extended.
 * MLflow Pipelines.
 * Pipelines específicos de herramientas de nube, como ser: Azure Machine Learning Pipelines.
+
+Ejemplos
+********
+
+.. toctree::
+  :maxdepth: 1
+  :titlesonly:
+  :glob:
+
+  code/mlflow_package.ipynb

@@ -44,13 +44,3 @@ Pruning es una técnica en la que se eliminan pesos (weights) de una red neurona
 Distillation
 ************
 Distillation es una técnica en la cual se entrena un modelo *estudiante* para que imite otro modelo, el cual es mas grande y potente.
-
-Ejemplos
-********
-
-.. toctree::
-  :maxdepth: 1
-  :titlesonly:
-  :glob:
-
-  code/*

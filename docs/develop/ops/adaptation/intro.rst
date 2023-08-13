@@ -21,7 +21,6 @@ En el medio de estos dos caminos tenemos todas las combinaciones posibles y depe
    :hidden:
    
    Portabilidad <portability>
-   El estandar MLflow <code/mlflow_package.ipynb>
    Vinculación de datos en inferencia <augmentation>
    Performance <performance>
 

@@ -3,3 +3,4 @@ erroranalysis==0.4.4
 scikit-learn==1.0.2
 lightgbm
 raiwidgets
+numpy<=1.22

@@ -1,6 +1,5 @@
 interpret-community==0.29.0
-erroranalysis==0.4.4
+erroranalysis==0.4.3
 scikit-learn==1.0.2
 lightgbm
-raiwidgets
-numpy<=1.22
+raiwidgets<=0.28.0

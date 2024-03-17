@@ -20,7 +20,7 @@ El entendimiento del problema es más relevante aún cuando consideramos las mul
    :widths: 20, 50, 50
 
    "Objetivo", "Correctitud", "La optimización de una métrica"
-   "Calidad*", "Depende deterministicamente del código", "Depende de los datos, de la arquitectura del modelo y sus hiperparámetros"
+   "Calidad", "Depende deterministicamente del código", "Depende de los datos, de la arquitectura del modelo y sus hiperparámetros"
 
 Lecture recomendada: `ML system design: 200 case studies to learn from <https://www.evidentlyai.com/ml-system-design>`_
 

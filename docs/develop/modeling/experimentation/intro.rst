@@ -9,6 +9,19 @@ Definición de una linea base
 
 Establecer una línea base para nuestro modelo es una tarea que muchas veces se pasa por alto, pero es increíblemente útil a la hora de experimentar e iterar sobre diferentes propuestas de modelos. Básicamente esta tarea consiste en identificar cual es la performance base a la que podríamos aspirar de mínima. Esto en general puede realizarse investigando problemas similares o cómo la competencia resuelve el problema. Para muchas tareas, podemos utilizar como línea base la performance a la que alcanza una persona resolviendo el problema. En cualquiera de los casos es importante tener este concepto en mente y cuantificarlo para luego poder determinar si, por ejemplo, un accuracy de 0.78 es bueno o malo.
 
+¿Qué es un modelo de una linea base?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Un modelo de referencia es un modelo simple que se utiliza para crear un punto de referencia sobre el cual construirá su modelo final de aprendizaje automático más complejo.
+
+Disponer de una linea base tiene las siguientes ventajas:
+
+* Los modelos de referencia pueden darle una buena idea de cómo funcionará un modelo más complejo.
+* Si un modelo de referencia funciona mal, podría ser una señal de un problema con la calidad de los datos que debe abordarse.
+* Si un modelo de referencia funciona mejor que el modelo final, podría indicar problemas con ese algoritmo, características, hiperparámetros u otro preprocesamiento de datos.
+* Si el modelo básico y el modelo complejo funcionan más o menos igual, esto podría indicar que el modelo complejo necesita un ajuste más preciso (en características, arquitectura o hiperparámetros). También podría mostrar que no es necesario un modelo más complejo y que bastará con un modelo más simple.
+
+Normalmente, un modelo de referencia es un modelo estadístico, como un modelo de media móvil. Alternativamente, es una versión más simple del modelo objetivo ; por ejemplo, si va a entrenar un modelo de bosque aleatorio, primero puede entrenar un modelo de árbol de decisión como base. En otros casos, la linea base puede estar dada por la performance que se tienen en el problema que se quiere resolver actualmente (por ejemplo, si estuviera realizado por una persona).
+
 
 Definición de la arquitectura
 -----------------------------

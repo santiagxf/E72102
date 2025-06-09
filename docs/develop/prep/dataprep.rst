@@ -68,6 +68,7 @@ Ejemplos
   :titlesonly:
 
   code/dataprep.ipynb
+  code/modular.ipynb
 
 Reproducibilidad
 ----------------

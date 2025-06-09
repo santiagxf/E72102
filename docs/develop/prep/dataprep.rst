@@ -68,7 +68,6 @@ Ejemplos
   :titlesonly:
 
   code/dataprep.ipynb
-  code/modular.ipynb
 
 Reproducibilidad
 ----------------
@@ -80,6 +79,15 @@ Esto implica:
 - Registrar todas las operaciones de preprocesamiento que se realizan.
 - Registrar cualquier valor que se calcula de forma dinámica sobre el conjunto de datos. Por ejemplo, medias, valores mínimos, etc.
 - Registrar cualquier transformación que se realiza sobre los datos junto con sus parámetros. Por ejemplo, normalización.
+
+Ejemplos
+^^^^^^^^
+
+.. toctree::
+  :maxdepth: 1
+  :titlesonly:
+
+  code/modular.ipynb
 
 Verificación
 ------------

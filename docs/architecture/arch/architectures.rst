@@ -26,55 +26,51 @@ Arquitectura Kappa
 
 Introducción:La arquitectura Kappa surge como una evolución de Lambda, con la intención de simplificar el ecosistema de procesamiento de datos. En lugar de mantener dos caminos distintos (batch y streaming), Kappa propone un único flujo de procesamiento en tiempo real. Los datos históricos se pueden reinyectar en el sistema de streaming si se requiere reprocesamiento. Es especialmente útil en organizaciones centradas en eventos y donde la inmediatez es prioritaria.
 
-Ventajas:
+**Ventajas:**
 
 Reduce complejidad.
 
 Enfoque uniforme para todos los datos.
 
-Desventajas:
+**Desventajas:**
 
 Reprocesar datos puede ser costoso.
 
 No es óptima para algunos casos batch.
 
-Tecnologías comunes:Kafka, Kafka Streams, Flink, Cassandra, HBase.
+Tecnologías comunes: Kafka, Kafka Streams, Flink, Cassandra, HBase.
 
 Arquitectura Data Mesh
 ----------------------
 
 Data Mesh es una propuesta disruptiva que rompe con el enfoque centralizado tradicional de las plataformas de datos. En lugar de tener un equipo central encargado de toda la infraestructura y calidad de los datos, promueve la descentralización, asignando la responsabilidad de los datos a los equipos de dominio. Cada equipo gestiona sus propios productos de datos como activos reutilizables y accesibles para toda la organización. Esta arquitectura es ideal para grandes organizaciones que buscan escalar sus capacidades de datos de forma orgánica y distribuida.
 
-Ventajas:
+**Ventajas:**
 
-Escalabilidad organizacional.
+* Escalabilidad organizacional.
+* Autonomía por dominio.
 
-Autonomía por dominio.
+**Desventajas:**
 
-Desventajas:
+* Complejidad de gobernanza.
+* Requiere madurez organizativa.
 
-Complejidad de gobernanza.
-
-Requiere madurez organizativa.
-
-Tecnologías comunes:DataHub, Amundsen, Kubernetes, Terraform, Airflow.
+Tecnologías comunes: DataHub, Amundsen, Kubernetes, Terraform, Airflow.
 
 Arquitectura basada en Microservicios de ML
 -------------------------------------------
 
 Esta arquitectura organiza el ciclo de vida del modelo de machine learning en componentes desacoplados, desplegados como microservicios independientes. Cada microservicio puede encargarse de una función específica como entrenamiento, validación, predicción, monitoreo o reentrenamiento. Esta modularidad permite escalar y actualizar partes del sistema sin afectar al resto. Es muy adecuada para entornos en los que se requiere agilidad, experimentación constante y despliegue continuo de modelos.
 
-Ventajas:
+**Ventajas:**
 
-Alto desacoplamiento.
+* Alto desacoplamiento.
+* Escalabilidad y CI/CD sencillos.
 
-Escalabilidad y CI/CD sencillos.
+**Desventajas:**
 
-Desventajas:
-
-Mayor complejidad operativa.
-
-Demanda monitoreo y observabilidad avanzados.
+* Mayor complejidad operativa.
+* Demanda monitoreo y observabilidad avanzados.
 
 Tecnologías comunes:Docker, Kubernetes, MLflow, TensorFlow Serving, Prometheus, Istio.
 

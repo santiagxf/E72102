@@ -28,15 +28,13 @@ Introducción:La arquitectura Kappa surge como una evolución de Lambda, con la 
 
 **Ventajas:**
 
-Reduce complejidad.
-
-Enfoque uniforme para todos los datos.
+* Reduce complejidad.
+* Enfoque uniforme para todos los datos.
 
 **Desventajas:**
 
-Reprocesar datos puede ser costoso.
-
-No es óptima para algunos casos batch.
+* Reprocesar datos puede ser costoso.
+* No es óptima para algunos casos batch.
 
 Tecnologías comunes: Kafka, Kafka Streams, Flink, Cassandra, HBase.
 

@@ -18,8 +18,8 @@ A primera vista, un proyecto de aprendizaje automático puede parecer una extens
 
 :Incertidumbre en el Retorno de la Inversión (ROI): Dada la naturaleza experimental y los desafíos inherentes, cuantificar el ROI de un proyecto de ML puede ser difícil al principio, lo que a veces complica la justificación de la inversión.
 
-La Relación entre aprendizaje automático y el Desarrollo de Software
---------------------------------------------------------------------
+La Relación con desarrollo de software
+--------------------------------------
 La relación entre el aprendizaje automático y el desarrollo de software es simbiótica y cada vez más interdependiente. Si bien los proyectos de ML tienen características únicas, no existen en el vacío; deben ser construidos, desplegados y mantenidos utilizando principios de ingeniería de software.
 
 :ML como Subconjunto de Software: En esencia, un modelo de ML en producción es una pieza de software. Requiere código para la ingestión de datos, el preprocesamiento, la inferencia del modelo, la integración con APIs y la interfaz de usuario. Por lo tanto, los principios de ingeniería de software, como el control de versiones (Git), las pruebas unitarias e integración, la modularidad, la documentación y la integración/despliegue continuo (CI/CD), son fundamentales para la fiabilidad, escalabilidad y mantenibilidad de los sistemas de ML.

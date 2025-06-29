@@ -9,6 +9,12 @@ Arquitectura Lambda
 
 La arquitectura Lambda es un enfoque híbrido que combina dos paradigmas de procesamiento de datos: el procesamiento por lotes (batch) y el procesamiento en tiempo real (streaming). Su objetivo es ofrecer una solución que permita manejar tanto datos históricos como eventos en tiempo real, proporcionando una visión integral del estado de los sistemas. Esta arquitectura es común en entornos donde se necesita una base sólida de datos históricos, pero también se requiere actuar rápidamente ante nuevos eventos.
 
+.. figure:: _images/lambda.png
+   :alt: Arquitectura Lambda
+   :align: center
+
+   *Arquitectura Lambda*
+
 **Ventajas:**
 
 * Equilibra velocidad y consistencia.
@@ -26,6 +32,12 @@ Arquitectura Kappa
 
 Introducción:La arquitectura Kappa surge como una evolución de Lambda, con la intención de simplificar el ecosistema de procesamiento de datos. En lugar de mantener dos caminos distintos (batch y streaming), Kappa propone un único flujo de procesamiento en tiempo real. Los datos históricos se pueden reinyectar en el sistema de streaming si se requiere reprocesamiento. Es especialmente útil en organizaciones centradas en eventos y donde la inmediatez es prioritaria.
 
+.. figure:: _images/kappa.png
+   :alt: Arquitectura Kappa
+   :align: center
+
+   *Arquitectura Kappa*
+
 **Ventajas:**
 
 * Reduce complejidad.
@@ -42,6 +54,12 @@ Arquitectura Data Mesh
 ----------------------
 
 Data Mesh es una propuesta disruptiva que rompe con el enfoque centralizado tradicional de las plataformas de datos. En lugar de tener un equipo central encargado de toda la infraestructura y calidad de los datos, promueve la descentralización, asignando la responsabilidad de los datos a los equipos de dominio. Cada equipo gestiona sus propios productos de datos como activos reutilizables y accesibles para toda la organización. Esta arquitectura es ideal para grandes organizaciones que buscan escalar sus capacidades de datos de forma orgánica y distribuida.
+
+.. figure:: _images/datamesh.png
+   :alt: Arquitectura Data Mesh
+   :align: center
+
+   *Arquitectura Data Mesh*
 
 **Ventajas:**
 

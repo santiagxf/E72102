@@ -1,5 +1,5 @@
-interpret-community==0.29.0
-erroranalysis==0.4.3
-scikit-learn==1.0.2
+interpret-community<=0.32.0
+erroranalysis<=0.5.5
+scikit-learn<=1.5.1
 lightgbm
-raiwidgets<=0.28.0
+raiwidgets<=0.36.0

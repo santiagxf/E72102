@@ -1,9 +1,10 @@
-sphinx==4.0.2
+sphinx==7.2.6
+nbsphinx>=0.8.6
 sphinx-rtd-theme
 myst-parser
-nbsphinx>=0.8.6
 furo
-ipykernel
+ipykernel==6.27.1
+ipython==8.12.3
 matplotlib
 numpy
 pandas

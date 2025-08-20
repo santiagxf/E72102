@@ -1,9 +1,10 @@
+numba==0.60.0
+statsmodels==0.14.5
 numpy==1.26.2
 erroranalysis==0.5.5
 interpret-community==0.32.0
-lightgbm==4.6.0
+lightgbm==3.3.5
 raiwidgets==0.36.0
 scikit-learn==1.5.1
 pandas==1.5.3
 shap==0.46.0
-statsmodels==0.14.5

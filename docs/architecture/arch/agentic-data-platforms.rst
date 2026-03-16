@@ -1,7 +1,8 @@
-Title: Diseño de arquitecturas de datos para sistemas de IA agente
+Diseño de arquitecturas de datos para sistemas de IA agente
+==================================================================
 
 Introducción
-============
+------------
 
 Las arquitecturas de datos empresariales fueron diseñadas históricamente para ayudar a las personas a analizar datos. Los *data warehouses* almacenaban hechos, las capas de transformación preparaban los datos y las herramientas de BI permitían a analistas y ejecutivos explorar reportes y *dashboards*. En este modelo, los humanos eran siempre el intérprete final del significado y quienes tomaban las decisiones.
 
@@ -12,7 +13,7 @@ El principio arquitectónico clave es simple: los sistemas deben exponer signifi
 Este artículo presenta los componentes principales y las guías para diseñar un *data stack* empresarial moderno que soporte IA agente.
 
 Separar observaciones de significado
-====================================
+------------
 
 Una regla arquitectónica fundamental es separar los datos observados del significado interpretado.
 
@@ -28,7 +29,7 @@ Guía:
 - Construir una capa separada de interpretación responsable de definir el significado de negocio.
 
 Mantener una capa de observación confiable
-==========================================
+------------
 
 La capa de observación sigue siendo esencial. Contiene todos los registros factuales de lo que ocurrió en el negocio.
 
@@ -49,7 +50,7 @@ Guía:
 - No asumir que estos modelos capturan el significado de negocio.
 
 Introducir una capa semántica explícita
-=======================================
+------------
 
 Los sistemas agentes requieren una capa que formalice el significado de negocio.
 
@@ -70,7 +71,7 @@ Guía:
 - Tratar la capa semántica como un modelo central de conocimiento de la organización, no solo como una conveniencia para BI.
 
 Exponer significado mediante una API semántica
-==============================================
+------------
 
 Para los sistemas agentes, la documentación textual no es suficiente. Los agentes necesitan interfaces determinísticas que eliminen la ambigüedad.
 
@@ -92,7 +93,7 @@ Guía:
 - Exponer métricas y conceptos de negocio como operaciones tipo API en lugar de permitir que los agentes infieran lógica desde tablas crudas.
 
 Agregar un motor de interpretación
-==================================
+------------
 
 Los sistemas agentes requieren más que métricas. Deben entender si el comportamiento del sistema es normal, anómalo o requiere acción.
 
@@ -118,7 +119,7 @@ Guía:
 - Implementar una capa de evaluación de reglas que convierta métricas en estados del sistema y señales para la toma automática de decisiones.
 
 Tratar a los agentes de IA como usuarios del sistema
-====================================================
+------------
 
 Las arquitecturas tradicionales fueron diseñadas alrededor de usuarios humanos como analistas, gerentes de producto o ejecutivos.
 
@@ -138,7 +139,7 @@ Guía:
 - Diseñar interfaces de datos para consumo por máquinas, no solo para exploración humana.
 
 Definir límites de acción
-=========================
+------------
 
 Los sistemas agentes deben operar dentro de límites de decisión bien definidos.
 
@@ -162,7 +163,7 @@ Guía:
 - Definir políticas explícitas que conecten señales con acciones permitidas.
 
 Preservar la explicabilidad mediante BI
-=======================================
+------------
 
 Incluso en sistemas agentes, los humanos necesitan visibilidad y confianza.
 
@@ -181,7 +182,7 @@ Guía:
 - Utilizar BI para transparencia y gobernanza, no como la interfaz principal de decisión.
 
 Alinear acuerdos organizacionales
-=================================
+------------
 
 La parte más difícil de construir arquitecturas agentes rara vez es la tecnología. Es alinear las definiciones de negocio.
 
@@ -201,7 +202,7 @@ Guía:
 - Tratar las definiciones de negocio como contratos formales del sistema, no como conocimiento informal del equipo.
 
 Conclusión
-==========
+------------
 
 La transición hacia IA agente transforma el propósito de las arquitecturas de datos empresariales.
 
